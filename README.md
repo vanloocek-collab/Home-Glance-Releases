@@ -97,6 +97,10 @@ Availability depends on the device and installed system apps.
 - Email reports open with app and device information pre-filled
 - Bug reporting and developer contact options are translated into all supported languages
 
+## Contributing
+
+[How to contribute](CONTRIBUTING.md)
+
 ## Testing
 
 [View the Home Glance Testing Checklist](TESTING.md)
