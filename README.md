@@ -6,6 +6,12 @@ A lightweight Android home-screen widget that combines weather and calendar info
 
 [Download Home Glance v0.1.2 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.2/Home-Glance-v0.1.2.apk)
 
+## Why Home Glance?
+
+I have always been a big fan of **Another Widget**. After it stopped evolving, I decided to create what I see as its spiritual successor: a modern, actively developed widget that keeps the same idea of showing the information you need at a glance, while adding more customization, broader device compatibility and new features.
+
+Home Glance is an independent project and is not affiliated with Another Widget.
+
 ## Features
 
 - Current weather, condition icon and temperature
