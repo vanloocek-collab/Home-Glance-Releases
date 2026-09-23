@@ -2,9 +2,9 @@
 
 A lightweight Android home-screen widget that combines weather and calendar information in a clean, Pixel-inspired layout.
 
-> **Current release:** Home Glance v0.1.2 · Public test release
+> **Current release:** Home Glance v0.1.3 · Public test release
 
-[Download Home Glance v0.1.2 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.2/Home-Glance-v0.1.2.apk)
+[Download Home Glance v0.1.3 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk)
 
 ## Why Home Glance?
 
@@ -30,6 +30,8 @@ Home Glance is an independent project and is not affiliated with Another Widget.
 - Custom weekday and month formatting
 - Direct launch of supported weather and calendar apps
 - In-app update checker
+- In-app bug reporting through GitHub Issues
+- Direct email contact with the developer for users without a GitHub account
 
 ## Languages
 
@@ -86,18 +88,17 @@ Availability depends on the device and installed system apps.
 4. Install Home Glance.
 5. Add the **Home Glance** widget to your home screen and configure it in the app.
 
-## v0.1.2 highlights
+## v0.1.3 highlights
 
-- 11-language localization
-- Improved Xiaomi / POCO calendar compatibility
-- Expanded OEM weather-app support
-- Optional Milky widget background
-- More widget appearance controls
-- Reorganized Settings, Weather, Calendar and Application sections
-- Compatibility and stability fixes
+- Added in-app bug reporting through GitHub Issues
+- Bug reports automatically include the Home Glance version, Android version and device information
+- Bug reports opened from the app are automatically labeled **bug**
+- Added **Contact developer** by email for users without a GitHub account
+- Email reports open with app and device information pre-filled
+- Bug reporting and developer contact options are translated into all supported languages
 
 ## Status
 
 Home Glance is still in public testing. Feedback and bug reports are welcome.
 
-[View Home Glance v0.1.2 release notes](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.1.2)
+[View Home Glance v0.1.3 release notes](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.1.3)
