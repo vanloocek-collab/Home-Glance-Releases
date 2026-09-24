@@ -13,6 +13,7 @@
   <link rel="icon" href="assets/home-glance-icon.webp" type="image/webp">
   <link rel="apple-touch-icon" href="assets/home-glance-icon.webp">
   <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -22,10 +23,17 @@
         <span>Home Glance</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#features">Features</a>
-        <a href="#screenshots">Screenshots</a>
-        <a href="#about">About</a>
-        <a class="nav-download" href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk">Download</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" class="language-option" data-lang="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="language-option" data-lang="pl" aria-pressed="false">PL</button>
+        </div>
+
+        <a class="nav-download" href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk" data-i18n="nav.download">Download</a>
       </nav>
     </div>
   </header>
@@ -33,99 +41,111 @@
   <main id="top">
     <section class="hero wrap">
       <div class="hero-copy">
-        <div class="eyebrow">Public test · v0.1.3</div>
-        <h1>Your weather and calendar.<br><span>At a glance.</span></h1>
-        <p class="lead">Home Glance is a lightweight, customizable Android home-screen widget inspired by the simplicity of Another Widget and the Pixel At a Glance experience.</p>
+        <div class="eyebrow" data-i18n="hero.eyebrow">Public test · v0.1.3</div>
+        <h1 data-i18n-html="hero.title">Your weather and calendar.<br><span>At a glance.</span></h1>
+        <p class="lead" data-i18n="hero.lead">Home Glance is a lightweight, customizable Android home-screen widget inspired by the simplicity of Another Widget and the Pixel At a Glance experience.</p>
         <div class="hero-actions">
-          <a class="button primary" href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk">Download APK</a>
-          <a class="button secondary" href="https://github.com/vanloocek-collab/Home-Glance-Releases">View on GitHub</a>
+          <a class="button primary" href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk" data-i18n="hero.download">Download APK</a>
+          <a class="button secondary" href="https://github.com/vanloocek-collab/Home-Glance-Releases" data-i18n="hero.github">View on GitHub</a>
         </div>
-        <p class="small-note">Android 8.0+ · Free · No ads · Public testing</p>
+        <p class="small-note" data-i18n="hero.note">Android 8.0+ · Free · No ads · Public testing</p>
       </div>
 
       <div class="hero-visual">
         <div class="phone-glow" aria-hidden="true"></div>
         <figure class="hero-shot">
-          <img src="screenshots/home-glance-widget-milky.jpg" alt="Home Glance widget displayed on an Android home screen">
+          <img src="screenshots/home-glance-widget-milky.jpg" alt="Home Glance widget displayed on an Android home screen" data-i18n-alt="hero.imageAlt">
         </figure>
       </div>
     </section>
 
     <section id="features" class="section wrap">
       <div class="section-heading">
-        <p class="kicker">Built for the home screen</p>
-        <h2>Useful information without the clutter.</h2>
-        <p>Weather, calendar events and smart context in a clean widget you can make your own.</p>
+        <p class="kicker" data-i18n="features.kicker">Built for the home screen</p>
+        <h2 data-i18n="features.title">Useful information without the clutter.</h2>
+        <p data-i18n="features.lead">Weather, calendar events and smart context in a clean widget you can make your own.</p>
       </div>
 
       <div class="feature-grid">
         <article class="feature-card">
           <div class="feature-icon" aria-hidden="true">☀</div>
-          <h3>Weather that adapts</h3>
-          <p>Current conditions, automatic or manual location, smart refresh intervals and dynamic weather details.</p>
+          <h3 data-i18n="features.weatherTitle">Weather that adapts</h3>
+          <p data-i18n="features.weatherText">Current conditions, automatic or manual location, smart refresh intervals and dynamic weather details.</p>
         </article>
         <article class="feature-card">
           <div class="feature-icon" aria-hidden="true">▣</div>
-          <h3>Calendar at a glance</h3>
-          <p>Upcoming events, selectable calendars, countdowns, ongoing events, event location and flexible filters.</p>
+          <h3 data-i18n="features.calendarTitle">Calendar at a glance</h3>
+          <p data-i18n="features.calendarText">Upcoming events, selectable calendars, countdowns, ongoing events, event location and flexible filters.</p>
         </article>
         <article class="feature-card">
           <div class="feature-icon" aria-hidden="true">Aa</div>
-          <h3>Make it yours</h3>
-          <p>Choose font style, text size, alignment, date formatting and an optional Milky widget background.</p>
+          <h3 data-i18n="features.customTitle">Make it yours</h3>
+          <p data-i18n="features.customText">Choose font style, text size, alignment, date formatting and an optional Milky widget background.</p>
         </article>
         <article class="feature-card">
           <div class="feature-icon" aria-hidden="true">✦</div>
-          <h3>Smart weather insights</h3>
-          <p>Helpful contextual alerts for rain, snow, thunderstorms, strong wind, heat and frost.</p>
+          <h3 data-i18n="features.smartTitle">Smart weather insights</h3>
+          <p data-i18n="features.smartText">Helpful contextual alerts for rain, snow, thunderstorms, strong wind, heat and frost.</p>
         </article>
       </div>
     </section>
 
     <section id="screenshots" class="section wrap">
       <div class="section-heading compact">
-        <p class="kicker">See it in action</p>
-        <h2>Simple outside. Powerful inside.</h2>
+        <p class="kicker" data-i18n="screenshots.kicker">See it in action</p>
+        <h2 data-i18n="screenshots.title">Simple outside. Powerful inside.</h2>
       </div>
 
       <div class="shot-grid">
-        <figure><img src="screenshots/home-glance-home.jpg" alt="Home Glance main settings screen"><figcaption>Home</figcaption></figure>
-        <figure><img src="screenshots/home-glance-appearance.jpg" alt="Home Glance appearance settings"><figcaption>Appearance</figcaption></figure>
-        <figure><img src="screenshots/home-glance-weather-smart.jpg" alt="Home Glance smart weather settings"><figcaption>Smart weather</figcaption></figure>
-        <figure><img src="screenshots/home-glance-calendar.jpg" alt="Home Glance calendar settings"><figcaption>Calendar</figcaption></figure>
+        <figure>
+          <img src="screenshots/home-glance-home.jpg" alt="Home Glance main settings screen" data-i18n-alt="screenshots.homeAlt">
+          <figcaption data-i18n="screenshots.home">Home</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/home-glance-appearance.jpg" alt="Home Glance appearance settings" data-i18n-alt="screenshots.appearanceAlt">
+          <figcaption data-i18n="screenshots.appearance">Appearance</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/home-glance-weather-smart.jpg" alt="Home Glance smart weather settings" data-i18n-alt="screenshots.smartAlt">
+          <figcaption data-i18n="screenshots.smart">Smart weather</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/home-glance-calendar.jpg" alt="Home Glance calendar settings" data-i18n-alt="screenshots.calendarAlt">
+          <figcaption data-i18n="screenshots.calendar">Calendar</figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="about" class="section wrap story">
       <div>
-        <p class="kicker">Why Home Glance?</p>
-        <h2>A modern spiritual successor to Another Widget.</h2>
+        <p class="kicker" data-i18n="about.kicker">Why Home Glance?</p>
+        <h2 data-i18n="about.title">A modern spiritual successor to Another Widget.</h2>
       </div>
       <div class="story-copy">
-        <p>Home Glance started from a simple idea: keep the clean, useful home-screen experience that made Another Widget so appealing, while bringing it forward for modern Android.</p>
-        <p>The project focuses on useful information at a glance, strong customization, broad device compatibility and active development.</p>
-        <p class="disclaimer">Home Glance is an independent project and is not affiliated with Another Widget.</p>
+        <p data-i18n="about.p1">Home Glance started from a simple idea: keep the clean, useful home-screen experience that made Another Widget so appealing, while bringing it forward for modern Android.</p>
+        <p data-i18n="about.p2">The project focuses on useful information at a glance, strong customization, broad device compatibility and active development.</p>
+        <p class="disclaimer" data-i18n="about.disclaimer">Home Glance is an independent project and is not affiliated with Another Widget.</p>
       </div>
     </section>
 
     <section class="section wrap language-strip" aria-label="Languages">
       <div>
-        <p class="kicker">11 languages</p>
-        <h2>Made for more Android users.</h2>
+        <p class="kicker" data-i18n="languages.kicker">11 languages</p>
+        <h2 data-i18n="languages.title">Made for more Android users.</h2>
       </div>
-      <p>English (US), English (UK), Polski, Deutsch, Español, Français, Italiano, Português (Brasil), Русский, 简体中文 and 日本語.</p>
+      <p data-i18n="languages.list">English (US), English (UK), Polski, Deutsch, Español, Français, Italiano, Português (Brasil), Русский, 简体中文 and 日本語.</p>
     </section>
 
     <section class="download-section">
       <div class="wrap download-card">
         <div>
-          <p class="kicker">Try the public test</p>
-          <h2>Bring Home Glance to your home screen.</h2>
-          <p>Download the latest public test APK from GitHub and help shape what comes next.</p>
+          <p class="kicker" data-i18n="download.kicker">Try the public test</p>
+          <h2 data-i18n="download.title">Bring Home Glance to your home screen.</h2>
+          <p data-i18n="download.text">Download the latest public test APK from GitHub and help shape what comes next.</p>
         </div>
         <div class="download-actions">
-          <a class="button primary light" href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk">Download v0.1.3</a>
-          <a class="button ghost-light" href="https://github.com/vanloocek-collab/Home-Glance-Releases/issues">Feedback & issues</a>
+          <a class="button primary light" href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk" data-i18n="download.button">Download v0.1.3</a>
+          <a class="button ghost-light" href="https://github.com/vanloocek-collab/Home-Glance-Releases/issues" data-i18n="download.feedback">Feedback & issues</a>
         </div>
       </div>
     </section>
@@ -135,13 +155,13 @@
     <div class="wrap footer-grid">
       <div>
         <strong>Home Glance</strong>
-        <p>Weather and calendar information, right where you need it.</p>
+        <p data-i18n="footer.text">Weather and calendar information, right where you need it.</p>
       </div>
       <div class="footer-links">
-        <a href="PRIVACY.md">Privacy</a>
-        <a href="ROADMAP.md">Roadmap</a>
-        <a href="TESTING.md">Testing</a>
-        <a href="CONTRIBUTING.md">Contributing</a>
+        <a href="PRIVACY.md" data-i18n="footer.privacy">Privacy</a>
+        <a href="ROADMAP.md" data-i18n="footer.roadmap">Roadmap</a>
+        <a href="TESTING.md" data-i18n="footer.testing">Testing</a>
+        <a href="CONTRIBUTING.md" data-i18n="footer.contributing">Contributing</a>
         <a href="https://github.com/vanloocek-collab/Home-Glance-Releases">GitHub</a>
       </div>
     </div>
