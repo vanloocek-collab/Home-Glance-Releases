@@ -410,8 +410,32 @@
       if (typeof value === "string") element.setAttribute("aria-label", value);
     });
 
-    const languageSelect = document.querySelector(".language-select");
-    if (languageSelect) languageSelect.value = lang;
+    const languageMeta = {
+      "en-US": { label: "English (US)", flag: "flag-us" },
+      "en-GB": { label: "English (UK)", flag: "flag-gb" },
+      pl: { label: "Polski", flag: "flag-pl" },
+      de: { label: "Deutsch", flag: "flag-de" },
+      es: { label: "Español", flag: "flag-es" },
+      fr: { label: "Français", flag: "flag-fr" },
+      it: { label: "Italiano", flag: "flag-it" },
+      "pt-BR": { label: "Português (Brasil)", flag: "flag-br" },
+      ru: { label: "Русский", flag: "flag-ru" },
+      "zh-CN": { label: "简体中文", flag: "flag-cn" },
+      ja: { label: "日本語", flag: "flag-jp" }
+    };
+
+    const meta = languageMeta[lang] || languageMeta["en-US"];
+    const currentLabel = document.querySelector("[data-current-language-label]");
+    const currentFlag = document.querySelector("[data-current-language-flag]");
+
+    if (currentLabel) currentLabel.textContent = meta.label;
+    if (currentFlag) {
+      currentFlag.className = `flag ${meta.flag}`;
+    }
+
+    document.querySelectorAll("[data-lang]").forEach((element) => {
+      element.classList.toggle("active", element.dataset.lang === lang);
+    });
 
     localStorage.setItem(LANGUAGE_KEY, lang);
   };
@@ -590,8 +614,16 @@
     });
   };
 
-  document.querySelector(".language-select")?.addEventListener("change", (event) => {
-    applyLanguage(event.target.value);
+  document.querySelectorAll("[data-lang]").forEach((element) => {
+    element.addEventListener("click", () => {
+      applyLanguage(element.dataset.lang);
+      element.closest(".language-menu")?.removeAttribute("open");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const menu = document.querySelector(".language-menu");
+    if (menu?.open && !menu.contains(event.target)) menu.removeAttribute("open");
   });
 
   document.querySelector(".theme-toggle")?.addEventListener("click", toggleTheme);
