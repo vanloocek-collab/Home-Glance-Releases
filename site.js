@@ -16,7 +16,7 @@
         download: "Download"
       },
       hero: {
-        eyebrow: "Public test · v0.1.3",
+        eyebrow: "Public test · v0.2.0",
         title: "Your weather and calendar.<br><span>At a glance.</span>",
         lead: "Home Glance is a lightweight, customizable Android home-screen widget inspired by the simplicity of Another Widget and the Pixel At a Glance experience.",
         download: "Download APK",
@@ -27,13 +27,13 @@
       features: {
         kicker: "Built for the home screen",
         title: "Useful information without the clutter.",
-        lead: "Weather, calendar events and smart context in a clean widget you can make your own.",
+        lead: "Weather, calendar events, next alarm and smart context in a clean widget you can make your own.",
         weatherTitle: "Weather that adapts",
         weatherText: "Current conditions, automatic or manual location, smart refresh intervals and dynamic weather details.",
         calendarTitle: "Calendar at a glance",
         calendarText: "Upcoming events, selectable calendars, countdowns, ongoing events, event location and flexible filters.",
         customTitle: "Make it yours",
-        customText: "Choose font style, text size, alignment, date formatting and an optional Milky widget background.",
+        customText: "Choose font style, text size, alignment, date formatting, per-line scrolling and Material You or Liquid Glass backgrounds.",
         smartTitle: "Smart weather insights",
         smartText: "Helpful contextual alerts for rain, snow, thunderstorms, strong wind, heat and frost."
       },
@@ -65,7 +65,7 @@
         kicker: "Try the public test",
         title: "Bring Home Glance to your home screen.",
         text: "Download the latest public test APK from GitHub and help shape what comes next.",
-        button: "Download v0.1.3",
+        button: "Download v0.2.0",
         feedback: "Feedback & issues"
       },
       footer: {
@@ -90,7 +90,7 @@
         download: "Pobierz"
       },
       hero: {
-        eyebrow: "Publiczne testy · v0.1.3",
+        eyebrow: "Publiczne testy · v0.2.0",
         title: "Pogoda i kalendarz.<br><span>Na pierwszy rzut oka.</span>",
         lead: "Home Glance to lekki, konfigurowalny widżet ekranu głównego Androida, inspirowany prostotą Another Widget i rozwiązaniem Pixel At a Glance.",
         download: "Pobierz APK",
@@ -101,13 +101,13 @@
       features: {
         kicker: "Stworzony dla ekranu głównego",
         title: "Przydatne informacje bez zbędnego bałaganu.",
-        lead: "Pogoda, wydarzenia z kalendarza i inteligentny kontekst w czystym widżecie, który możesz dopasować do siebie.",
+        lead: "Pogoda, wydarzenia z kalendarza, najbliższy alarm i inteligentny kontekst w czystym widżecie, który możesz dopasować do siebie.",
         weatherTitle: "Pogoda, która się dostosowuje",
         weatherText: "Aktualne warunki, automatyczna lub ręczna lokalizacja, inteligentne interwały odświeżania i dynamiczne szczegóły pogody.",
         calendarTitle: "Kalendarz na pierwszy rzut oka",
         calendarText: "Nadchodzące wydarzenia, wybór kalendarzy, odliczanie, trwające wydarzenia, lokalizacja i elastyczne filtry.",
         customTitle: "Dopasuj go do siebie",
-        customText: "Wybierz krój i rozmiar tekstu, wyrównanie, format daty oraz opcjonalne tło widżetu Milky.",
+        customText: "Wybierz krój i rozmiar tekstu, wyrównanie, format daty, przewijanie każdej linii oraz tła Material You lub Liquid Glass.",
         smartTitle: "Inteligentne informacje pogodowe",
         smartText: "Pomocne alerty kontekstowe o deszczu, śniegu, burzach, silnym wietrze, upale i mrozie."
       },
@@ -139,7 +139,7 @@
         kicker: "Wypróbuj publiczną wersję testową",
         title: "Dodaj Home Glance do swojego ekranu głównego.",
         text: "Pobierz najnowszą publiczną wersję testową APK z GitHuba i pomóż rozwijać kolejne wydania.",
-        button: "Pobierz v0.1.3",
+        button: "Pobierz v0.2.0",
         feedback: "Opinie i błędy"
       },
       footer: {

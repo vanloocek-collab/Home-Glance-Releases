@@ -2,9 +2,9 @@
 
 A lightweight Android home-screen widget that combines weather and calendar information in a clean, Pixel-inspired layout.
 
-> **Current release:** Home Glance v0.1.3 · Public test release
+> **Current release:** Home Glance v0.2.0 · Public test release
 
-[Download Home Glance v0.1.3 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.1.3/Home-Glance-v0.1.3.apk)
+[Download Home Glance v0.2.0 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.0/Home-Glance-v0.2.0.apk)
 
 ## Why Home Glance?
 
@@ -24,10 +24,13 @@ Home Glance is an independent project and is not affiliated with Another Widget.
 - Event start time or countdown
 - Ongoing-event support, event location and calendar name
 - Event filters and configurable look-ahead
-- Optional **Milky widget background**
+- Widget backgrounds: **No background, Material You and Liquid Glass**, with adjustable wallpaper visibility
 - Google-inspired, iOS-inspired and system font styles
 - Adjustable widget text size and alignment
 - Custom weekday and month formatting
+- Long-text scrolling for date/alarm, weather and calendar, with per-line controls and configurable pause
+- Optional next-alarm time beside the date
+- Quick widget refresh directly from the Home dashboard
 - Direct launch of supported weather and calendar apps
 - In-app update checker
 - In-app bug reporting through GitHub Issues
@@ -70,7 +73,7 @@ Availability depends on the device and installed system apps.
 
 <p align="center">
   <img src="screenshots/home-glance-widget-milky.jpg" width="280"/><br/>
-  <b>Home Glance widget with Milky background</b>
+  <b>Home Glance widget on the Android home screen</b>
 </p>
 
 ## Requirements
@@ -88,14 +91,18 @@ Availability depends on the device and installed system apps.
 4. Install Home Glance.
 5. Add the **Home Glance** widget to your home screen and configure it in the app.
 
-## v0.1.3 highlights
+## v0.2.0 highlights
 
-- Added in-app bug reporting through GitHub Issues
-- Bug reports automatically include the Home Glance version, Android version and device information
-- Bug reports opened from the app are automatically labeled **bug**
-- Added **Contact developer** by email for users without a GitHub account
-- Email reports open with app and device information pre-filled
-- Bug reporting and developer contact options are translated into all supported languages
+- Completely redesigned Home Glance interface with a Bento-style dashboard
+- Added quick widget refresh with real refresh progress and completion feedback
+- Added long-text scrolling to all three widget lines
+- Added separate scrolling controls for the date/alarm, weather and calendar lines
+- Added configurable pause between scrolls and natural clipping when scrolling is disabled
+- Added optional next-alarm information beside the date
+- Replaced the old Milky background with **Material You** and **Liquid Glass** options
+- Added adjustable wallpaper visibility for widget backgrounds
+- Improved widget resizing and behaviour on narrow layouts
+- Existing settings and widget configuration are preserved when updating from previous versions
 
 ## Contributing
 
@@ -117,4 +124,4 @@ Availability depends on the device and installed system apps.
 
 Home Glance is still in public testing. Feedback and bug reports are welcome.
 
-[View Home Glance v0.1.3 release notes](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.1.3)
+[View Home Glance v0.2.0 release notes](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.0)
