@@ -112,6 +112,12 @@ Availability depends on the device and installed system apps.
 - Improved widget resizing and behaviour on narrow layouts
 - Existing settings and widget configuration are preserved when updating from previous versions
 
+## Feedback and support
+
+- [Report a bug or request a feature](https://github.com/vanloocek-collab/Home-Glance-Releases/issues/new/choose)
+- [Support guide](SUPPORT.md)
+- [Security policy](SECURITY.md)
+
 ## Contributing
 
 [How to contribute](CONTRIBUTING.md)
