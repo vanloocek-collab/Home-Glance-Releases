@@ -1,116 +1,78 @@
 # Privacy Policy for Home Glance
 
-**Effective date: September 23, 2026**
+**Effective date: September 24, 2026**
 
-Home Glance is an independent Android home-screen widget for weather and calendar information. This Privacy Policy explains what data Home Glance processes, why it is needed, and when information may be sent to third-party services.
+Home Glance is an independent Android home-screen widget for weather, calendar and next-alarm information.
 
 ## Summary
 
-Home Glance does not require an account and does not include advertising, analytics SDKs, or behavioral tracking.
+Home Glance does not require an account and does not include advertising, analytics SDKs or behavioral tracking.
 
-Most settings and calendar processing remain on the device. Some data must be sent to external services when you use weather, location search, update checking, bug reporting, or email contact features.
+Most settings, calendar information and alarm information are processed locally on the device. Weather features require a network connection and may send location coordinates to a weather provider.
 
 ## Weather and location
 
-If you use automatic weather location, Home Glance requests Android's approximate location permission (ACCESS_COARSE_LOCATION).
+If you choose automatic weather location, Home Glance requests Android's approximate location permission (`ACCESS_COARSE_LOCATION`).
 
-The resulting latitude and longitude are stored locally in the app's private preferences and are used to request weather data.
+The selected latitude and longitude are stored locally in the app's private preferences and are used to request weather data.
 
-If you use manual location, the city name and resolved coordinates may also be stored locally so the widget can continue using the selected location.
+Home Glance uses the Open-Meteo API. The selected latitude and longitude are transmitted to Open-Meteo over HTTPS so the service can return weather information.
 
-### Open-Meteo
-
-Home Glance uses the Open-Meteo API to obtain weather information. To provide weather data, Home Glance sends the selected location's latitude and longitude to Open-Meteo over HTTPS.
-
-According to Open-Meteo's published privacy information, the free API may keep web-server logs containing information such as IP addresses and geographical coordinates for troubleshooting and abuse prevention, and those log files are deleted after 90 days.
+If you use manual location search, Home Glance uses Android's system `Geocoder`. Depending on the device and Android provider, the search may use a network-backed geocoding service. Home Glance does not control the geocoding backend selected by the device.
 
 Open-Meteo Terms & Privacy:
 https://open-meteo.com/en/terms
 
-### Manual city search
-
-When you search for a city manually, Home Glance uses Android's system Geocoder service. Depending on the Android device and system provider, the city search may be processed by a network-backed geocoding service. Home Glance does not control which geocoding backend is provided by the device manufacturer or Android system.
-
 ## Calendar
 
-Calendar access is optional.
+Calendar integration is optional. If enabled, Home Glance requests `READ_CALENDAR` and reads data such as event title, start/end time, calendar name and event location when that display option is enabled.
 
-If enabled, Home Glance requests READ_CALENDAR permission and reads calendar information needed to display selected events in the widget, including event titles, start/end times, calendar names, event locations when enabled, and event metadata needed for filtering.
+Calendar data is processed locally on the device and is not sent to Open-Meteo or to a Home Glance server.
 
-Calendar data is processed locally on the device. Home Glance does not send calendar events to Open-Meteo or to a Home Glance server.
+## Next alarm
+
+Home Glance can display the next system alarm. Alarm information is read locally from Android and is not sent to a Home Glance server.
 
 ## App settings and local storage
 
-Home Glance stores app preferences locally, including selected widget options, weather settings, calendar selections, selected apps, language preferences, and saved weather coordinates.
+Home Glance stores settings locally, including widget options, language settings, selected calendars, selected weather options and saved weather coordinates.
 
-Home Glance does not operate its own backend server for storing these preferences.
+Home Glance does not operate an account system or a backend server for storing these settings.
 
-Depending on the Home Glance version installed and the Android device/system settings, Android system backup or device-transfer features may process app data. Newer Home Glance source builds disable Android app-data backup.
+## Google Play build
 
-## Update checking and downloads
+The Google Play distribution of Home Glance does not use the GitHub self-updater and does not request permission to install APK packages.
 
-Home Glance can check for new releases using the public GitHub API and can download update APK files from the public Home Glance Releases repository.
+The separately distributed GitHub build may include an optional GitHub release update checker and APK update flow.
 
-GitHub may process network information such as IP address, device information, request time, and service usage information according to its own privacy statement.
+## Bug reports and contact
 
-GitHub Privacy Statement:
-https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+Home Glance can open GitHub Issues or the user's email app. The draft may contain basic technical information such as Home Glance version, Android version/API level and device manufacturer/model.
 
-The installation of an update is initiated by the user. Home Glance may request Android permission to install APK files from this source when needed for the in-app update process.
+Nothing is submitted automatically. Information is sent only if the user chooses to submit the issue or email.
 
-## Bug reports
+## Security
 
-Home Glance includes a Report a bug option that opens GitHub Issues.
-
-Before opening the page, Home Glance can pre-fill basic technical information such as the Home Glance version, Android version/API level, and device manufacturer/model.
-
-Nothing is submitted automatically. A report is sent only if you choose to create the GitHub issue.
-
-GitHub issues in the public Home Glance Releases repository may be publicly visible. Do not include private or sensitive information in issue text or screenshots.
-
-## Contact developer by email
-
-The Contact developer option opens your email application with a message addressed to:
-
-**vanloocek@gmail.com**
-
-The draft may include the Home Glance version, Android version, and device manufacturer/model.
-
-Nothing is sent automatically. The email is sent only if you choose to send it. Your email provider and the recipient's email provider may process the message according to their own privacy policies.
-
-## Permissions
-
-Home Glance may request or use the following Android permissions:
-
-- Internet — weather data, update checks, and update downloads
-- Approximate location — automatic weather location
-- Read calendar — displaying calendar events when calendar integration is enabled
-- Request package installs — installing an APK update initiated by the user
-
-Location and calendar permissions are optional and can be denied or revoked in Android settings.
+Network requests made directly by Home Glance use HTTPS.
 
 ## Advertising, analytics and tracking
 
-Home Glance does not include advertising SDKs, analytics SDKs, or behavioral tracking.
+Home Glance does not include advertising SDKs, analytics SDKs or behavioral tracking.
 
 Home Glance does not sell user data.
 
 ## Data deletion
 
-You can remove Home Glance's locally stored settings by using Factory reset in the app or by clearing the app's data in Android settings.
+Home Glance does not provide user accounts.
 
-Uninstalling Home Glance removes the app's local data from the device, subject to any Android system backup or device-transfer behavior applicable to the installed version and device.
+Local Home Glance data can be removed using the app's factory-reset option, by clearing the app's storage in Android settings, or by uninstalling the app.
 
-Information voluntarily submitted to GitHub Issues or by email is handled by those services and must be removed through the relevant service or by contacting the developer when applicable.
+Information voluntarily submitted to GitHub Issues or by email is handled by those services.
 
-## Changes to this policy
+## Changes
 
-This policy may be updated when Home Glance adds or changes features, permissions, or third-party services.
-
-The latest version of this Privacy Policy will be published in the Home Glance Releases repository.
+This policy may be updated when Home Glance changes features, permissions or third-party services.
 
 ## Contact
 
-For privacy questions related to Home Glance:
-
-**vanloocek@gmail.com**
+Privacy questions: **vanloocek@gmail.com**

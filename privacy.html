@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home Glance Privacy Policy</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:820px;margin:0 auto;padding:40px 22px;line-height:1.65;color:#172033;background:#fff}
+h1,h2{line-height:1.2}h1{font-size:2rem}h2{margin-top:2rem;font-size:1.25rem}
+code{background:#f3f6fa;padding:.15em .35em;border-radius:.35em}a{color:#1769d2}
+</style>
+</head>
+<body>
+<h1>Privacy Policy for Home Glance</h1>
+<p><strong>Effective date: September 24, 2026</strong></p>
+<p>Home Glance is an independent Android home-screen widget for weather, calendar and next-alarm information.</p>
+<h2>Summary</h2>
+<p>Home Glance does not require an account and does not include advertising, analytics SDKs or behavioral tracking. Most settings, calendar information and alarm information are processed locally on the device. Weather features require a network connection and may send location coordinates to a weather provider.</p>
+<h2>Weather and location</h2>
+<p>If you choose automatic weather location, Home Glance requests Android's approximate location permission (<code>ACCESS_COARSE_LOCATION</code>). The selected latitude and longitude are stored locally in the app's private preferences and are used to request weather data.</p>
+<p>Home Glance uses the <a href="https://open-meteo.com/en/terms">Open-Meteo API</a>. The selected latitude and longitude are transmitted to Open-Meteo over HTTPS so the service can return weather information.</p>
+<p>If you use manual location search, Home Glance uses Android's system <code>Geocoder</code>. Depending on the device and Android provider, the search may use a network-backed geocoding service. Home Glance does not control the geocoding backend selected by the device.</p>
+<h2>Calendar</h2>
+<p>Calendar integration is optional. If enabled, Home Glance requests <code>READ_CALENDAR</code> and reads data such as event title, start/end time, calendar name and event location when that display option is enabled. Calendar data is processed locally on the device and is not sent to Open-Meteo or to a Home Glance server.</p>
+<h2>Next alarm</h2>
+<p>Home Glance can display the next system alarm. Alarm information is read locally from Android and is not sent to a Home Glance server.</p>
+<h2>App settings and local storage</h2>
+<p>Home Glance stores settings locally, including widget options, language settings, selected calendars, selected weather options and saved weather coordinates. Home Glance does not operate an account system or a backend server for storing these settings.</p>
+<h2>Google Play build</h2>
+<p>The Google Play distribution of Home Glance does not use the GitHub self-updater and does not request permission to install APK packages. The separately distributed GitHub build may include an optional GitHub release update checker and APK update flow.</p>
+<h2>Bug reports and contact</h2>
+<p>Home Glance can open GitHub Issues or the user's email app. The draft may contain basic technical information such as Home Glance version, Android version/API level and device manufacturer/model. Nothing is submitted automatically. Information is sent only if the user chooses to submit the issue or email.</p>
+<h2>Security</h2>
+<p>Network requests made directly by Home Glance use HTTPS.</p>
+<h2>Advertising, analytics and tracking</h2>
+<p>Home Glance does not include advertising SDKs, analytics SDKs or behavioral tracking. Home Glance does not sell user data.</p>
+<h2>Data deletion</h2>
+<p>Home Glance does not provide user accounts. Local Home Glance data can be removed using the app's factory-reset option, by clearing the app's storage in Android settings, or by uninstalling the app. Information voluntarily submitted to GitHub Issues or by email is handled by those services.</p>
+<h2>Changes</h2>
+<p>This policy may be updated when Home Glance changes features, permissions or third-party services.</p>
+<h2>Contact</h2>
+<p>Privacy questions: <a href="mailto:vanloocek@gmail.com">vanloocek@gmail.com</a></p>
+</body>
+</html>
