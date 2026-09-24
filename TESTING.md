@@ -52,6 +52,8 @@ When reporting a problem or sharing test results, please include:
 - Enable calendar integration
 - Select one or more calendars
 - Confirm the next relevant event appears
+- Add, edit and delete a calendar event while the widget is visible and confirm the widget refreshes automatically within a few seconds
+- Confirm calendar changes still refresh correctly after the phone has been idle for a while
 - Test Start time and Countdown modes
 - Test ongoing events
 - Test event location and calendar name display
