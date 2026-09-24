@@ -74,6 +74,6 @@ Home Glance jest niezależnym projektem i nie jest powiązany z Google, Pixel At
 - Package: `com.vanloocek.homeglance`
 - Min SDK: 26
 - Target SDK: 37
-- Version: 0.2.0
-- Version code: 7
+- Version: 0.2.1
+- Version code: 8
 - Default store language: English (United States)

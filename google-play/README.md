@@ -9,7 +9,6 @@ This folder is the central checklist and source-of-truth for publishing Home Gla
 - Store listing copy: `PLAY_STORE_LISTING.md`
 - Data Safety draft: `DATA_SAFETY_DRAFT.md`
 - App Content draft: `APP_CONTENT_DRAFT.md`
-- Release notes: `RELEASE_NOTES_0.2.0.md`
 - Screenshot capture plan: `screenshots/CAPTURE_CHECKLIST.md`
 - Public privacy page: https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html
 
@@ -18,8 +17,8 @@ This folder is the central checklist and source-of-truth for publishing Home Gla
 Upload the signed `playRelease` AAB. The Play flavor disables the GitHub self-updater and does not request `REQUEST_INSTALL_PACKAGES`.
 
 Package: `com.vanloocek.homeglance`  
-Version: `0.2.0`  
-Version code: `7`  
+Version: `0.2.1`  
+Version code: `8`  
 Target SDK: `37`
 
 ## Screenshots

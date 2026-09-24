@@ -1,6 +1,6 @@
 # Google Play Data Safety — draft
 
-Based on the current Home Glance v0.2.0 Play flavor source. Re-check whenever networking, permissions or dependencies change.
+Based on the current Home Glance v0.2.1 Play flavor source. Re-check whenever networking, permissions or dependencies change.
 
 ## High-confidence answers
 
