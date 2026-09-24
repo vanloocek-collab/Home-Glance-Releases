@@ -13,7 +13,7 @@
   <link rel="icon" href="assets/home-glance-icon.webp" type="image/webp">
   <link rel="apple-touch-icon" href="assets/home-glance-icon.webp">
   <link rel="stylesheet" href="site.css?v=20260924-7">
-  <script src="site.js?v=20260924-5" defer></script>
+  <script src="site.js?v=20260924-6" defer></script>
 </head>
 <body>
   <div class="page-glow page-glow-a" aria-hidden="true"></div>
@@ -465,38 +465,38 @@
     <div class="release-modal-shell">
       <header class="release-modal-header">
         <div>
-          <p class="kicker">FULL RELEASE NOTES</p>
+          <p class="kicker" data-i18n="fullRelease.kicker">FULL RELEASE NOTES</p>
           <h2 id="full-release-modal-title">Home Glance v0.2.1</h2>
-          <p>Original release text from the published GitHub release.</p>
+          <p data-i18n="fullRelease.lead">Original release text from the published GitHub release.</p>
         </div>
-        <button class="release-modal-close" type="button" aria-label="Close full release notes" data-full-release-modal-close>×</button>
+        <button class="release-modal-close" type="button" aria-label="Close full release notes" data-i18n-aria="fullRelease.close" data-full-release-modal-close>×</button>
       </header>
 
       <div class="release-modal-body full-release-copy">
-        <p>Home Glance v0.2.1 is a focused reliability update for calendar refresh and widget text animation.</p>
+        <p data-i18n="fullRelease.intro">Home Glance v0.2.1 is a focused reliability update for calendar refresh and widget text animation.</p>
 
-        <h3>What's new</h3>
+        <h3 data-i18n="fullRelease.whatsNew">What's new</h3>
         <ul>
-          <li>Calendar changes can now refresh the widget automatically instead of waiting for the regular 30-minute widget update window</li>
-          <li>Added Android Calendar provider change monitoring using a content-triggered background job</li>
-          <li>Calendar event and reminder changes are debounced briefly before refresh so related provider writes can settle</li>
-          <li>Fixed clipped standard-mode widget text showing an unwanted ellipsis</li>
-          <li>Fixed a first-cycle long-text scrolling glitch that could briefly show two calendar text layers after dismissing a smart weather insight</li>
-          <li>Preserved the existing 30-minute system widget refresh as a fallback</li>
+          <li data-i18n="fullRelease.item1">Calendar changes can now refresh the widget automatically instead of waiting for the regular 30-minute widget update window</li>
+          <li data-i18n="fullRelease.item2">Added Android Calendar provider change monitoring using a content-triggered background job</li>
+          <li data-i18n="fullRelease.item3">Calendar event and reminder changes are debounced briefly before refresh so related provider writes can settle</li>
+          <li data-i18n="fullRelease.item4">Fixed clipped standard-mode widget text showing an unwanted ellipsis</li>
+          <li data-i18n="fullRelease.item5">Fixed a first-cycle long-text scrolling glitch that could briefly show two calendar text layers after dismissing a smart weather insight</li>
+          <li data-i18n="fullRelease.item6">Preserved the existing 30-minute system widget refresh as a fallback</li>
         </ul>
 
-        <h3>Testing focus</h3>
-        <p>Please pay particular attention to:</p>
+        <h3 data-i18n="fullRelease.testingFocus">Testing focus</h3>
+        <p data-i18n="fullRelease.attention">Please pay particular attention to:</p>
         <ul>
-          <li>adding a new calendar event while the widget is visible</li>
-          <li>editing an existing event</li>
-          <li>deleting an event</li>
-          <li>changing an event reminder</li>
-          <li>dismissing a smart weather insight while calendar scrolling is enabled</li>
-          <li>long text in Standard weather mode</li>
+          <li data-i18n="fullRelease.test1">adding a new calendar event while the widget is visible</li>
+          <li data-i18n="fullRelease.test2">editing an existing event</li>
+          <li data-i18n="fullRelease.test3">deleting an event</li>
+          <li data-i18n="fullRelease.test4">changing an event reminder</li>
+          <li data-i18n="fullRelease.test5">dismissing a smart weather insight while calendar scrolling is enabled</li>
+          <li data-i18n="fullRelease.test6">long text in Standard weather mode</li>
         </ul>
 
-        <p class="full-release-final">Home Glance remains in public testing. Feedback and bug reports are welcome.</p>
+        <p class="full-release-final" data-i18n="fullRelease.final">Home Glance remains in public testing. Feedback and bug reports are welcome.</p>
       </div>
     </div>
   </dialog>
