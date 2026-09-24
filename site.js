@@ -70,13 +70,13 @@
       },
       new: {
         kicker: "What’s new",
-        title: "A major step forward in",
-        lead: "The biggest Home Glance update so far focuses on a cleaner app, better widget behaviour and more control over how your information appears.",
-        item1: "Redesigned Bento-style app dashboard",
-        item2: "Per-line scrolling with configurable pauses",
-        item3: "Material You and Liquid Glass widget backgrounds",
-        item4: "Next-alarm support and better narrow-widget behaviour",
-        item5: "Quick widget refresh with real completion feedback",
+        title: "A reliability-focused update in",
+        lead: "Home Glance v0.2.1 focuses on faster calendar reactions and smoother widget text behaviour.",
+        item1: "Calendar changes can refresh the widget within seconds",
+        item2: "Automatic calendar provider change monitoring",
+        item3: "Fixed unwanted ellipsis in Standard weather text",
+        item4: "Fixed the first-cycle duplicate calendar ticker layer",
+        item5: "30-minute Android widget refresh remains as a fallback",
         notes: "Read full release notes",
         refreshMock: "Refresh widget"
       },
@@ -103,7 +103,7 @@
       languages: { kicker: "11 languages", title: "Made for more Android users." },
       faq: {
         title: "Good to know before installing.",
-        q1: "Can I install v0.2.0 over an older version?",
+        q1: "Can I install v0.2.1 over an older version?",
         a1: "Yes. Home Glance can update over previous versions without removing the app, and existing settings and widget configuration are preserved.",
         q2: "Does Home Glance contain ads?",
         a2: "No. Home Glance is free and does not include advertising.",
@@ -194,13 +194,13 @@
       },
       new: {
         kicker: "Co nowego",
-        title: "Duży krok naprzód w",
-        lead: "Największa dotąd aktualizacja Home Glance skupia się na czystszej aplikacji, lepszym zachowaniu widżetu i większej kontroli nad prezentacją informacji.",
-        item1: "Przeprojektowany ekran główny aplikacji w stylu Bento",
-        item2: "Przewijanie każdej linii osobno z regulacją przerw",
-        item3: "Tła widżetu Material You i Liquid Glass",
-        item4: "Obsługa najbliższego alarmu i lepsze działanie w wąskim widżecie",
-        item5: "Szybkie odświeżanie widżetu z prawdziwym potwierdzeniem zakończenia",
+        title: "Aktualizacja niezawodności w",
+        lead: "Home Glance v0.2.1 skupia się na szybszej reakcji kalendarza i płynniejszym działaniu tekstu widżetu.",
+        item1: "Zmiany kalendarza mogą odświeżać widżet w ciągu kilku sekund",
+        item2: "Automatyczne monitorowanie zmian w kalendarzu Androida",
+        item3: "Usunięto niechciane wielokropki w trybie Standard pogody",
+        item4: "Naprawiono podwójną warstwę pierwszego przewinięcia kalendarza",
+        item5: "30-minutowe systemowe odświeżanie pozostaje jako zabezpieczenie"
         notes: "Zobacz pełne informacje o wydaniu",
         refreshMock: "Odśwież widget"
       },
@@ -227,7 +227,7 @@
       languages: { kicker: "11 języków", title: "Dla jeszcze większej liczby użytkowników Androida." },
       faq: {
         title: "Warto wiedzieć przed instalacją.",
-        q1: "Czy mogę zainstalować v0.2.0 na starszej wersji?",
+        q1: "Czy mogę zainstalować v0.2.1 na starszej wersji?",
         a1: "Tak. Home Glance aktualizuje się bez usuwania poprzedniej wersji, a istniejące ustawienia i konfiguracja widżetu zostają zachowane.",
         q2: "Czy Home Glance zawiera reklamy?",
         a2: "Nie. Home Glance jest bezpłatny i nie zawiera reklam.",
@@ -336,7 +336,7 @@
       const latest = releases.find((release) => !release.draft);
       if (!latest) return;
 
-      const version = latest.tag_name || "0.2.0";
+      const version = latest.tag_name || "0.2.1";
       const apk = (latest.assets || []).find((asset) =>
         asset.name && asset.name.toLowerCase().endsWith(".apk") &&
         !asset.name.toLowerCase().includes("debug")

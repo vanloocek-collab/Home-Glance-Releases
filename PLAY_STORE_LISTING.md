@@ -92,7 +92,7 @@ Limit Google Play: 4000 znaków.
 - Polish localization: planned
 - Distribution: Free
 - Ads: None
-- Current public test version: v0.2.0
+- Current public test version: v0.2.1
 - Android support: Android 8.0+ (minSdk 26)
 - Google Play package name: `com.vanloocek.homeglance`
 - Developer name: `vanloocek`
