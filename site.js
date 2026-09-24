@@ -451,6 +451,33 @@
     sections.forEach((section) => observer.observe(section));
   };
 
+
+  const initReleaseModal = () => {
+    const dialog = document.querySelector(".release-modal");
+    if (!dialog || typeof dialog.showModal !== "function") return;
+
+    const openers = document.querySelectorAll("[data-release-modal-open]");
+    const closer = dialog.querySelector("[data-release-modal-close]");
+    const downloadLink = dialog.querySelector("[data-release-modal-download]");
+
+    openers.forEach((opener) => {
+      opener.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (!dialog.open) dialog.showModal();
+      });
+    });
+
+    closer?.addEventListener("click", () => dialog.close());
+
+    downloadLink?.addEventListener("click", () => {
+      dialog.close();
+    });
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  };
+
   const initLightbox = () => {
     const dialog = document.querySelector(".lightbox");
     if (!dialog || typeof dialog.showModal !== "function") return;
@@ -488,5 +515,6 @@
   initReveal();
   initActiveNavigation();
   initLightbox();
+  initReleaseModal();
   initReleaseMetadata();
 })();
