@@ -2102,7 +2102,7 @@ html { scroll-behavior: smooth; }
 .flag-ru { background: linear-gradient(to bottom, #fff 0 33.33%, #0039a6 33.33% 66.66%, #d52b1e 66.66%); }
 
 .flag-ptbr {
-  background: url("assets/flags/pt-br-split.svg") center / cover no-repeat;
+  background: url("assets/flags/pt-br-split.svg?v=20260924-2") center / cover no-repeat;
 }
 
 .flag-cn { background: #de2910; }
