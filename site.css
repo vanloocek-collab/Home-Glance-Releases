@@ -253,26 +253,30 @@ html[data-theme="dark"] .theme-icon-dark { opacity: 1; transform: scale(1) rotat
   border-radius: 50%;
   background: #58c98c;
   box-shadow: 0 0 0 5px rgba(88,201,140,.10);
-  animation: release-dot-pulse 1.8s ease-in-out infinite;
 }
 
-@keyframes release-dot-pulse {
+.release-pill {
+  animation: release-pill-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes release-pill-pulse {
   0%, 100% {
-    opacity: .55;
-    box-shadow: 0 0 0 4px rgba(88,201,140,.08);
+    border-color: var(--line);
+    background: var(--surface);
+    box-shadow: 0 0 0 rgba(88,201,140,0);
   }
   50% {
-    opacity: 1;
+    border-color: rgba(88,201,140,.58);
+    background: rgba(88,201,140,.09);
     box-shadow:
-      0 0 0 6px rgba(88,201,140,.12),
-      0 0 12px rgba(88,201,140,.32);
+      0 0 0 4px rgba(88,201,140,.07),
+      0 0 18px rgba(88,201,140,.18);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .release-dot {
+  .release-pill {
     animation: none;
-    opacity: 1;
   }
 }
 
@@ -1251,4 +1255,11 @@ nav a.active::after {
     flex-basis: 28px;
     border-radius: 8px;
   }
+}
+
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
