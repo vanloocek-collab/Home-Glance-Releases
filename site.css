@@ -706,15 +706,6 @@ h3 { margin-bottom: 9px; font-size: 20px; line-height: 1.15; letter-spacing: -.0
 }
 .language-card h2 { margin-bottom: 0; }
 .language-cloud { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 9px; }
-.language-cloud span {
-  padding: 8px 11px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface-soft);
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 700;
-}
 
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .faq-item {
@@ -2283,5 +2274,54 @@ html { scroll-behavior: smooth; }
     height: 6px;
     left: 6px;
     top: 3px;
+  }
+}
+
+
+/* Language pills cleanup */
+.language-cloud {
+  max-width: 650px;
+  margin-left: auto;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.language-pill {
+  min-height: 38px;
+  padding: 8px 12px;
+  gap: 8px;
+}
+
+.language-pill > span:not(.flag) {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.2;
+}
+
+.language-pill .flag,
+.language-menu-item .flag,
+.language-menu-toggle .flag {
+  padding: 0 !important;
+  border: 0 !important;
+  background-clip: border-box;
+}
+
+.language-pill .flag {
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), 0 1px 2px rgba(0,0,0,.20);
+}
+
+.language-pill.active {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+@media (max-width: 980px) {
+  .language-cloud {
+    max-width: none;
+    margin-left: 0;
+    justify-content: flex-start;
   }
 }
