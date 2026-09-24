@@ -58,13 +58,15 @@ Please check whether a similar issue or feature request already exists.
 
 If it does, add useful information to the existing issue instead of creating a duplicate.
 
-## Privacy
+## Privacy and security
 
 Do not include private or sensitive information in public GitHub Issues, screenshots or logs.
 
 See:
 
-[Home Glance Privacy Policy](PRIVACY.md)
+- [Home Glance Privacy Policy](PRIVACY.md)
+- [Security Policy](SECURITY.md)
+- [Support Guide](SUPPORT.md)
 
 ## Development direction
 
