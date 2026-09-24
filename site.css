@@ -1186,8 +1186,7 @@ nav a.active::after {
 /* Panel-scroll motion */
 @media (min-width: 981px) and (pointer: fine) {
   html.panel-scroll-enabled {
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    scroll-behavior: auto;
   }
 
   html.panel-scroll-enabled body {
@@ -1196,17 +1195,10 @@ nav a.active::after {
 
   .scroll-panel {
     min-height: calc(100svh - 74px);
-    scroll-margin-top: 74px;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
   }
 
   .hero.scroll-panel {
     min-height: calc(100svh - 74px);
-  }
-
-  .compact-panel {
-    min-height: auto;
   }
 
   .scroll-panel.panel-entering {

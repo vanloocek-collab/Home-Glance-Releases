@@ -409,9 +409,10 @@
     const desktop = window.matchMedia("(min-width: 981px) and (pointer: fine)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const root = document.documentElement;
+    const header = document.querySelector(".site-header");
     const progress = document.querySelector(".panel-progress");
+
     let panels = [];
-    let currentIndex = 0;
     let locked = false;
     let unlockTimer = 0;
     let accumulatedDelta = 0;
@@ -424,14 +425,20 @@
       });
     };
 
+    const headerHeight = () => header ? header.offsetHeight : 0;
+
+    const panelTop = (panel) =>
+      Math.max(0, Math.round(panel.getBoundingClientRect().top + window.scrollY - headerHeight()));
+
     const nearestPanelIndex = () => {
       if (!panels.length) return 0;
-      const anchor = window.scrollY + 90;
+
+      const y = window.scrollY;
       let bestIndex = 0;
       let bestDistance = Infinity;
 
       panels.forEach((panel, index) => {
-        const distance = Math.abs(panel.offsetTop - anchor);
+        const distance = Math.abs(panelTop(panel) - y);
         if (distance < bestDistance) {
           bestDistance = distance;
           bestIndex = index;
@@ -443,8 +450,8 @@
 
     const updateProgress = () => {
       if (!progress || !panels.length) return;
-      currentIndex = nearestPanelIndex();
-      const value = panels.length <= 1 ? 1 : (currentIndex + 1) / panels.length;
+      const index = nearestPanelIndex();
+      const value = panels.length <= 1 ? 1 : (index + 1) / panels.length;
       progress.style.setProperty("--panel-progress", String(value));
     };
 
@@ -458,53 +465,49 @@
 
     const goToPanel = (index) => {
       if (!panels.length) return;
+
       const nextIndex = Math.max(0, Math.min(index, panels.length - 1));
       const target = panels[nextIndex];
       if (!target) return;
 
       locked = true;
-      currentIndex = nextIndex;
       accumulatedDelta = 0;
 
-      target.scrollIntoView({
-        behavior: reducedMotion.matches ? "auto" : "smooth",
-        block: "start"
+      window.scrollTo({
+        top: panelTop(target),
+        behavior: reducedMotion.matches ? "auto" : "smooth"
       });
 
       animatePanel(target);
-      updateProgress();
 
       window.clearTimeout(unlockTimer);
       unlockTimer = window.setTimeout(() => {
         locked = false;
-      }, reducedMotion.matches ? 120 : 720);
+        updateProgress();
+      }, reducedMotion.matches ? 100 : 820);
     };
 
     const isInteractiveTarget = (target) =>
       target instanceof Element &&
-      Boolean(target.closest("dialog[open], details[open], input, textarea, select"));
+      Boolean(target.closest("dialog[open], input, textarea, select"));
 
     const onWheel = (event) => {
       if (!desktop.matches || reducedMotion.matches || isInteractiveTarget(event.target)) return;
       if (Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
 
+      event.preventDefault();
+      if (locked) return;
+
       accumulatedDelta += event.deltaY;
       window.clearTimeout(accumulationTimer);
       accumulationTimer = window.setTimeout(() => {
         accumulatedDelta = 0;
-      }, 180);
+      }, 160);
 
-      if (Math.abs(accumulatedDelta) < 46) {
-        event.preventDefault();
-        return;
-      }
-
-      event.preventDefault();
-      if (locked) return;
+      if (Math.abs(accumulatedDelta) < 38) return;
 
       refreshPanels();
-      currentIndex = nearestPanelIndex();
-
+      const currentIndex = nearestPanelIndex();
       const direction = accumulatedDelta > 0 ? 1 : -1;
       goToPanel(currentIndex + direction);
     };
@@ -519,14 +522,16 @@
 
       event.preventDefault();
       if (locked) return;
+
       refreshPanels();
-      currentIndex = nearestPanelIndex();
+      const currentIndex = nearestPanelIndex();
       goToPanel(currentIndex + (forward ? 1 : -1));
     };
 
     const applyMode = () => {
       refreshPanels();
-      root.classList.toggle("panel-scroll-enabled", desktop.matches && !reducedMotion.matches);
+      const enabled = desktop.matches && !reducedMotion.matches;
+      root.classList.toggle("panel-scroll-enabled", enabled);
       updateProgress();
     };
 
