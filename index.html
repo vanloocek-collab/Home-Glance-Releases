@@ -12,8 +12,8 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/vanloocek-collab/Home-Glance-Releases/main/screenshots/home-glance-home.jpg">
   <link rel="icon" href="assets/home-glance-icon.webp" type="image/webp">
   <link rel="apple-touch-icon" href="assets/home-glance-icon.webp">
-  <link rel="stylesheet" href="site.css?v=20260924-4">
-  <script src="site.js" defer></script>
+  <link rel="stylesheet" href="site.css?v=20260924-5">
+  <script src="site.js?v=20260924-2" defer></script>
 </head>
 <body>
   <div class="page-glow page-glow-a" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
         <p class="lead" data-i18n="hero.lead">Weather, calendar events, next alarm and smart context in a clean Android widget built to feel at home on modern launchers.</p>
 
         <div class="hero-actions">
-          <a class="button secondary" data-release-url href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.1">
+          <a class="button secondary" href="#release-notes">
             <span data-i18n="hero.releaseNotes">Release notes</span>
           </a>
         </div>
@@ -258,7 +258,7 @@
             <div><span>05</span><p data-i18n="new.item5">30-minute Android widget refresh remains as a fallback</p></div>
           </div>
 
-          <a class="text-link" data-release-url href="https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.1">
+          <a class="text-link" href="#release-notes">
             <span data-i18n="new.notes">Read full release notes</span>
             <span aria-hidden="true">→</span>
           </a>
@@ -284,6 +284,55 @@
       </div>
     </section>
 
+
+    <section id="release-notes" class="section wrap release-notes-section">
+      <div class="release-notes-head reveal">
+        <div>
+          <p class="kicker" data-i18n="releaseDetails.kicker">Release notes</p>
+          <h2 data-i18n="releaseDetails.title">Home Glance v0.2.1</h2>
+          <p data-i18n="releaseDetails.lead">A focused reliability update for calendar refresh and widget text animation.</p>
+        </div>
+        <div class="release-notes-version" aria-label="Release version">
+          <span class="release-dot" aria-hidden="true"></span>
+          <strong data-release-version>v0.2.1</strong>
+          <span data-i18n="releaseDetails.publicTest">Public test</span>
+        </div>
+      </div>
+
+      <div class="release-notes-grid">
+        <article class="release-note-card reveal">
+          <div class="release-note-number">01</div>
+          <h3 data-i18n="releaseDetails.changesTitle">What changed</h3>
+          <ul>
+            <li data-i18n="releaseDetails.change1">Calendar changes can refresh the widget automatically instead of waiting for the regular update window.</li>
+            <li data-i18n="releaseDetails.change2">Added Android Calendar provider change monitoring using a content-triggered background job.</li>
+            <li data-i18n="releaseDetails.change3">Calendar event and reminder changes are briefly debounced before refresh.</li>
+            <li data-i18n="releaseDetails.change4">Fixed clipped Standard weather text showing an unwanted ellipsis.</li>
+            <li data-i18n="releaseDetails.change5">Fixed a first-cycle long-text scrolling glitch that could briefly show two calendar text layers.</li>
+            <li data-i18n="releaseDetails.change6">The 30-minute system widget refresh remains as a fallback.</li>
+          </ul>
+        </article>
+
+        <article class="release-note-card release-note-card-accent reveal">
+          <div class="release-note-number">02</div>
+          <h3 data-i18n="releaseDetails.testingTitle">Testing focus</h3>
+          <ul>
+            <li data-i18n="releaseDetails.test1">Add a new calendar event while the widget is visible.</li>
+            <li data-i18n="releaseDetails.test2">Edit an existing event.</li>
+            <li data-i18n="releaseDetails.test3">Delete an event.</li>
+            <li data-i18n="releaseDetails.test4">Change an event reminder.</li>
+            <li data-i18n="releaseDetails.test5">Dismiss a smart weather insight while calendar scrolling is enabled.</li>
+            <li data-i18n="releaseDetails.test6">Check long text in Standard weather mode.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="release-notes-foot reveal">
+        <p data-i18n="releaseDetails.status">Home Glance remains in public testing. Feedback and bug reports are welcome.</p>
+        <a class="button secondary compact-button" href="#download" data-i18n="releaseDetails.download">Go to download</a>
+      </div>
+    </section>
+
     <section id="screenshots" class="section wrap">
       <div class="section-heading compact reveal">
         <p class="kicker" data-i18n="screenshots.kicker">See it in action</p>
@@ -292,7 +341,7 @@
       </div>
 
       <div class="shot-grid">
-        <button class="shot-card reveal" type="button" data-lightbox="screenshots/home-glance-home.jpg" data-lightbox-caption="screenshots.home">
+        <button class="shot-card shot-featured reveal" type="button" data-lightbox="screenshots/home-glance-home.jpg" data-lightbox-caption="screenshots.home">
           <img src="screenshots/home-glance-home.jpg" alt="Home Glance main screen" data-i18n-alt="screenshots.homeAlt">
           <span data-i18n="screenshots.home">Home</span>
         </button>
@@ -373,7 +422,6 @@
             <span class="button-icon" aria-hidden="true">↓</span>
             <span data-i18n="download.button">Download APK</span>
           </a>
-          <a class="button ghost-light" href="https://github.com/vanloocek-collab/Home-Glance-Releases/issues" data-i18n="download.feedback">Feedback & issues</a>
         </div>
       </div>
     </section>
@@ -397,6 +445,7 @@
       </div>
 
       <div class="footer-links">
+        <a href="https://github.com/vanloocek-collab/Home-Glance-Releases/issues" data-i18n="footer.feedback">Feedback & issues</a>
         <a href="PRIVACY.md" data-i18n="footer.privacy">Privacy</a>
         <a href="ROADMAP.md" data-i18n="footer.roadmap">Roadmap</a>
         <a href="TESTING.md" data-i18n="footer.testing">Testing</a>
