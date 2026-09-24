@@ -2051,3 +2051,275 @@ html { scroll-behavior: smooth; }
     font-size: 10px;
   }
 }
+
+
+/* Unified footer links, app icon shape and country flags */
+.footer-links a,
+.footer-links a:first-child {
+  color: var(--muted);
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.brand-icon,
+.mock-head img,
+.footer-brand img,
+.footer-grid .creator-credit .creator-avatar {
+  border-radius: 30% !important;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* CSS-drawn flags so they render consistently on Windows, Android and macOS. */
+.flag {
+  width: 20px;
+  height: 14px;
+  flex: 0 0 20px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.20), 0 1px 2px rgba(0,0,0,.18);
+  vertical-align: middle;
+}
+
+.flag-us {
+  background:
+    repeating-linear-gradient(to bottom, #b22234 0 7.69%, #fff 7.69% 15.38%);
+}
+.flag-us::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42%;
+  height: 54%;
+  background: #3c3b6e;
+}
+
+.flag-gb {
+  background:
+    linear-gradient(33deg, transparent 42%, #fff 42% 58%, transparent 58%),
+    linear-gradient(-33deg, transparent 42%, #fff 42% 58%, transparent 58%),
+    linear-gradient(90deg, transparent 39%, #fff 39% 61%, transparent 61%),
+    linear-gradient(transparent 34%, #fff 34% 66%, transparent 66%),
+    linear-gradient(90deg, transparent 45%, #c8102e 45% 55%, transparent 55%),
+    linear-gradient(transparent 42%, #c8102e 42% 58%, transparent 58%),
+    #012169;
+}
+
+.flag-pl { background: linear-gradient(to bottom, #fff 0 50%, #dc143c 50%); }
+.flag-de { background: linear-gradient(to bottom, #111 0 33.33%, #dd0000 33.33% 66.66%, #ffce00 66.66%); }
+.flag-es { background: linear-gradient(to bottom, #aa151b 0 25%, #f1bf00 25% 75%, #aa151b 75%); }
+.flag-fr { background: linear-gradient(to right, #0055a4 0 33.33%, #fff 33.33% 66.66%, #ef4135 66.66%); }
+.flag-it { background: linear-gradient(to right, #009246 0 33.33%, #fff 33.33% 66.66%, #ce2b37 66.66%); }
+.flag-ru { background: linear-gradient(to bottom, #fff 0 33.33%, #0039a6 33.33% 66.66%, #d52b1e 66.66%); }
+
+.flag-br { background: #009c3b; }
+.flag-br::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 5px;
+  top: 2px;
+  background: #ffdf00;
+  transform: rotate(45deg);
+}
+.flag-br::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 7px;
+  top: 4px;
+  border-radius: 50%;
+  background: #002776;
+}
+
+.flag-cn { background: #de2910; }
+.flag-cn::before {
+  content: "★";
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  color: #ffde00;
+  font-size: 8px;
+  line-height: 1;
+}
+
+.flag-jp { background: #fff; }
+.flag-jp::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 6.5px;
+  top: 3.5px;
+  border-radius: 50%;
+  background: #bc002d;
+}
+
+/* Reusable diagonal split flag for future combined country/region entries.
+   Use two absolutely positioned .flag-half elements with .flag-half-a/.flag-half-b. */
+.flag-split .flag-half {
+  position: absolute;
+  inset: 0;
+}
+.flag-split .flag-half-a {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.flag-split .flag-half-b {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* Custom language menu with flags */
+.language-menu {
+  position: relative;
+}
+
+.language-menu > summary {
+  list-style: none;
+}
+
+.language-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu-toggle {
+  min-width: 150px;
+  height: 38px;
+  padding: 0 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+}
+
+.language-menu-toggle .language-chevron {
+  margin-left: auto;
+  color: var(--muted);
+  transition: transform .18s ease;
+}
+
+.language-menu[open] .language-chevron {
+  transform: rotate(180deg);
+}
+
+.language-menu-list {
+  width: 220px;
+  max-height: 360px;
+  padding: 7px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 9px);
+  z-index: 100;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--bg-elevated) 96%, transparent);
+  box-shadow: 0 22px 60px rgba(0,0,0,.28);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.language-menu-item {
+  width: 100%;
+  padding: 9px 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 11px;
+  background: transparent;
+  color: var(--muted);
+  text-align: left;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.language-menu-item:hover,
+.language-menu-item.active {
+  color: var(--text);
+  background: var(--surface-strong);
+}
+
+.language-cloud {
+  align-items: center;
+}
+
+.language-pill {
+  padding: 8px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-pill:hover,
+.language-pill.active {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--primary) 28%, var(--line));
+  background: color-mix(in srgb, var(--surface-strong) 94%, var(--primary) 6%);
+}
+
+@media (max-width: 650px) {
+  .language-menu-toggle {
+    min-width: 112px;
+    max-width: 128px;
+    padding: 0 8px;
+  }
+
+  .language-menu-toggle [data-current-language-label] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .language-menu-list {
+    width: 205px;
+  }
+
+  .flag {
+    width: 18px;
+    height: 12px;
+    flex-basis: 18px;
+  }
+
+  .flag-br::before {
+    width: 9px;
+    height: 9px;
+    left: 4.5px;
+    top: 1.5px;
+  }
+
+  .flag-br::after {
+    width: 5px;
+    height: 5px;
+    left: 6.5px;
+    top: 3.5px;
+  }
+
+  .flag-jp::before {
+    width: 6px;
+    height: 6px;
+    left: 6px;
+    top: 3px;
+  }
+}
