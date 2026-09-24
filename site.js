@@ -1,75 +1,109 @@
 (() => {
-  const STORAGE_KEY = "home-glance-language";
+  const LANGUAGE_KEY = "home-glance-language";
+  const THEME_KEY = "home-glance-theme";
   const supportedLanguages = ["en", "pl"];
 
   const translations = {
     en: {
       page: {
         title: "Home Glance — Weather and calendar at a glance",
-        description: "Home Glance is a lightweight, customizable Android home-screen widget for weather and calendar information.",
-        ogDescription: "A modern Android home-screen widget for weather and calendar information."
+        description: "Home Glance is a lightweight, customizable Android home-screen widget for weather, calendar events and contextual information.",
+        ogDescription: "A modern, customizable Android home-screen widget inspired by Pixel At a Glance."
       },
-      nav: {
-        features: "Features",
-        screenshots: "Screenshots",
-        about: "About",
-        download: "Download"
-      },
+      nav: { features: "Features", whatsNew: "What’s new", screenshots: "Screenshots", faq: "FAQ", download: "Download" },
+      theme: { toggle: "Toggle light and dark theme" },
       hero: {
-        eyebrow: "Public test · v0.2.0",
-        title: "Your weather and calendar.<br><span>At a glance.</span>",
-        lead: "Home Glance is a lightweight, customizable Android home-screen widget inspired by the simplicity of Another Widget and the Pixel At a Glance experience.",
+        eyebrow: "Public test",
+        title: "Your day.<br><span>At a glance.</span>",
+        lead: "Weather, calendar events, next alarm and smart context in a clean Android widget built to feel at home on modern launchers.",
         download: "Download APK",
-        github: "View on GitHub",
-        note: "Android 8.0+ · Free · No ads · Public testing",
-        imageAlt: "Home Glance widget displayed on an Android home screen"
+        releaseNotes: "Release notes",
+        free: "Free",
+        noAds: "No ads",
+        languages: "languages",
+        imageAlt: "Home Glance widget displayed on an Android home screen",
+        weatherCard: "Weather",
+        weatherCardSub: "Smart details",
+        calendarCard: "Calendar",
+        calendarCardSub: "Next event",
+        styleCardSub: "Adaptive style"
+      },
+      trust: {
+        lightweight: "Lightweight",
+        lightweightSub: "Focused on the home screen",
+        customizable: "Customizable",
+        customizableSub: "Text, layout, scrolling and backgrounds",
+        compatible: "Broad compatibility",
+        compatibleSub: "Built for different devices and launchers"
       },
       features: {
         kicker: "Built for the home screen",
         title: "Useful information without the clutter.",
-        lead: "Weather, calendar events, next alarm and smart context in a clean widget you can make your own.",
+        lead: "A compact widget with the details you want, only when you want them.",
         weatherTitle: "Weather that adapts",
-        weatherText: "Current conditions, automatic or manual location, smart refresh intervals and dynamic weather details.",
+        weatherText: "Current conditions, automatic or manual location, smart refresh intervals, dynamic details and contextual insights.",
         calendarTitle: "Calendar at a glance",
-        calendarText: "Upcoming events, selectable calendars, countdowns, ongoing events, event location and flexible filters.",
-        customTitle: "Make it yours",
-        customText: "Choose font style, text size, alignment, date formatting, per-line scrolling and Material You or Liquid Glass backgrounds.",
-        smartTitle: "Smart weather insights",
-        smartText: "Helpful contextual alerts for rain, snow, thunderstorms, strong wind, heat and frost."
+        calendarText: "Upcoming events, selected calendars, countdowns, ongoing events and flexible filters.",
+        alarmTitle: "Next alarm",
+        alarmText: "Keep the next system alarm beside your date, updated automatically when the alarm changes.",
+        customTitle: "Make every line yours",
+        customText: "Choose font, size, alignment and independent scrolling for date/alarm, weather and calendar.",
+        materialText: "Use system-inspired colors that blend naturally with your Android setup.",
+        glassText: "A translucent glass-style background with adjustable wallpaper visibility."
+      },
+      new: {
+        kicker: "What’s new",
+        title: "A major step forward in",
+        lead: "The biggest Home Glance update so far focuses on a cleaner app, better widget behaviour and more control over how your information appears.",
+        item1: "Redesigned Bento-style app dashboard",
+        item2: "Per-line scrolling with configurable pauses",
+        item3: "Material You and Liquid Glass widget backgrounds",
+        item4: "Next-alarm support and better narrow-widget behaviour",
+        item5: "Quick widget refresh with real completion feedback",
+        notes: "Read full release notes",
+        refreshMock: "Refresh widget"
       },
       screenshots: {
         kicker: "See it in action",
         title: "Simple outside. Powerful inside.",
+        lead: "Tap a screenshot to see it larger.",
         home: "Home",
         appearance: "Appearance",
         smart: "Smart weather",
         calendar: "Calendar",
-        homeAlt: "Home Glance main settings screen",
+        homeAlt: "Home Glance main screen",
         appearanceAlt: "Home Glance appearance settings",
         smartAlt: "Home Glance smart weather settings",
         calendarAlt: "Home Glance calendar settings"
       },
       about: {
         kicker: "Why Home Glance?",
-        title: "A modern spiritual successor to Another Widget.",
+        title: "A familiar idea, rebuilt for modern Android.",
         p1: "Home Glance started from a simple idea: keep the clean, useful home-screen experience that made Another Widget so appealing, while bringing it forward for modern Android.",
         p2: "The project focuses on useful information at a glance, strong customization, broad device compatibility and active development.",
         disclaimer: "Home Glance is an independent project and is not affiliated with Another Widget."
       },
-      languages: {
-        kicker: "11 languages",
-        title: "Made for more Android users.",
-        list: "English (US), English (UK), Polski, Deutsch, Español, Français, Italiano, Português (Brasil), Русский, 简体中文 and 日本語."
+      languages: { kicker: "11 languages", title: "Made for more Android users." },
+      faq: {
+        title: "Good to know before installing.",
+        q1: "Can I install v0.2.0 over an older version?",
+        a1: "Yes. Home Glance can update over previous versions without removing the app, and existing settings and widget configuration are preserved.",
+        q2: "Does Home Glance contain ads?",
+        a2: "No. Home Glance is free and does not include advertising.",
+        q3: "Which Android versions are supported?",
+        a3: "Home Glance supports Android 8.0 (API 26) and newer.",
+        q4: "Is this a finished stable release?",
+        a4: "Not yet. Home Glance is still in public testing, so feedback and bug reports are especially useful."
       },
       download: {
-        kicker: "Try the public test",
+        latest: "Latest public test",
         title: "Bring Home Glance to your home screen.",
-        text: "Download the latest public test APK from GitHub and help shape what comes next.",
-        button: "Download v0.2.0",
+        text: "Download the APK from GitHub and help shape the next release.",
+        button: "Download APK",
         feedback: "Feedback & issues"
       },
       footer: {
-        text: "Weather and calendar information, right where you need it.",
+        text: "Useful information, right where you need it.",
         privacy: "Privacy",
         roadmap: "Roadmap",
         testing: "Testing",
@@ -80,70 +114,103 @@
     pl: {
       page: {
         title: "Home Glance — Pogoda i kalendarz na pierwszy rzut oka",
-        description: "Home Glance to lekki i konfigurowalny widżet ekranu głównego Androida z informacjami o pogodzie i wydarzeniach z kalendarza.",
-        ogDescription: "Nowoczesny widżet ekranu głównego Androida z pogodą i kalendarzem."
+        description: "Home Glance to lekki i konfigurowalny widżet Androida z pogodą, wydarzeniami z kalendarza i informacjami kontekstowymi.",
+        ogDescription: "Nowoczesny i konfigurowalny widżet ekranu głównego Androida inspirowany Pixel At a Glance."
       },
-      nav: {
-        features: "Funkcje",
-        screenshots: "Zrzuty ekranu",
-        about: "O projekcie",
-        download: "Pobierz"
-      },
+      nav: { features: "Funkcje", whatsNew: "Co nowego", screenshots: "Zrzuty", faq: "FAQ", download: "Pobierz" },
+      theme: { toggle: "Przełącz jasny i ciemny motyw" },
       hero: {
-        eyebrow: "Publiczne testy · v0.2.0",
-        title: "Pogoda i kalendarz.<br><span>Na pierwszy rzut oka.</span>",
-        lead: "Home Glance to lekki, konfigurowalny widżet ekranu głównego Androida, inspirowany prostotą Another Widget i rozwiązaniem Pixel At a Glance.",
+        eyebrow: "Publiczne testy",
+        title: "Twój dzień.<br><span>Na pierwszy rzut oka.</span>",
+        lead: "Pogoda, wydarzenia z kalendarza, najbliższy alarm i inteligentny kontekst w czystym widżecie Androida pasującym do nowoczesnych launcherów.",
         download: "Pobierz APK",
-        github: "Zobacz na GitHubie",
-        note: "Android 8.0+ · Bezpłatna · Bez reklam · Testy publiczne",
-        imageAlt: "Widżet Home Glance wyświetlany na ekranie głównym Androida"
+        releaseNotes: "Informacje o wydaniu",
+        free: "Bezpłatna",
+        noAds: "Bez reklam",
+        languages: "języków",
+        imageAlt: "Widżet Home Glance na ekranie głównym Androida",
+        weatherCard: "Pogoda",
+        weatherCardSub: "Inteligentne szczegóły",
+        calendarCard: "Kalendarz",
+        calendarCardSub: "Najbliższe wydarzenie",
+        styleCardSub: "Adaptacyjny styl"
+      },
+      trust: {
+        lightweight: "Lekki",
+        lightweightSub: "Skupiony na ekranie głównym",
+        customizable: "Konfigurowalny",
+        customizableSub: "Tekst, układ, przewijanie i tła",
+        compatible: "Szeroka zgodność",
+        compatibleSub: "Tworzony z myślą o różnych urządzeniach i launcherach"
       },
       features: {
         kicker: "Stworzony dla ekranu głównego",
         title: "Przydatne informacje bez zbędnego bałaganu.",
-        lead: "Pogoda, wydarzenia z kalendarza, najbliższy alarm i inteligentny kontekst w czystym widżecie, który możesz dopasować do siebie.",
+        lead: "Kompaktowy widżet pokazujący dokładnie te informacje, których potrzebujesz.",
         weatherTitle: "Pogoda, która się dostosowuje",
-        weatherText: "Aktualne warunki, automatyczna lub ręczna lokalizacja, inteligentne interwały odświeżania i dynamiczne szczegóły pogody.",
+        weatherText: "Aktualne warunki, automatyczna lub ręczna lokalizacja, inteligentne odświeżanie, dynamiczne szczegóły i wskazówki kontekstowe.",
         calendarTitle: "Kalendarz na pierwszy rzut oka",
-        calendarText: "Nadchodzące wydarzenia, wybór kalendarzy, odliczanie, trwające wydarzenia, lokalizacja i elastyczne filtry.",
-        customTitle: "Dopasuj go do siebie",
-        customText: "Wybierz krój i rozmiar tekstu, wyrównanie, format daty, przewijanie każdej linii oraz tła Material You lub Liquid Glass.",
-        smartTitle: "Inteligentne informacje pogodowe",
-        smartText: "Pomocne alerty kontekstowe o deszczu, śniegu, burzach, silnym wietrze, upale i mrozie."
+        calendarText: "Nadchodzące wydarzenia, wybrane kalendarze, odliczanie, trwające wydarzenia i elastyczne filtry.",
+        alarmTitle: "Najbliższy alarm",
+        alarmText: "Pokazuj najbliższy alarm obok daty i aktualizuj go automatycznie po zmianie alarmu systemowego.",
+        customTitle: "Dopasuj każdą linię",
+        customText: "Wybierz krój, rozmiar, wyrównanie i niezależne przewijanie daty/alarmu, pogody oraz kalendarza.",
+        materialText: "Korzystaj z kolorów inspirowanych systemem, które naturalnie pasują do Twojego Androida.",
+        glassText: "Półprzezroczyste tło w stylu szkła z regulacją przenikania tapety."
+      },
+      new: {
+        kicker: "Co nowego",
+        title: "Duży krok naprzód w",
+        lead: "Największa dotąd aktualizacja Home Glance skupia się na czystszej aplikacji, lepszym zachowaniu widżetu i większej kontroli nad prezentacją informacji.",
+        item1: "Przeprojektowany ekran główny aplikacji w stylu Bento",
+        item2: "Przewijanie każdej linii osobno z regulacją przerw",
+        item3: "Tła widżetu Material You i Liquid Glass",
+        item4: "Obsługa najbliższego alarmu i lepsze działanie w wąskim widżecie",
+        item5: "Szybkie odświeżanie widżetu z prawdziwym potwierdzeniem zakończenia",
+        notes: "Zobacz pełne informacje o wydaniu",
+        refreshMock: "Odśwież widget"
       },
       screenshots: {
         kicker: "Zobacz go w działaniu",
-        title: "Prosty z wyglądu. Rozbudowany w środku.",
+        title: "Prosty z zewnątrz. Rozbudowany w środku.",
+        lead: "Kliknij zrzut ekranu, aby zobaczyć go w większym rozmiarze.",
         home: "Ekran główny",
         appearance: "Wygląd",
         smart: "Inteligentna pogoda",
         calendar: "Kalendarz",
-        homeAlt: "Główny ekran ustawień Home Glance",
+        homeAlt: "Główny ekran Home Glance",
         appearanceAlt: "Ustawienia wyglądu Home Glance",
         smartAlt: "Ustawienia inteligentnej pogody Home Glance",
         calendarAlt: "Ustawienia kalendarza Home Glance"
       },
       about: {
         kicker: "Dlaczego Home Glance?",
-        title: "Nowoczesny następca idei Another Widget.",
+        title: "Znany pomysł zbudowany od nowa dla współczesnego Androida.",
         p1: "Home Glance powstał z prostej idei: zachować czyste i użyteczne doświadczenie ekranu głównego, za które użytkownicy polubili Another Widget, i przenieść je na współczesnego Androida.",
         p2: "Projekt skupia się na przydatnych informacjach dostępnych od razu, szerokiej personalizacji, dobrej zgodności z różnymi urządzeniami i aktywnym rozwoju.",
         disclaimer: "Home Glance jest niezależnym projektem i nie jest powiązany z Another Widget."
       },
-      languages: {
-        kicker: "11 języków",
-        title: "Dla jeszcze większej liczby użytkowników Androida.",
-        list: "English (US), English (UK), Polski, Deutsch, Español, Français, Italiano, Português (Brasil), Русский, 简体中文 i 日本語."
+      languages: { kicker: "11 języków", title: "Dla jeszcze większej liczby użytkowników Androida." },
+      faq: {
+        title: "Warto wiedzieć przed instalacją.",
+        q1: "Czy mogę zainstalować v0.2.0 na starszej wersji?",
+        a1: "Tak. Home Glance aktualizuje się bez usuwania poprzedniej wersji, a istniejące ustawienia i konfiguracja widżetu zostają zachowane.",
+        q2: "Czy Home Glance zawiera reklamy?",
+        a2: "Nie. Home Glance jest bezpłatny i nie zawiera reklam.",
+        q3: "Jakie wersje Androida są obsługiwane?",
+        a3: "Home Glance obsługuje Androida 8.0 (API 26) i nowsze wersje.",
+        q4: "Czy to już stabilne, finalne wydanie?",
+        a4: "Jeszcze nie. Home Glance nadal jest w publicznych testach, dlatego opinie i zgłoszenia błędów są szczególnie przydatne."
       },
       download: {
-        kicker: "Wypróbuj publiczną wersję testową",
+        latest: "Najnowsza wersja testowa",
         title: "Dodaj Home Glance do swojego ekranu głównego.",
-        text: "Pobierz najnowszą publiczną wersję testową APK z GitHuba i pomóż rozwijać kolejne wydania.",
-        button: "Pobierz v0.2.0",
+        text: "Pobierz APK z GitHuba i pomóż kształtować kolejne wydanie.",
+        button: "Pobierz APK",
         feedback: "Opinie i błędy"
       },
       footer: {
-        text: "Pogoda i kalendarz dokładnie tam, gdzie ich potrzebujesz.",
+        text: "Przydatne informacje dokładnie tam, gdzie ich potrzebujesz.",
         privacy: "Prywatność",
         roadmap: "Plan rozwoju",
         testing: "Testowanie",
@@ -152,19 +219,20 @@
     }
   };
 
+  let currentLanguage = "en";
+
   const getValue = (object, path) =>
     path.split(".").reduce((value, key) => value && value[key], object);
 
   const detectInitialLanguage = () => {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = localStorage.getItem(LANGUAGE_KEY);
     if (supportedLanguages.includes(saved)) return saved;
-
-    const browserLanguage = (navigator.language || "").toLowerCase();
-    return browserLanguage.startsWith("pl") ? "pl" : "en";
+    return (navigator.language || "").toLowerCase().startsWith("pl") ? "pl" : "en";
   };
 
   const applyLanguage = (language) => {
     const lang = supportedLanguages.includes(language) ? language : "en";
+    currentLanguage = lang;
     const dictionary = translations[lang];
 
     document.documentElement.lang = lang;
@@ -191,16 +259,124 @@
       if (typeof value === "string") element.setAttribute("alt", value);
     });
 
+    document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+      const value = getValue(dictionary, element.dataset.i18nAria);
+      if (typeof value === "string") element.setAttribute("aria-label", value);
+    });
+
     document.querySelectorAll(".language-option").forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.lang === lang));
     });
 
-    localStorage.setItem(STORAGE_KEY, lang);
+    localStorage.setItem(LANGUAGE_KEY, lang);
+  };
+
+  const getSystemDark = () =>
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const applyTheme = (theme) => {
+    const normalized = ["light", "dark", "system"].includes(theme) ? theme : "system";
+    document.documentElement.dataset.theme = normalized;
+
+    const effectiveDark = normalized === "dark" || (normalized === "system" && getSystemDark());
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.setAttribute("content", effectiveDark ? "#0e1118" : "#f5f6fb");
+
+    localStorage.setItem(THEME_KEY, normalized);
+  };
+
+  const toggleTheme = () => {
+    const current = document.documentElement.dataset.theme || "system";
+    const effectiveDark = current === "dark" || (current === "system" && getSystemDark());
+    applyTheme(effectiveDark ? "light" : "dark");
+  };
+
+  const initReleaseMetadata = async () => {
+    try {
+      const response = await fetch("https://api.github.com/repos/vanloocek-collab/Home-Glance-Releases/releases?per_page=10", {
+        headers: { Accept: "application/vnd.github+json" }
+      });
+      if (!response.ok) return;
+
+      const releases = await response.json();
+      const latest = releases.find((release) => !release.draft);
+      if (!latest) return;
+
+      const version = latest.tag_name || "0.2.0";
+      const apk = (latest.assets || []).find((asset) =>
+        asset.name && asset.name.toLowerCase().endsWith(".apk") &&
+        !asset.name.toLowerCase().includes("debug")
+      );
+
+      document.querySelectorAll("[data-release-version]").forEach((element) => {
+        element.textContent = version.startsWith("v") ? version : `v${version}`;
+      });
+
+      document.querySelectorAll("[data-release-url]").forEach((element) => {
+        if (latest.html_url) element.href = latest.html_url;
+      });
+
+      document.querySelectorAll("[data-release-download]").forEach((element) => {
+        if (apk && apk.browser_download_url) element.href = apk.browser_download_url;
+      });
+    } catch (_) {
+      // Static v0.2.0 links remain as a safe fallback.
+    }
+  };
+
+  const initReveal = () => {
+    const elements = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach((element) => element.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.10 });
+
+    elements.forEach((element) => observer.observe(element));
+  };
+
+  const initLightbox = () => {
+    const dialog = document.querySelector(".lightbox");
+    if (!dialog || typeof dialog.showModal !== "function") return;
+
+    const image = dialog.querySelector("img");
+    const caption = dialog.querySelector("p");
+    const close = dialog.querySelector(".lightbox-close");
+
+    document.querySelectorAll("[data-lightbox]").forEach((button) => {
+      button.addEventListener("click", () => {
+        image.src = button.dataset.lightbox;
+        image.alt = button.querySelector("img")?.alt || "";
+        const captionKey = button.dataset.lightboxCaption;
+        const localized = captionKey ? getValue(translations[currentLanguage], captionKey) : "";
+        caption.textContent = localized || "";
+        dialog.showModal();
+      });
+    });
+
+    close?.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
   };
 
   document.querySelectorAll(".language-option").forEach((button) => {
     button.addEventListener("click", () => applyLanguage(button.dataset.lang));
   });
 
+  document.querySelector(".theme-toggle")?.addEventListener("click", toggleTheme);
+
+  const savedTheme = localStorage.getItem(THEME_KEY) || "system";
+  applyTheme(savedTheme);
   applyLanguage(detectInitialLanguage());
+  initReveal();
+  initLightbox();
+  initReleaseMetadata();
 })();
