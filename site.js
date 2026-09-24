@@ -478,6 +478,28 @@
     });
   };
 
+
+  const initFullReleaseModal = () => {
+    const dialog = document.querySelector(".full-release-modal");
+    if (!dialog || typeof dialog.showModal !== "function") return;
+
+    const openers = document.querySelectorAll("[data-full-release-modal-open]");
+    const closer = dialog.querySelector("[data-full-release-modal-close]");
+
+    openers.forEach((opener) => {
+      opener.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (!dialog.open) dialog.showModal();
+      });
+    });
+
+    closer?.addEventListener("click", () => dialog.close());
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  };
+
   const initLightbox = () => {
     const dialog = document.querySelector(".lightbox");
     if (!dialog || typeof dialog.showModal !== "function") return;
@@ -516,5 +538,6 @@
   initActiveNavigation();
   initLightbox();
   initReleaseModal();
+  initFullReleaseModal();
   initReleaseMetadata();
 })();
