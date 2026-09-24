@@ -97,7 +97,8 @@
         kicker: "Why Home Glance?",
         title: "A familiar idea, rebuilt for modern Android.",
         p1: "Home Glance started from a simple idea: keep the clean, useful home-screen experience that made Another Widget so appealing, while bringing it forward for modern Android.",
-        p2: "The project focuses on useful information at a glance, strong customization, broad device compatibility and active development.",
+        p2: "It is also made for Android users who like the clean, Pixel-like look but do not want to switch to a custom ROM just to get it — especially when keeping Strong Play Integrity matters to them. Home Glance brings a little of that clean-Android feel to the home screen while leaving the rest of the system untouched.",
+        p3: "The project focuses on useful information at a glance, strong customization, broad device compatibility and active development.",
         disclaimer: "Home Glance is an independent project and is not affiliated with Another Widget."
       },
       languages: { kicker: "11 languages", title: "Made for more Android users." },
@@ -244,7 +245,8 @@
         kicker: "Dlaczego Home Glance?",
         title: "Znany pomysł zbudowany od nowa dla współczesnego Androida.",
         p1: "Home Glance powstał z prostej idei: zachować czyste i użyteczne doświadczenie ekranu głównego, za które użytkownicy polubili Another Widget, i przenieść je na współczesnego Androida.",
-        p2: "Projekt skupia się na przydatnych informacjach dostępnych od razu, szerokiej personalizacji, dobrej zgodności z różnymi urządzeniami i aktywnym rozwoju.",
+        p2: "To także aplikacja dla użytkowników Androida, którzy lubią czysty, pixelowy wygląd, ale nie chcą przechodzić na custom ROM tylko po to, żeby go uzyskać — szczególnie jeśli zależy im na zachowaniu Strong Play Integrity. Home Glance ma dawać odrobinę klimatu czystego Androida na ekranie głównym bez konieczności zmiany całego systemu.",
+        p3: "Projekt skupia się na przydatnych informacjach dostępnych od razu, szerokiej personalizacji, dobrej zgodności z różnymi urządzeniami i aktywnym rozwoju.",
         disclaimer: "Home Glance jest niezależnym projektem i nie jest powiązany z Another Widget."
       },
       languages: { kicker: "11 języków", title: "Dla jeszcze większej liczby użytkowników Androida." },
