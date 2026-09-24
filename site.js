@@ -10,7 +10,7 @@
         description: "Home Glance is a lightweight, customizable Android home-screen widget for weather, calendar events and contextual information.",
         ogDescription: "A modern, customizable Android home-screen widget inspired by Pixel At a Glance."
       },
-      nav: { features: "Features", whatsNew: "What’s new", screenshots: "Screenshots", faq: "FAQ", download: "Download" },
+      nav: { widget: "Widget", features: "Features", whatsNew: "What’s new", screenshots: "Screenshots", faq: "FAQ", download: "Download" },
       theme: { toggle: "Toggle light and dark theme" },
       hero: {
         eyebrow: "Public test",
@@ -35,6 +35,23 @@
         customizableSub: "Text, layout, scrolling and backgrounds",
         compatible: "Broad compatibility",
         compatibleSub: "Built for different devices and launchers"
+      },
+      widget: {
+        kicker: "Three lines. Your information.",
+        title: "Designed to stay useful at every size.",
+        lead: "Home Glance keeps the Pixel-inspired three-line layout while giving you control over what moves, what stays still and how the background blends with your wallpaper.",
+        line1Title: "Date + next alarm",
+        line1Text: "The date can scroll on narrow widgets while the next alarm remains available beside it.",
+        line2Title: "Weather",
+        line2Text: "Current weather and optional details can scroll independently when the line is too long.",
+        line3Title: "Calendar",
+        line3Text: "The next event gets its own scrolling control, so every line can behave differently.",
+        imageAlt: "Home Glance widget on an Android home screen",
+        backgroundNone: "No background",
+        scrollTitle: "Per-line scrolling",
+        scrollText: "Choose each line separately",
+        backgroundTitle: "Adaptive background",
+        backgroundText: "Wallpaper visibility control"
       },
       features: {
         kicker: "Built for the home screen",
@@ -117,7 +134,7 @@
         description: "Home Glance to lekki i konfigurowalny widżet Androida z pogodą, wydarzeniami z kalendarza i informacjami kontekstowymi.",
         ogDescription: "Nowoczesny i konfigurowalny widżet ekranu głównego Androida inspirowany Pixel At a Glance."
       },
-      nav: { features: "Funkcje", whatsNew: "Co nowego", screenshots: "Zrzuty", faq: "FAQ", download: "Pobierz" },
+      nav: { widget: "Widżet", features: "Funkcje", whatsNew: "Co nowego", screenshots: "Zrzuty", faq: "FAQ", download: "Pobierz" },
       theme: { toggle: "Przełącz jasny i ciemny motyw" },
       hero: {
         eyebrow: "Publiczne testy",
@@ -142,6 +159,23 @@
         customizableSub: "Tekst, układ, przewijanie i tła",
         compatible: "Szeroka zgodność",
         compatibleSub: "Tworzony z myślą o różnych urządzeniach i launcherach"
+      },
+      widget: {
+        kicker: "Trzy linie. Twoje informacje.",
+        title: "Zaprojektowany tak, by pozostać użyteczny w każdym rozmiarze.",
+        lead: "Home Glance zachowuje trzywierszowy układ inspirowany Pixelem, dając Ci kontrolę nad tym, co się przewija, co pozostaje nieruchome i jak tło łączy się z tapetą.",
+        line1Title: "Data + najbliższy alarm",
+        line1Text: "Data może przewijać się w wąskim widżecie, a informacja o najbliższym alarmie pozostaje obok niej.",
+        line2Title: "Pogoda",
+        line2Text: "Aktualna pogoda i opcjonalne szczegóły mogą przewijać się niezależnie, gdy linia jest zbyt długa.",
+        line3Title: "Kalendarz",
+        line3Text: "Najbliższe wydarzenie ma własne sterowanie przewijaniem, więc każda linia może zachowywać się inaczej.",
+        imageAlt: "Widżet Home Glance na ekranie głównym Androida",
+        backgroundNone: "Bez tła",
+        scrollTitle: "Przewijanie każdej linii",
+        scrollText: "Wybieraj każdą linię osobno",
+        backgroundTitle: "Adaptacyjne tło",
+        backgroundText: "Regulacja przenikania tapety"
       },
       features: {
         kicker: "Stworzony dla ekranu głównego",
@@ -342,6 +376,35 @@
     elements.forEach((element) => observer.observe(element));
   };
 
+  const initActiveNavigation = () => {
+    const links = [...document.querySelectorAll('nav a[href^="#"]')];
+    if (!links.length || !("IntersectionObserver" in window)) return;
+
+    const sections = links
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visible) return;
+
+      links.forEach((link) => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === `#${visible.target.id}`
+        );
+      });
+    }, {
+      rootMargin: "-22% 0px -58% 0px",
+      threshold: [0.05, 0.2, 0.5]
+    });
+
+    sections.forEach((section) => observer.observe(section));
+  };
+
   const initLightbox = () => {
     const dialog = document.querySelector(".lightbox");
     if (!dialog || typeof dialog.showModal !== "function") return;
@@ -377,6 +440,7 @@
   applyTheme(savedTheme);
   applyLanguage(detectInitialLanguage());
   initReveal();
+  initActiveNavigation();
   initLightbox();
   initReleaseMetadata();
 })();
