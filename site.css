@@ -1678,3 +1678,270 @@ html { scroll-behavior: smooth; }
     align-items: flex-start;
   }
 }
+
+
+/* Release notes modal + stable screenshot gallery */
+.release-modal {
+  width: min(900px, calc(100% - 32px));
+  max-height: 84vh;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, var(--line));
+  border-radius: 28px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: 0 34px 110px rgba(0,0,0,.42);
+}
+
+.release-modal::backdrop {
+  background: rgba(4,7,13,.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.release-modal-shell {
+  max-height: 84vh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.release-modal-header {
+  padding: 26px 28px 22px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--primary-2) 14%, transparent), transparent 22rem),
+    var(--surface-strong);
+}
+
+.release-modal-header .kicker {
+  margin-bottom: 6px;
+}
+
+.release-modal-header h2 {
+  margin: 0 0 8px;
+  font-size: clamp(30px, 5vw, 44px);
+  letter-spacing: -.045em;
+}
+
+.release-modal-header p:not(.kicker) {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.release-modal-close {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.release-modal-close:hover {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--primary) 35%, var(--line));
+}
+
+.release-modal-body {
+  min-height: 0;
+  padding: 18px 22px 22px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.release-modal-status {
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 8px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 760;
+}
+
+.release-modal-status strong {
+  color: var(--text);
+}
+
+.release-modal-card {
+  margin-bottom: 14px;
+  padding: 22px 20px 20px;
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--surface-strong) 96%, var(--primary) 4%), var(--surface));
+}
+
+.release-modal-card::before {
+  content: "";
+  width: 3px;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+}
+
+.release-modal-tag {
+  width: fit-content;
+  margin-bottom: 9px;
+  padding: 4px 8px;
+  display: inline-block;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--line));
+  border-radius: 999px;
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+.release-modal-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.release-modal-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.release-modal-card li {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.release-modal-foot {
+  padding: 4px 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.release-modal-foot p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Keep phone screenshots tidy and equal — modern, but no oversized featured card. */
+#screenshots {
+  overflow: hidden;
+}
+
+.shot-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: start;
+}
+
+.shot-card,
+.shot-featured,
+.shot-featured + .shot-card {
+  grid-column: span 1 !important;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 26px !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-strong) 96%, var(--primary) 4%), var(--surface));
+  box-shadow: 0 16px 42px rgba(0,0,0,.10);
+}
+
+.shot-card img {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+}
+
+.shot-card span {
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface-strong) 96%, transparent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .shot-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--primary) 26%, var(--line));
+  }
+
+  .shot-card:hover img {
+    transform: scale(1.01);
+  }
+}
+
+@media (max-width: 980px) {
+  .shot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .release-modal {
+    width: calc(100% - 18px);
+    max-height: 88vh;
+    border-radius: 22px;
+  }
+
+  .release-modal-shell {
+    max-height: 88vh;
+  }
+
+  .release-modal-header {
+    padding: 22px 18px 18px;
+  }
+
+  .release-modal-header h2 {
+    font-size: 30px;
+  }
+
+  .release-modal-body {
+    padding: 14px;
+  }
+
+  .release-modal-foot {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .release-modal-foot .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .shot-grid {
+    gap: 10px !important;
+  }
+
+  .shot-card,
+  .shot-featured,
+  .shot-featured + .shot-card {
+    border-radius: 19px !important;
+  }
+}
