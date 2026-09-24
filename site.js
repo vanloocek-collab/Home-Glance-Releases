@@ -1,7 +1,7 @@
 (() => {
   const LANGUAGE_KEY = "home-glance-language";
   const THEME_KEY = "home-glance-theme";
-  const supportedLanguages = ["en", "pl"];
+  const supportedLanguages = ["en-US", "en-GB", "pl", "de", "es", "fr", "it", "pt-BR", "ru", "zh-CN", "ja"];
 
   const translations = {
     en: {
@@ -345,21 +345,41 @@
     }
   };
 
-  let currentLanguage = "en";
+  translations["en-US"] = translations.en;
+  Object.assign(translations, window.HOME_GLANCE_LOCALES || {});
+
+  let currentLanguage = "en-US";
+
+  const readValue = (object, path) =>
+    path.split(".").reduce((value, key) => value && value[key], object);
 
   const getValue = (object, path) =>
-    path.split(".").reduce((value, key) => value && value[key], object);
+    readValue(object, path) ?? readValue(translations["en-US"], path);
 
   const detectInitialLanguage = () => {
     const saved = localStorage.getItem(LANGUAGE_KEY);
+    if (saved === "en") return "en-US";
     if (supportedLanguages.includes(saved)) return saved;
-    return (navigator.language || "").toLowerCase().startsWith("pl") ? "pl" : "en";
+
+    const browserLanguage = (navigator.language || "en-US");
+    const normalized = browserLanguage.replace("_", "-");
+
+    if (supportedLanguages.includes(normalized)) return normalized;
+    if (/^en-GB/i.test(normalized)) return "en-GB";
+    if (/^en/i.test(normalized)) return "en-US";
+    if (/^pt/i.test(normalized)) return "pt-BR";
+    if (/^zh/i.test(normalized)) return "zh-CN";
+
+    const base = normalized.split("-")[0].toLowerCase();
+    if (supportedLanguages.includes(base)) return base;
+
+    return "en-US";
   };
 
   const applyLanguage = (language) => {
-    const lang = supportedLanguages.includes(language) ? language : "en";
+    const lang = supportedLanguages.includes(language) ? language : "en-US";
     currentLanguage = lang;
-    const dictionary = translations[lang];
+    const dictionary = translations[lang] || translations["en-US"];
 
     document.documentElement.lang = lang;
     document.title = dictionary.page.title;
@@ -390,9 +410,8 @@
       if (typeof value === "string") element.setAttribute("aria-label", value);
     });
 
-    document.querySelectorAll(".language-option").forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.dataset.lang === lang));
-    });
+    const languageSelect = document.querySelector(".language-select");
+    if (languageSelect) languageSelect.value = lang;
 
     localStorage.setItem(LANGUAGE_KEY, lang);
   };
@@ -571,8 +590,8 @@
     });
   };
 
-  document.querySelectorAll(".language-option").forEach((button) => {
-    button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+  document.querySelector(".language-select")?.addEventListener("change", (event) => {
+    applyLanguage(event.target.value);
   });
 
   document.querySelector(".theme-toggle")?.addEventListener("click", toggleTheme);
