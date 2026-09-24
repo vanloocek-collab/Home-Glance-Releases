@@ -405,6 +405,144 @@
     sections.forEach((section) => observer.observe(section));
   };
 
+  const initPanelScrolling = () => {
+    const desktop = window.matchMedia("(min-width: 981px) and (pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const root = document.documentElement;
+    const progress = document.querySelector(".panel-progress");
+    let panels = [];
+    let currentIndex = 0;
+    let locked = false;
+    let unlockTimer = 0;
+    let accumulatedDelta = 0;
+    let accumulationTimer = 0;
+
+    const refreshPanels = () => {
+      panels = [...document.querySelectorAll(".scroll-panel")].filter((panel) => {
+        const style = getComputedStyle(panel);
+        return style.display !== "none" && panel.offsetHeight > 0;
+      });
+    };
+
+    const nearestPanelIndex = () => {
+      if (!panels.length) return 0;
+      const anchor = window.scrollY + 90;
+      let bestIndex = 0;
+      let bestDistance = Infinity;
+
+      panels.forEach((panel, index) => {
+        const distance = Math.abs(panel.offsetTop - anchor);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          bestIndex = index;
+        }
+      });
+
+      return bestIndex;
+    };
+
+    const updateProgress = () => {
+      if (!progress || !panels.length) return;
+      currentIndex = nearestPanelIndex();
+      const value = panels.length <= 1 ? 1 : (currentIndex + 1) / panels.length;
+      progress.style.setProperty("--panel-progress", String(value));
+    };
+
+    const animatePanel = (panel) => {
+      if (!panel || reducedMotion.matches) return;
+      panel.classList.remove("panel-entering");
+      void panel.offsetWidth;
+      panel.classList.add("panel-entering");
+      window.setTimeout(() => panel.classList.remove("panel-entering"), 760);
+    };
+
+    const goToPanel = (index) => {
+      if (!panels.length) return;
+      const nextIndex = Math.max(0, Math.min(index, panels.length - 1));
+      const target = panels[nextIndex];
+      if (!target) return;
+
+      locked = true;
+      currentIndex = nextIndex;
+      accumulatedDelta = 0;
+
+      target.scrollIntoView({
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+        block: "start"
+      });
+
+      animatePanel(target);
+      updateProgress();
+
+      window.clearTimeout(unlockTimer);
+      unlockTimer = window.setTimeout(() => {
+        locked = false;
+      }, reducedMotion.matches ? 120 : 720);
+    };
+
+    const isInteractiveTarget = (target) =>
+      target instanceof Element &&
+      Boolean(target.closest("dialog[open], details[open], input, textarea, select"));
+
+    const onWheel = (event) => {
+      if (!desktop.matches || reducedMotion.matches || isInteractiveTarget(event.target)) return;
+      if (Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
+
+      accumulatedDelta += event.deltaY;
+      window.clearTimeout(accumulationTimer);
+      accumulationTimer = window.setTimeout(() => {
+        accumulatedDelta = 0;
+      }, 180);
+
+      if (Math.abs(accumulatedDelta) < 46) {
+        event.preventDefault();
+        return;
+      }
+
+      event.preventDefault();
+      if (locked) return;
+
+      refreshPanels();
+      currentIndex = nearestPanelIndex();
+
+      const direction = accumulatedDelta > 0 ? 1 : -1;
+      goToPanel(currentIndex + direction);
+    };
+
+    const onKeyDown = (event) => {
+      if (!desktop.matches || reducedMotion.matches) return;
+      if (event.target instanceof Element && event.target.closest("input, textarea, select, summary")) return;
+
+      const forward = ["PageDown", "ArrowDown", " "].includes(event.key);
+      const backward = ["PageUp", "ArrowUp"].includes(event.key);
+      if (!forward && !backward) return;
+
+      event.preventDefault();
+      if (locked) return;
+      refreshPanels();
+      currentIndex = nearestPanelIndex();
+      goToPanel(currentIndex + (forward ? 1 : -1));
+    };
+
+    const applyMode = () => {
+      refreshPanels();
+      root.classList.toggle("panel-scroll-enabled", desktop.matches && !reducedMotion.matches);
+      updateProgress();
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", applyMode);
+
+    if (typeof desktop.addEventListener === "function") {
+      desktop.addEventListener("change", applyMode);
+      reducedMotion.addEventListener("change", applyMode);
+    }
+
+    applyMode();
+  };
+
   const initLightbox = () => {
     const dialog = document.querySelector(".lightbox");
     if (!dialog || typeof dialog.showModal !== "function") return;
@@ -441,6 +579,7 @@
   applyLanguage(detectInitialLanguage());
   initReveal();
   initActiveNavigation();
+  initPanelScrolling();
   initLightbox();
   initReleaseMetadata();
 })();

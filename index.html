@@ -54,7 +54,8 @@
   </header>
 
   <main id="top">
-    <section class="hero wrap">
+    <div class="panel-progress" aria-hidden="true"></div>
+    <section class="hero wrap scroll-panel" data-panel="hero">
       <div class="hero-copy reveal">
         <div class="release-pill">
           <span class="release-dot" aria-hidden="true"></span>
@@ -116,7 +117,7 @@
       </div>
     </section>
 
-    <section class="trust-strip wrap reveal" aria-label="Highlights">
+    <section class="trust-strip wrap reveal scroll-panel compact-panel" data-panel="highlights" aria-label="Highlights">
       <div>
         <strong data-i18n="trust.lightweight">Lightweight</strong>
         <span data-i18n="trust.lightweightSub">Focused on the home screen</span>
@@ -131,7 +132,7 @@
       </div>
     </section>
 
-    <section id="widget" class="section wrap widget-showcase">
+    <section id="widget" class="section wrap widget-showcase scroll-panel" data-panel="widget">
       <div class="widget-copy reveal">
         <p class="kicker" data-i18n="widget.kicker">Three lines. Your information.</p>
         <h2 data-i18n="widget.title">Designed to stay useful at every size.</h2>
@@ -194,7 +195,7 @@
       </div>
     </section>
 
-    <section id="features" class="section wrap">
+    <section id="features" class="section wrap scroll-panel" data-panel="features">
       <div class="section-heading reveal">
         <p class="kicker" data-i18n="features.kicker">Built for the home screen</p>
         <h2 data-i18n="features.title">Useful information without the clutter.</h2>
@@ -247,7 +248,7 @@
       </div>
     </section>
 
-    <section id="whats-new" class="section wrap">
+    <section id="whats-new" class="section wrap scroll-panel" data-panel="whats-new">
       <div class="release-showcase reveal">
         <div class="release-copy">
           <p class="kicker" data-i18n="new.kicker">What’s new</p>
@@ -288,7 +289,7 @@
       </div>
     </section>
 
-    <section id="screenshots" class="section wrap">
+    <section id="screenshots" class="section wrap scroll-panel" data-panel="screenshots">
       <div class="section-heading compact reveal">
         <p class="kicker" data-i18n="screenshots.kicker">See it in action</p>
         <h2 data-i18n="screenshots.title">Simple outside. Powerful inside.</h2>
@@ -315,7 +316,7 @@
       </div>
     </section>
 
-    <section id="about" class="section wrap story reveal">
+    <section id="about" class="section wrap story reveal scroll-panel" data-panel="about">
       <div>
         <p class="kicker" data-i18n="about.kicker">Why Home Glance?</p>
         <h2 data-i18n="about.title">A familiar idea, rebuilt for modern Android.</h2>
@@ -327,7 +328,7 @@
       </div>
     </section>
 
-    <section class="section wrap language-card reveal" aria-label="Languages">
+    <section class="section wrap language-card reveal scroll-panel compact-panel" data-panel="languages" aria-label="Languages">
       <div>
         <p class="kicker" data-i18n="languages.kicker">11 languages</p>
         <h2 data-i18n="languages.title">Made for more Android users.</h2>
@@ -339,7 +340,7 @@
       </div>
     </section>
 
-    <section id="faq" class="section wrap">
+    <section id="faq" class="section wrap scroll-panel" data-panel="faq">
       <div class="section-heading compact reveal">
         <p class="kicker">FAQ</p>
         <h2 data-i18n="faq.title">Good to know before installing.</h2>
@@ -365,7 +366,7 @@
       </div>
     </section>
 
-    <section class="download-section">
+    <section class="download-section scroll-panel" data-panel="download">
       <div class="wrap download-card reveal">
         <div>
           <div class="download-version"><span data-i18n="download.latest">Latest public test</span> · <strong data-release-version>v0.2.0</strong></div>
