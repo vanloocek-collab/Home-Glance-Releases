@@ -12,9 +12,9 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/vanloocek-collab/Home-Glance-Releases/main/screenshots/home-glance-home.jpg">
   <link rel="icon" href="assets/home-glance-icon.webp" type="image/webp">
   <link rel="apple-touch-icon" href="assets/home-glance-icon.webp">
-  <link rel="stylesheet" href="site.css?v=20260924-8">
+  <link rel="stylesheet" href="site.css?v=20260924-9">
   <script src="site-locales.js?v=20260924-1" defer></script>
-  <script src="site.js?v=20260924-7" defer></script>
+  <script src="site.js?v=20260924-8" defer></script>
 </head>
 <body>
   <div class="page-glow page-glow-a" aria-hidden="true"></div>
@@ -36,21 +36,26 @@
       </nav>
 
       <div class="nav-actions">
-        <div class="language-switch">
-          <select class="language-select" aria-label="Language">
-            <option value="en-US">English (US)</option>
-            <option value="en-GB">English (UK)</option>
-            <option value="pl">Polski</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="it">Italiano</option>
-            <option value="pt-BR">Português (Brasil)</option>
-            <option value="ru">Русский</option>
-            <option value="zh-CN">简体中文</option>
-            <option value="ja">日本語</option>
-          </select>
-        </div>
+        <details class="language-menu">
+          <summary class="language-menu-toggle" aria-label="Language">
+            <span class="flag flag-us" data-current-language-flag aria-hidden="true"></span>
+            <span data-current-language-label>English (US)</span>
+            <span class="language-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="language-menu-list" role="menu">
+            <button type="button" class="language-menu-item" data-lang="en-US"><span class="flag flag-us" aria-hidden="true"></span><span>English (US)</span></button>
+            <button type="button" class="language-menu-item" data-lang="en-GB"><span class="flag flag-gb" aria-hidden="true"></span><span>English (UK)</span></button>
+            <button type="button" class="language-menu-item" data-lang="pl"><span class="flag flag-pl" aria-hidden="true"></span><span>Polski</span></button>
+            <button type="button" class="language-menu-item" data-lang="de"><span class="flag flag-de" aria-hidden="true"></span><span>Deutsch</span></button>
+            <button type="button" class="language-menu-item" data-lang="es"><span class="flag flag-es" aria-hidden="true"></span><span>Español</span></button>
+            <button type="button" class="language-menu-item" data-lang="fr"><span class="flag flag-fr" aria-hidden="true"></span><span>Français</span></button>
+            <button type="button" class="language-menu-item" data-lang="it"><span class="flag flag-it" aria-hidden="true"></span><span>Italiano</span></button>
+            <button type="button" class="language-menu-item" data-lang="pt-BR"><span class="flag flag-br" aria-hidden="true"></span><span>Português (Brasil)</span></button>
+            <button type="button" class="language-menu-item" data-lang="ru"><span class="flag flag-ru" aria-hidden="true"></span><span>Русский</span></button>
+            <button type="button" class="language-menu-item" data-lang="zh-CN"><span class="flag flag-cn" aria-hidden="true"></span><span>简体中文</span></button>
+            <button type="button" class="language-menu-item" data-lang="ja"><span class="flag flag-jp" aria-hidden="true"></span><span>日本語</span></button>
+          </div>
+        </details>
 
         <button class="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria="theme.toggle">
           <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
@@ -341,9 +346,17 @@
         <h2 data-i18n="languages.title">Made for more Android users.</h2>
       </div>
       <div class="language-cloud" aria-label="Supported languages">
-        <span>English (US)</span><span>English (UK)</span><span>Polski</span><span>Deutsch</span>
-        <span>Español</span><span>Français</span><span>Italiano</span><span>Português (Brasil)</span>
-        <span>Русский</span><span>简体中文</span><span>日本語</span>
+        <button type="button" class="language-pill" data-lang="en-US"><span class="flag flag-us" aria-hidden="true"></span><span>English (US)</span></button>
+        <button type="button" class="language-pill" data-lang="en-GB"><span class="flag flag-gb" aria-hidden="true"></span><span>English (UK)</span></button>
+        <button type="button" class="language-pill" data-lang="pl"><span class="flag flag-pl" aria-hidden="true"></span><span>Polski</span></button>
+        <button type="button" class="language-pill" data-lang="de"><span class="flag flag-de" aria-hidden="true"></span><span>Deutsch</span></button>
+        <button type="button" class="language-pill" data-lang="es"><span class="flag flag-es" aria-hidden="true"></span><span>Español</span></button>
+        <button type="button" class="language-pill" data-lang="fr"><span class="flag flag-fr" aria-hidden="true"></span><span>Français</span></button>
+        <button type="button" class="language-pill" data-lang="it"><span class="flag flag-it" aria-hidden="true"></span><span>Italiano</span></button>
+        <button type="button" class="language-pill" data-lang="pt-BR"><span class="flag flag-br" aria-hidden="true"></span><span>Português (Brasil)</span></button>
+        <button type="button" class="language-pill" data-lang="ru"><span class="flag flag-ru" aria-hidden="true"></span><span>Русский</span></button>
+        <button type="button" class="language-pill" data-lang="zh-CN"><span class="flag flag-cn" aria-hidden="true"></span><span>简体中文</span></button>
+        <button type="button" class="language-pill" data-lang="ja"><span class="flag flag-jp" aria-hidden="true"></span><span>日本語</span></button>
       </div>
     </section>
 
