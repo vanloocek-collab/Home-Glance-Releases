@@ -418,7 +418,7 @@
       es: { label: "Español", flag: "flag-es" },
       fr: { label: "Français", flag: "flag-fr" },
       it: { label: "Italiano", flag: "flag-it" },
-      "pt-BR": { label: "Português (Brasil)", flag: "flag-br" },
+      "pt-BR": { label: "Português (Brasil)", flag: "flag-ptbr" },
       ru: { label: "Русский", flag: "flag-ru" },
       "zh-CN": { label: "简体中文", flag: "flag-cn" },
       ja: { label: "日本語", flag: "flag-jp" }
