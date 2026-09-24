@@ -47,17 +47,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 750; }
-.brand-mark {
+.brand-icon {
   width: 36px;
   height: 36px;
+  display: block;
+  flex: 0 0 36px;
   border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-size: 12px;
-  letter-spacing: -.03em;
-  color: white;
-  background: linear-gradient(145deg, var(--primary), var(--primary-2));
-  box-shadow: 0 10px 24px rgba(79,110,219,.25);
+  box-shadow: 0 10px 24px rgba(79,110,219,.16);
 }
 
 nav { display: flex; align-items: center; gap: 24px; font-size: 14px; font-weight: 650; color: var(--muted); }
@@ -70,12 +66,12 @@ nav a:hover { color: var(--text); }
 }
 
 .hero {
-  min-height: 650px;
-  padding: 84px 0 70px;
+  min-height: 560px;
+  padding: 58px 0 52px;
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   align-items: center;
-  gap: 64px;
+  gap: 52px;
 }
 
 .eyebrow, .kicker {
@@ -151,9 +147,9 @@ h3 { margin-bottom: 8px; font-size: 19px; letter-spacing: -.02em; }
 }
 .hero-shot {
   position: relative;
-  width: min(370px, 90%);
+  width: min(315px, 86%);
   margin: 0;
-  border-radius: 34px;
+  border-radius: 30px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.7);
   box-shadow: 0 30px 70px rgba(30,41,59,.22);
