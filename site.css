@@ -2100,14 +2100,7 @@ html { scroll-behavior: smooth; }
 }
 
 .flag-gb {
-  background:
-    linear-gradient(33deg, transparent 42%, #fff 42% 58%, transparent 58%),
-    linear-gradient(-33deg, transparent 42%, #fff 42% 58%, transparent 58%),
-    linear-gradient(90deg, transparent 39%, #fff 39% 61%, transparent 61%),
-    linear-gradient(transparent 34%, #fff 34% 66%, transparent 66%),
-    linear-gradient(90deg, transparent 45%, #c8102e 45% 55%, transparent 55%),
-    linear-gradient(transparent 42%, #c8102e 42% 58%, transparent 58%),
-    #012169;
+  background: url("assets/flags/gb.svg") center / cover no-repeat;
 }
 
 .flag-pl { background: linear-gradient(to bottom, #fff 0 50%, #dc143c 50%); }
@@ -2117,26 +2110,8 @@ html { scroll-behavior: smooth; }
 .flag-it { background: linear-gradient(to right, #009246 0 33.33%, #fff 33.33% 66.66%, #ce2b37 66.66%); }
 .flag-ru { background: linear-gradient(to bottom, #fff 0 33.33%, #0039a6 33.33% 66.66%, #d52b1e 66.66%); }
 
-.flag-br { background: #009c3b; }
-.flag-br::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: 5px;
-  top: 2px;
-  background: #ffdf00;
-  transform: rotate(45deg);
-}
-.flag-br::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  left: 7px;
-  top: 4px;
-  border-radius: 50%;
-  background: #002776;
+.flag-ptbr {
+  background: url("assets/flags/pt-br-split.svg") center / cover no-repeat;
 }
 
 .flag-cn { background: #de2910; }
@@ -2302,19 +2277,6 @@ html { scroll-behavior: smooth; }
     flex-basis: 18px;
   }
 
-  .flag-br::before {
-    width: 9px;
-    height: 9px;
-    left: 4.5px;
-    top: 1.5px;
-  }
-
-  .flag-br::after {
-    width: 5px;
-    height: 5px;
-    left: 6.5px;
-    top: 3.5px;
-  }
 
   .flag-jp::before {
     width: 6px;
