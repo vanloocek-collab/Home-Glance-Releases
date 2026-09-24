@@ -12,8 +12,9 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/vanloocek-collab/Home-Glance-Releases/main/screenshots/home-glance-home.jpg">
   <link rel="icon" href="assets/home-glance-icon.webp" type="image/webp">
   <link rel="apple-touch-icon" href="assets/home-glance-icon.webp">
-  <link rel="stylesheet" href="site.css?v=20260924-7">
-  <script src="site.js?v=20260924-6" defer></script>
+  <link rel="stylesheet" href="site.css?v=20260924-8">
+  <script src="site-locales.js?v=20260924-1" defer></script>
+  <script src="site.js?v=20260924-7" defer></script>
 </head>
 <body>
   <div class="page-glow page-glow-a" aria-hidden="true"></div>
@@ -35,10 +36,20 @@
       </nav>
 
       <div class="nav-actions">
-        <div class="language-switch" role="group" aria-label="Language">
-          <button type="button" class="language-option" data-lang="en" aria-pressed="true">EN</button>
-          <span aria-hidden="true">/</span>
-          <button type="button" class="language-option" data-lang="pl" aria-pressed="false">PL</button>
+        <div class="language-switch">
+          <select class="language-select" aria-label="Language">
+            <option value="en-US">English (US)</option>
+            <option value="en-GB">English (UK)</option>
+            <option value="pl">Polski</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="pt-BR">Português (Brasil)</option>
+            <option value="ru">Русский</option>
+            <option value="zh-CN">简体中文</option>
+            <option value="ja">日本語</option>
+          </select>
         </div>
 
         <button class="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria="theme.toggle">
