@@ -10,6 +10,8 @@ A lightweight Android home-screen widget that combines weather and calendar info
 
 I have always been a big fan of **Another Widget**. After it stopped evolving, I decided to create what I see as its spiritual successor: a modern, actively developed widget that keeps the same idea of showing the information you need at a glance, while adding more customization, broader device compatibility and new features.
 
+There is another reason behind Home Glance too: it is for Android users who like the clean, Pixel-like look, but do not want to switch to a custom ROM just to get it — especially when keeping **Strong Play Integrity** matters to them. Home Glance aims to bring a little of that clean-Android feel to the home screen while letting users keep their existing system setup.
+
 Home Glance is an independent project and is not affiliated with Another Widget.
 
 ## Features
