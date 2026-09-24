@@ -200,7 +200,7 @@
         item2: "Automatyczne monitorowanie zmian w kalendarzu Androida",
         item3: "Usunięto niechciane wielokropki w trybie Standard pogody",
         item4: "Naprawiono podwójną warstwę pierwszego przewinięcia kalendarza",
-        item5: "30-minutowe systemowe odświeżanie pozostaje jako zabezpieczenie"
+        item5: "30-minutowe systemowe odświeżanie pozostaje jako zabezpieczenie",
         notes: "Zobacz pełne informacje o wydaniu",
         refreshMock: "Odśwież widget"
       },
@@ -354,7 +354,7 @@
         if (apk && apk.browser_download_url) element.href = apk.browser_download_url;
       });
     } catch (_) {
-      // Static v0.2.0 links remain as a safe fallback.
+      // Static v0.2.1 links remain as a safe fallback.
     }
   };
 
