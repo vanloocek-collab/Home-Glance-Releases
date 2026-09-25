@@ -17,8 +17,8 @@ This folder is the central checklist and source-of-truth for publishing Home Gla
 Upload the signed `playRelease` AAB. The Play flavor disables the GitHub self-updater and does not request `REQUEST_INSTALL_PACKAGES`.
 
 Package: `com.vanloocek.homeglance`  
-Version: `0.2.1`  
-Version code: `8`  
+Version: `0.2.2`  
+Version code: `9`  
 Target SDK: `37`
 
 ## Screenshots
