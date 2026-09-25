@@ -13,8 +13,8 @@
   <link rel="icon" href="assets/home-glance-icon.webp" type="image/webp">
   <link rel="apple-touch-icon" href="assets/home-glance-icon.webp">
   <link rel="stylesheet" href="site.css?v=20260924-12">
-  <script src="site-locales.js?v=20260925-1" defer></script>
-  <script src="site.js?v=20260925-1" defer></script>
+  <script src="site-locales.js?v=20260925-2" defer></script>
+  <script src="site.js?v=20260925-2" defer></script>
 </head>
 <body>
   <div class="page-glow page-glow-a" aria-hidden="true"></div>
@@ -84,7 +84,7 @@
 
         <div class="hero-actions">
           <a class="button secondary" href="#release-notes-modal" data-release-modal-open>
-            <span data-i18n="hero.releaseNotes">Release notes</span>
+            <span data-i18n="hero.releaseNotes">v0.2.2 release notes</span>
           </a>
         </div>
 
@@ -263,7 +263,7 @@
       <div class="release-showcase reveal">
         <div class="release-copy">
           <p class="kicker" data-i18n="new.kicker">What’s new</p>
-          <h2><span data-i18n="new.title">A reliability-focused update in</span> <span data-release-version>v0.2.2</span>.</h2>
+          <h2><span data-i18n="new.title">A reliability-focused update in</span> <span>v0.2.2</span>.</h2>
           <p data-i18n="new.lead">Home Glance v0.2.2 improves alarm reliability, launcher text handling, resizing and refresh stability.</p>
 
           <div class="release-list">
@@ -286,7 +286,7 @@
           <div class="mock-dashboard">
             <div class="mock-head">
               <img src="assets/home-glance-icon.webp" alt="">
-              <div><strong>Home Glance</strong><span data-release-version>v0.2.2</span></div>
+              <div><strong>Home Glance</strong><span>v0.2.2</span></div>
             </div>
             <div class="mock-grid">
               <span class="mock-tile tile-a">⚙</span>
@@ -304,7 +304,7 @@
       <div class="section-heading compact reveal">
         <p class="kicker" data-i18n="screenshots.kicker">See it in action</p>
         <h2 data-i18n="screenshots.title">Simple outside. Powerful inside.</h2>
-        <p data-i18n="screenshots.lead">Tap a screenshot to see it larger.</p>
+        <p data-i18n="screenshots.lead">Reference screenshots from earlier builds; the current interface may differ. Tap a screenshot to enlarge it.</p>
       </div>
 
       <div class="shot-grid">
@@ -369,7 +369,7 @@
       <div class="faq-grid">
         <details class="faq-item reveal">
           <summary data-i18n="faq.q1">Can I install v0.2.2 over an older version?</summary>
-          <p data-i18n="faq.a1">Yes. Home Glance can update over previous versions without removing the app, and existing settings and widget configuration are preserved.</p>
+          <p data-i18n="faq.a1">Yes, when the APK uses the same package name and signing key as your installed build. Settings are preserved during a compatible update. Debug, Play and GitHub builds may not be interchangeable.</p>
         </details>
         <details class="faq-item reveal">
           <summary data-i18n="faq.q2">Does Home Glance contain ads?</summary>
@@ -381,7 +381,7 @@
         </details>
         <details class="faq-item reveal">
           <summary data-i18n="faq.q4">Is this a finished stable release?</summary>
-          <p data-i18n="faq.a4">Not yet. Home Glance is still in public testing, so feedback and bug reports are especially useful.</p>
+          <p data-i18n="faq.a4">Not yet. Home Glance is still in public testing. Development builds can contain changes that are not included in the public APK.</p>
         </details>
       </div>
     </section>
@@ -422,10 +422,10 @@
 
       <div class="footer-links">
         <a href="https://github.com/vanloocek-collab/Home-Glance-Releases/issues" data-i18n="footer.feedback">Feedback & issues</a>
-        <a href="PRIVACY.md" data-i18n="footer.privacy">Privacy</a>
-        <a href="ROADMAP.md" data-i18n="footer.roadmap">Roadmap</a>
-        <a href="TESTING.md" data-i18n="footer.testing">Testing</a>
-        <a href="CONTRIBUTING.md" data-i18n="footer.contributing">Contributing</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+        <a href="https://github.com/vanloocek-collab/Home-Glance-Releases/blob/main/ROADMAP.md" data-i18n="footer.roadmap">Roadmap</a>
+        <a href="https://github.com/vanloocek-collab/Home-Glance-Releases/blob/main/TESTING.md" data-i18n="footer.testing">Testing</a>
+        <a href="https://github.com/vanloocek-collab/Home-Glance-Releases/blob/main/CONTRIBUTING.md" data-i18n="footer.contributing">Contributing</a>
         <a href="https://github.com/vanloocek-collab/Home-Glance-Releases">GitHub</a>
       </div>
     </div>
@@ -446,7 +446,7 @@
       <div class="release-modal-body">
         <div class="release-modal-status">
           <span class="release-dot" aria-hidden="true"></span>
-          <strong data-release-version>v0.2.2</strong>
+          <strong>v0.2.2</strong>
           <span data-i18n="releaseDetails.publicTest">Public test</span>
         </div>
 
@@ -491,7 +491,7 @@
         <div>
           <p class="kicker" data-i18n="fullRelease.kicker">FULL RELEASE NOTES</p>
           <h2 id="full-release-modal-title">Home Glance v0.2.2</h2>
-          <p data-i18n="fullRelease.lead">Original release text from the published GitHub release.</p>
+          <p data-i18n="fullRelease.lead">Release notes for the v0.2.2 public test.</p>
         </div>
         <button class="release-modal-close" type="button" aria-label="Close full release notes" data-i18n-aria="fullRelease.close" data-full-release-modal-close>×</button>
       </header>

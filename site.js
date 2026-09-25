@@ -17,7 +17,7 @@
         title: "Your day.<br><span>At a glance.</span>",
         lead: "Weather, calendar events, next alarm and smart context in a clean Android widget built to feel at home on modern launchers.",
         download: "Download APK",
-        releaseNotes: "Release notes",
+        releaseNotes: "v0.2.2 release notes",
         free: "Free",
         noAds: "No ads",
         languages: "languages",
@@ -83,7 +83,7 @@
       screenshots: {
         kicker: "See it in action",
         title: "Simple outside. Powerful inside.",
-        lead: "Tap a screenshot to see it larger.",
+        lead: "Reference screenshots from earlier builds; the current interface may differ. Tap a screenshot to enlarge it.",
         home: "Home",
         appearance: "Appearance",
         smart: "Smart weather",
@@ -105,13 +105,13 @@
       faq: {
         title: "Good to know before installing.",
         q1: "Can I install v0.2.2 over an older version?",
-        a1: "Yes. Home Glance can update over previous versions without removing the app, and existing settings and widget configuration are preserved.",
+        a1: "Yes, when the APK uses the same package name and signing key as your installed build. Settings are preserved during a compatible update. Debug, Play and GitHub builds may not be interchangeable.",
         q2: "Does Home Glance contain ads?",
         a2: "No. Home Glance is free and does not include advertising.",
         q3: "Which Android versions are supported?",
         a3: "Home Glance supports Android 8.0 (API 26) and newer.",
         q4: "Is this a finished stable release?",
-        a4: "Not yet. Home Glance is still in public testing, so feedback and bug reports are especially useful."
+        a4: "Not yet. Home Glance is still in public testing. Development builds can contain changes that are not included in the public APK."
       },
       download: {
         latest: "Latest public test",
@@ -144,7 +144,7 @@
       },
       fullRelease: {
         kicker: "FULL RELEASE NOTES",
-        lead: "Original release text from the published GitHub release.",
+        lead: "Release notes for the v0.2.2 public test.",
         close: "Close full release notes",
         intro: "Home Glance v0.2.2 is a compatibility and reliability update focused on Xiaomi / POCO alarms, launcher text handling, widget resizing and refresh stability.",
         whatsNew: "What's new",
@@ -187,7 +187,7 @@
         title: "Twój dzień.<br><span>Na pierwszy rzut oka.</span>",
         lead: "Pogoda, wydarzenia z kalendarza, najbliższy alarm i inteligentny kontekst w czystym widżecie Androida pasującym do nowoczesnych launcherów.",
         download: "Pobierz APK",
-        releaseNotes: "Informacje o wydaniu",
+        releaseNotes: "Informacje o wydaniu v0.2.2",
         free: "Bezpłatna",
         noAds: "Bez reklam",
         languages: "języków",
@@ -253,7 +253,7 @@
       screenshots: {
         kicker: "Zobacz go w działaniu",
         title: "Prosty z zewnątrz. Rozbudowany w środku.",
-        lead: "Kliknij zrzut ekranu, aby zobaczyć go w większym rozmiarze.",
+        lead: "Zrzuty poglądowe z wcześniejszych wersji; obecny interfejs może się różnić. Dotknij zrzutu, aby go powiększyć.",
         home: "Ekran główny",
         appearance: "Wygląd",
         smart: "Inteligentna pogoda",
@@ -275,13 +275,13 @@
       faq: {
         title: "Warto wiedzieć przed instalacją.",
         q1: "Czy mogę zainstalować v0.2.2 na starszej wersji?",
-        a1: "Tak. Home Glance aktualizuje się bez usuwania poprzedniej wersji, a istniejące ustawienia i konfiguracja widżetu zostają zachowane.",
+        a1: "Tak, jeśli APK ma tę samą nazwę pakietu i klucz podpisu co zainstalowana wersja. Zgodna aktualizacja zachowuje ustawienia. Wersje debug, Play i GitHub mogą nie być wzajemnie zgodne.",
         q2: "Czy Home Glance zawiera reklamy?",
         a2: "Nie. Home Glance jest bezpłatny i nie zawiera reklam.",
         q3: "Jakie wersje Androida są obsługiwane?",
         a3: "Home Glance obsługuje Androida 8.0 (API 26) i nowsze wersje.",
         q4: "Czy to już stabilne, finalne wydanie?",
-        a4: "Jeszcze nie. Home Glance nadal jest w publicznych testach, dlatego opinie i zgłoszenia błędów są szczególnie przydatne."
+        a4: "Jeszcze nie. Home Glance nadal jest w publicznych testach. Wersje rozwojowe mogą zawierać zmiany niedostępne w publicznym APK."
       },
       download: {
         latest: "Najnowsza wersja testowa",
@@ -314,7 +314,7 @@
       },
       fullRelease: {
         kicker: "PEŁNE INFORMACJE O WYDANIU",
-        lead: "Oryginalna treść opublikowanego wydania z GitHuba.",
+        lead: "Informacje o publicznej wersji testowej v0.2.2.",
         close: "Zamknij pełne informacje o wydaniu",
         intro: "Home Glance v0.2.2 to aktualizacja zgodności i niezawodności skupiona na alarmach Xiaomi / POCO, tekście launchera, zmianie rozmiaru i odświeżaniu widżetu.",
         whatsNew: "Co nowego",
@@ -382,13 +382,13 @@
     const dictionary = translations[lang] || translations["en-US"];
 
     document.documentElement.lang = lang;
-    document.title = dictionary.page.title;
+    document.title = getValue(dictionary, "page.title");
 
     const description = document.querySelector('meta[name="description"]');
-    if (description) description.setAttribute("content", dictionary.page.description);
+    if (description) description.setAttribute("content", getValue(dictionary, "page.description"));
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) ogDescription.setAttribute("content", dictionary.page.ogDescription);
+    if (ogDescription) ogDescription.setAttribute("content", getValue(dictionary, "page.ogDescription"));
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const value = getValue(dictionary, element.dataset.i18n);
@@ -468,25 +468,33 @@
       if (!response.ok) return;
 
       const releases = await response.json();
-      const latest = releases.find((release) => !release.draft);
+      if (!Array.isArray(releases)) return;
+
+      // A release without a downloadable APK must not relabel the fallback download.
+      // Include public prereleases: Home Glance is currently in public testing.
+      const candidates = releases.filter((release) =>
+        release && !release.draft && typeof release.tag_name === "string" && release.tag_name
+      ).map((release) => ({
+        release,
+        apk: (Array.isArray(release.assets) ? release.assets : []).find((asset) =>
+          asset && typeof asset.name === "string" && /\.apk$/i.test(asset.name) &&
+          !/debug/i.test(asset.name) &&
+          typeof asset.browser_download_url === "string" &&
+          asset.browser_download_url.startsWith("https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/")
+        )
+      })).filter(({ apk }) => apk).sort((a, b) =>
+        (Date.parse(b.release.published_at) || 0) - (Date.parse(a.release.published_at) || 0)
+      );
+      const latest = candidates[0];
       if (!latest) return;
 
-      const version = latest.tag_name || "0.2.2";
-      const apk = (latest.assets || []).find((asset) =>
-        asset.name && asset.name.toLowerCase().endsWith(".apk") &&
-        !asset.name.toLowerCase().includes("debug")
-      );
-
+      const version = latest.release.tag_name;
       document.querySelectorAll("[data-release-version]").forEach((element) => {
         element.textContent = version.startsWith("v") ? version : `v${version}`;
       });
 
-      document.querySelectorAll("[data-release-url]").forEach((element) => {
-        if (latest.html_url) element.href = latest.html_url;
-      });
-
       document.querySelectorAll("[data-release-download]").forEach((element) => {
-        if (apk && apk.browser_download_url) element.href = apk.browser_download_url;
+        element.href = latest.apk.browser_download_url;
       });
     } catch (_) {
       // Static v0.2.2 links remain as a safe fallback.

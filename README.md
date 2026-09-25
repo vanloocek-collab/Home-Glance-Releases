@@ -2,9 +2,13 @@
 
 A lightweight Android home-screen widget that combines weather and calendar information in a clean, Pixel-inspired layout.
 
-> **Current release:** Home Glance v0.2.2 · Public test release
+> **Latest public APK:** Home Glance v0.2.2 · Public test prerelease
 
 [Download Home Glance v0.2.2 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.2/Home-Glance-v0.2.2.apk)
+
+This repository contains public downloads, the [project website](https://vanloocek-collab.github.io/Home-Glance-Releases/), documentation and issue tracking. App source development is maintained separately.
+
+Development and experimental test builds can contain changes that are not included in v0.2.2. The features and release highlights below describe the published APK; unreleased work is not a new public release.
 
 ## Why Home Glance?
 
@@ -60,6 +64,8 @@ Availability depends on the device and installed system apps.
 
 ## Screenshots
 
+These are reference screenshots from earlier builds. Some screens and background options have changed; they are not a version-matched screenshot set for v0.2.2. The older “Milky” preview is retained as a visual reference, while the published app offers No background, Material You and Liquid Glass.
+
 <table>
   <tr>
     <td align="center"><img src="screenshots/home-glance-home.jpg" width="250"/><br/><b>Home</b></td>
@@ -92,6 +98,8 @@ Availability depends on the device and installed system apps.
 3. Allow installation from this source if Android asks for permission.
 4. Install Home Glance.
 5. Add the **Home Glance** widget to your home screen and configure it in the app.
+
+Updating in place requires the same package name and signing key as the installed app. Compatible updates preserve settings. Debug, Google Play and GitHub builds may not be interchangeable; include the build source when reporting an installation problem.
 
 ## v0.2.2 highlights
 

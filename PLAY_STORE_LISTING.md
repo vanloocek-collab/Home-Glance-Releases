@@ -2,6 +2,8 @@
 
 This file keeps the current Google Play Store listing copy and publishing notes for Home Glance in one place.
 
+**Draft preparation material:** this document does not confirm that Home Glance is available on Google Play. The [publishing pack](google-play/README.md) contains the prepared assets, listing copy and remaining submission work.
+
 ## App name
 
 **Home Glance**
@@ -89,7 +91,7 @@ Limit Google Play: 4000 znaków.
 ## Current publishing details
 
 - Default store language: English (United States)
-- Polish localization: planned
+- Polish localization: draft copy prepared below
 - Distribution: Free
 - Ads: None
 - Current public test version: v0.2.2
@@ -106,12 +108,12 @@ Limit Google Play: 4000 znaków.
 
 ## Store assets checklist
 
-- [ ] App icon — 512 × 512 PNG
+- [x] App icon — [512 × 512 PNG](google-play/assets/app-icon-512.png)
 - [ ] Feature graphic — 1024 × 500
 - [ ] Phone screenshots
-- [ ] English store listing
-- [ ] Polish store listing
-- [ ] Privacy policy URL
+- [x] English store listing draft
+- [x] Polish store listing draft
+- [x] [Public privacy policy URL](https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html)
 - [ ] Data safety declaration
 - [ ] Content rating questionnaire
 - [ ] Target audience declaration

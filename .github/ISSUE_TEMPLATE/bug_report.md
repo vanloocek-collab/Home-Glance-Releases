@@ -27,6 +27,8 @@ Add screenshots if they help explain the problem.
 ### Device information
 
 - Home Glance version:
+- Build source (public GitHub APK, Google Play or developer test APK):
+- Branch/commit, if supplied with a test build:
 - Android version:
 - Device:
 - Launcher:

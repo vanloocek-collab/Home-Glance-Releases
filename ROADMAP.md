@@ -2,6 +2,8 @@
 
 Home Glance is currently in public testing. This roadmap shows the general direction of the project without promising fixed release dates.
 
+The latest published APK is **v0.2.2**, a public test prerelease. Development builds and experiments are evaluated separately and are not part of the public download until explicitly released.
+
 ## Now
 
 - Collect feedback from early testers

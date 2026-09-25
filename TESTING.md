@@ -2,11 +2,21 @@
 
 Home Glance is still in public testing. If you want to help, you do not need to test everything — even a few checks on your phone are useful.
 
+## Which build to test
+
+- **Public testing:** use the [v0.2.2 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.2). This checklist describes that public release.
+- **Development testing:** if you receive a separate test APK from the developer, record its version, build source and, if supplied, branch or commit. It may include unreleased changes; do not assume those changes are in the public APK.
+- **Experimental features:** test only in the build supplied for that experiment. Animation and icon-pack experiments have not been published in v0.2.2.
+
+An in-place update needs a compatible package name and signing key. Debug, Google Play and GitHub builds may not update one another.
+
 ## Basic information to include
 
 When reporting a problem or sharing test results, please include:
 
 - Home Glance version
+- Build source (public GitHub APK, Google Play or developer-provided test APK)
+- Branch or commit, if supplied with a development build
 - Android version
 - Device manufacturer and model
 - Launcher

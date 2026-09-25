@@ -37,7 +37,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "Dein Tag.<br><span>Auf einen Blick.</span>",
       "lead": "Wetter, Kalendertermine, nächster Wecker und intelligenter Kontext in einem klaren Android-Widget für moderne Launcher.",
       "download": "APK herunterladen",
-      "releaseNotes": "Versionshinweise",
+      "releaseNotes": "Versionshinweise zu v0.2.2",
       "free": "Kostenlos",
       "noAds": "Werbefrei",
       "languages": "Sprachen",
@@ -89,7 +89,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "In Aktion ansehen",
       "title": "Außen schlicht. Innen leistungsstark.",
-      "lead": "Klicke auf einen Screenshot, um ihn größer anzusehen.",
+      "lead": "Referenzbilder aus früheren Builds; die aktuelle Oberfläche kann abweichen. Klicke auf ein Bild, um es zu vergrößern.",
       "home": "Startseite",
       "appearance": "Darstellung",
       "smart": "Intelligentes Wetter",
@@ -110,13 +110,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "Gut zu wissen vor der Installation.",
       "q1": "Kann ich v0.2.2 über eine ältere Version installieren?",
-      "a1": "Ja. Home Glance kann ältere Versionen aktualisieren, ohne die App zu entfernen; vorhandene Einstellungen und die Widget-Konfiguration bleiben erhalten.",
+      "a1": "Ja, wenn die APK denselben Paketnamen und Signaturschlüssel wie die installierte Version verwendet. Bei einem kompatiblen Update bleiben die Einstellungen erhalten. Debug-, Play- und GitHub-Builds sind möglicherweise nicht untereinander austauschbar.",
       "q2": "Enthält Home Glance Werbung?",
       "a2": "Nein. Home Glance ist kostenlos und enthält keine Werbung.",
       "q3": "Welche Android-Versionen werden unterstützt?",
       "a3": "Home Glance unterstützt Android 8.0 (API 26) und neuer.",
       "q4": "Ist dies bereits eine stabile finale Version?",
-      "a4": "Noch nicht. Home Glance befindet sich weiterhin im öffentlichen Test, daher sind Feedback und Fehlerberichte besonders hilfreich."
+      "a4": "Noch nicht. Home Glance befindet sich weiterhin im öffentlichen Test. Entwicklungs-Builds können Änderungen enthalten, die noch nicht in der öffentlichen APK enthalten sind."
     },
     "download": {
       "latest": "Neueste Testversion",
@@ -169,7 +169,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "VOLLSTÄNDIGE VERSIONSHINWEISE",
-      "lead": "Originaltext der veröffentlichten GitHub-Version.",
+      "lead": "Versionshinweise zur öffentlichen Testversion v0.2.2.",
       "close": "Vollständige Versionshinweise schließen",
       "intro": "Home Glance v0.2.2 ist ein Kompatibilitäts- und Zuverlässigkeitsupdate mit Schwerpunkt auf Xiaomi-/POCO-Weckern, Launcher-Textdarstellung, Widget-Größenänderung und Aktualisierungsstabilität.",
       "whatsNew": "Neuigkeiten",
@@ -212,7 +212,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "Tu día.<br><span>De un vistazo.</span>",
       "lead": "Tiempo, eventos del calendario, próxima alarma y contexto inteligente en un widget Android limpio, pensado para launchers modernos.",
       "download": "Descargar APK",
-      "releaseNotes": "Notas de la versión",
+      "releaseNotes": "Notas de la versión v0.2.2",
       "free": "Gratis",
       "noAds": "Sin anuncios",
       "languages": "idiomas",
@@ -264,7 +264,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "Míralo en acción",
       "title": "Simple por fuera. Potente por dentro.",
-      "lead": "Pulsa una captura para verla más grande.",
+      "lead": "Capturas de referencia de versiones anteriores; la interfaz actual puede variar. Toca una captura para ampliarla.",
       "home": "Inicio",
       "appearance": "Apariencia",
       "smart": "Tiempo inteligente",
@@ -285,13 +285,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "Conviene saberlo antes de instalar.",
       "q1": "¿Puedo instalar v0.2.2 sobre una versión anterior?",
-      "a1": "Sí. Home Glance puede actualizar versiones anteriores sin eliminar la app, conservando los ajustes y la configuración del widget.",
+      "a1": "Sí, si el APK utiliza el mismo nombre de paquete y la misma clave de firma que la versión instalada. Una actualización compatible conserva los ajustes. Las versiones debug, Play y GitHub pueden no ser intercambiables.",
       "q2": "¿Home Glance contiene anuncios?",
       "a2": "No. Home Glance es gratis y no incluye publicidad.",
       "q3": "¿Qué versiones de Android son compatibles?",
       "a3": "Home Glance es compatible con Android 8.0 (API 26) y versiones posteriores.",
       "q4": "¿Es ya una versión estable y final?",
-      "a4": "Todavía no. Home Glance sigue en pruebas públicas, por lo que los comentarios y los informes de errores son especialmente útiles."
+      "a4": "Todavía no. Home Glance sigue en pruebas públicas. Las versiones de desarrollo pueden incluir cambios que aún no están en el APK público."
     },
     "download": {
       "latest": "Última versión de prueba",
@@ -344,7 +344,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "NOTAS COMPLETAS",
-      "lead": "Texto original de la versión publicada en GitHub.",
+      "lead": "Notas de la versión de prueba pública v0.2.2.",
       "close": "Cerrar notas completas",
       "intro": "Home Glance v0.2.2 es una actualización de compatibilidad y fiabilidad centrada en las alarmas Xiaomi / POCO, el texto del launcher, el redimensionado y la estabilidad de actualización.",
       "whatsNew": "Novedades",
@@ -387,7 +387,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "Votre journée.<br><span>En un coup d’œil.</span>",
       "lead": "Météo, événements du calendrier, prochaine alarme et contexte intelligent dans un widget Android épuré conçu pour les lanceurs modernes.",
       "download": "Télécharger l’APK",
-      "releaseNotes": "Notes de version",
+      "releaseNotes": "Notes de version v0.2.2",
       "free": "Gratuit",
       "noAds": "Sans publicité",
       "languages": "langues",
@@ -439,7 +439,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "Voyez-le en action",
       "title": "Simple à l’extérieur. Puissant à l’intérieur.",
-      "lead": "Touchez une capture pour l’agrandir.",
+      "lead": "Captures de référence de versions précédentes ; l’interface actuelle peut différer. Touchez une capture pour l’agrandir.",
       "home": "Accueil",
       "appearance": "Apparence",
       "smart": "Météo intelligente",
@@ -460,13 +460,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "À savoir avant l’installation.",
       "q1": "Puis-je installer v0.2.2 par-dessus une ancienne version ?",
-      "a1": "Oui. Home Glance peut mettre à jour les versions précédentes sans supprimer l’application, et conserve les réglages et la configuration du widget.",
+      "a1": "Oui, si l’APK utilise le même nom de paquet et la même clé de signature que la version installée. Une mise à jour compatible conserve les réglages. Les versions debug, Play et GitHub ne sont pas forcément interchangeables.",
       "q2": "Home Glance contient-il des publicités ?",
       "a2": "Non. Home Glance est gratuit et ne contient aucune publicité.",
       "q3": "Quelles versions d’Android sont prises en charge ?",
       "a3": "Home Glance prend en charge Android 8.0 (API 26) et versions ultérieures.",
       "q4": "S’agit-il déjà d’une version stable et finale ?",
-      "a4": "Pas encore. Home Glance est toujours en test public ; les retours et rapports de bugs sont donc particulièrement utiles."
+      "a4": "Pas encore. Home Glance est toujours en test public. Les versions de développement peuvent contenir des changements absents de l’APK public."
     },
     "download": {
       "latest": "Dernière version de test",
@@ -519,7 +519,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "NOTES COMPLÈTES",
-      "lead": "Texte original de la version publiée sur GitHub.",
+      "lead": "Notes de la version de test publique v0.2.2.",
       "close": "Fermer les notes complètes",
       "intro": "Home Glance v0.2.2 est une mise à jour de compatibilité et de fiabilité axée sur les alarmes Xiaomi / POCO, le texte des lanceurs, le redimensionnement et la stabilité des actualisations.",
       "whatsNew": "Nouveautés",
@@ -562,7 +562,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "La tua giornata.<br><span>A colpo d’occhio.</span>",
       "lead": "Meteo, eventi del calendario, prossima sveglia e contesto intelligente in un widget Android pulito pensato per launcher moderni.",
       "download": "Scarica APK",
-      "releaseNotes": "Note di rilascio",
+      "releaseNotes": "Note di rilascio v0.2.2",
       "free": "Gratis",
       "noAds": "Senza pubblicità",
       "languages": "lingue",
@@ -614,7 +614,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "Guardalo in azione",
       "title": "Semplice fuori. Potente dentro.",
-      "lead": "Tocca uno screenshot per ingrandirlo.",
+      "lead": "Screenshot di riferimento di versioni precedenti; l’interfaccia attuale può variare. Tocca uno screenshot per ingrandirlo.",
       "home": "Home",
       "appearance": "Aspetto",
       "smart": "Meteo intelligente",
@@ -635,13 +635,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "Da sapere prima dell’installazione.",
       "q1": "Posso installare v0.2.2 sopra una versione precedente?",
-      "a1": "Sì. Home Glance può aggiornare le versioni precedenti senza rimuovere l’app, mantenendo impostazioni e configurazione del widget.",
+      "a1": "Sì, se l’APK usa lo stesso nome del pacchetto e la stessa chiave di firma della versione installata. Un aggiornamento compatibile mantiene le impostazioni. Le versioni debug, Play e GitHub potrebbero non essere intercambiabili.",
       "q2": "Home Glance contiene pubblicità?",
       "a2": "No. Home Glance è gratuito e non include pubblicità.",
       "q3": "Quali versioni di Android sono supportate?",
       "a3": "Home Glance supporta Android 8.0 (API 26) e versioni successive.",
       "q4": "È già una versione stabile e definitiva?",
-      "a4": "Non ancora. Home Glance è ancora in test pubblico, quindi feedback e segnalazioni di bug sono particolarmente utili."
+      "a4": "Non ancora. Home Glance è ancora in fase di test pubblico. Le versioni di sviluppo possono contenere modifiche non presenti nell’APK pubblico."
     },
     "download": {
       "latest": "Ultima versione di test",
@@ -694,7 +694,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "NOTE COMPLETE",
-      "lead": "Testo originale della release pubblicata su GitHub.",
+      "lead": "Note della versione di test pubblica v0.2.2.",
       "close": "Chiudi le note complete",
       "intro": "Home Glance v0.2.2 è un aggiornamento di compatibilità e affidabilità focalizzato su sveglie Xiaomi / POCO, testo del launcher, ridimensionamento e stabilità degli aggiornamenti.",
       "whatsNew": "Novità",
@@ -737,7 +737,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "Seu dia.<br><span>Num relance.</span>",
       "lead": "Clima, eventos do calendário, próximo alarme e contexto inteligente em um widget Android limpo, feito para launchers modernos.",
       "download": "Baixar APK",
-      "releaseNotes": "Notas da versão",
+      "releaseNotes": "Notas da versão v0.2.2",
       "free": "Grátis",
       "noAds": "Sem anúncios",
       "languages": "idiomas",
@@ -789,7 +789,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "Veja em ação",
       "title": "Simples por fora. Poderoso por dentro.",
-      "lead": "Toque em uma captura para ampliar.",
+      "lead": "Capturas de referência de versões anteriores; a interface atual pode variar. Toque em uma captura para ampliá-la.",
       "home": "Início",
       "appearance": "Aparência",
       "smart": "Clima inteligente",
@@ -810,13 +810,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "Bom saber antes de instalar.",
       "q1": "Posso instalar a v0.2.2 sobre uma versão anterior?",
-      "a1": "Sim. Home Glance pode atualizar versões anteriores sem remover o app, mantendo as configurações e a configuração do widget.",
+      "a1": "Sim, se o APK usar o mesmo nome de pacote e a mesma chave de assinatura da versão instalada. Uma atualização compatível preserva as configurações. As versões debug, Play e GitHub podem não ser intercambiáveis.",
       "q2": "Home Glance contém anúncios?",
       "a2": "Não. Home Glance é gratuito e não inclui anúncios.",
       "q3": "Quais versões do Android são compatíveis?",
       "a3": "Home Glance é compatível com Android 8.0 (API 26) e versões mais recentes.",
       "q4": "Esta já é uma versão estável e final?",
-      "a4": "Ainda não. Home Glance continua em teste público, então feedback e relatórios de bugs são especialmente úteis."
+      "a4": "Ainda não. O Home Glance continua em testes públicos. As versões de desenvolvimento podem conter mudanças que ainda não estão no APK público."
     },
     "download": {
       "latest": "Versão de teste mais recente",
@@ -869,7 +869,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "NOTAS COMPLETAS",
-      "lead": "Texto original da versão publicada no GitHub.",
+      "lead": "Notas da versão de teste pública v0.2.2.",
       "close": "Fechar notas completas",
       "intro": "Home Glance v0.2.2 é uma atualização de compatibilidade e confiabilidade focada em alarmes Xiaomi / POCO, texto do launcher, redimensionamento e estabilidade de atualização.",
       "whatsNew": "Novidades",
@@ -912,7 +912,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "Ваш день.<br><span>С первого взгляда.</span>",
       "lead": "Погода, события календаря, ближайший будильник и умный контекст в аккуратном Android-виджете для современных лаунчеров.",
       "download": "Скачать APK",
-      "releaseNotes": "Информация о выпуске",
+      "releaseNotes": "Примечания к выпуску v0.2.2",
       "free": "Бесплатно",
       "noAds": "Без рекламы",
       "languages": "языков",
@@ -964,7 +964,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "Посмотрите в действии",
       "title": "Простой снаружи. Мощный внутри.",
-      "lead": "Нажмите на скриншот, чтобы увеличить его.",
+      "lead": "Справочные скриншоты предыдущих сборок; текущий интерфейс может отличаться. Нажмите на скриншот, чтобы увеличить его.",
       "home": "Главная",
       "appearance": "Внешний вид",
       "smart": "Умная погода",
@@ -985,13 +985,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "Полезно знать перед установкой.",
       "q1": "Можно ли установить v0.2.2 поверх более старой версии?",
-      "a1": "Да. Home Glance обновляется поверх предыдущих версий без удаления приложения, сохраняя настройки и конфигурацию виджета.",
+      "a1": "Да, если APK использует то же имя пакета и ключ подписи, что и установленная версия. При совместимом обновлении настройки сохраняются. Сборки debug, Play и GitHub могут быть несовместимы друг с другом.",
       "q2": "Есть ли в Home Glance реклама?",
       "a2": "Нет. Home Glance бесплатен и не содержит рекламы.",
       "q3": "Какие версии Android поддерживаются?",
       "a3": "Home Glance поддерживает Android 8.0 (API 26) и новее.",
       "q4": "Это уже стабильная финальная версия?",
-      "a4": "Пока нет. Home Glance всё ещё находится в публичном тестировании, поэтому отзывы и сообщения об ошибках особенно полезны."
+      "a4": "Пока нет. Home Glance всё ещё проходит публичное тестирование. Сборки для разработки могут содержать изменения, которых ещё нет в публичном APK."
     },
     "download": {
       "latest": "Последняя тестовая версия",
@@ -1044,7 +1044,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "ПОЛНЫЕ ПРИМЕЧАНИЯ",
-      "lead": "Оригинальный текст опубликованного выпуска GitHub.",
+      "lead": "Примечания к публичной тестовой версии v0.2.2.",
       "close": "Закрыть полные примечания",
       "intro": "Home Glance v0.2.2 — обновление совместимости и надёжности, посвящённое будильникам Xiaomi / POCO, отображению текста лаунчером, изменению размера и стабильности обновления.",
       "whatsNew": "Что нового",
@@ -1087,7 +1087,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "你的一天。<br><span>一目了然。</span>",
       "lead": "在简洁的 Android 小组件中查看天气、日历日程、下一个闹钟和智能情境信息，适配现代启动器。",
       "download": "下载 APK",
-      "releaseNotes": "版本说明",
+      "releaseNotes": "v0.2.2 版本说明",
       "free": "免费",
       "noAds": "无广告",
       "languages": "种语言",
@@ -1139,7 +1139,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "实际效果",
       "title": "外表简洁，内在强大。",
-      "lead": "点击截图可放大查看。",
+      "lead": "这些是早期版本的参考截图，当前界面可能有所不同。点击截图可放大查看。",
       "home": "主页",
       "appearance": "外观",
       "smart": "智能天气",
@@ -1160,13 +1160,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "安装前需要了解。",
       "q1": "可以在旧版本上直接安装 v0.2.2 吗？",
-      "a1": "可以。Home Glance 可直接更新旧版本，无需卸载，并保留现有设置和小组件配置。",
+      "a1": "可以，但 APK 必须与已安装版本使用相同的包名和签名密钥。兼容的更新会保留设置。debug、Play 和 GitHub 版本可能无法互相覆盖安装。",
       "q2": "Home Glance 有广告吗？",
       "a2": "没有。Home Glance 免费且不含广告。",
       "q3": "支持哪些 Android 版本？",
       "a3": "Home Glance 支持 Android 8.0（API 26）及更高版本。",
       "q4": "这是稳定的最终版本吗？",
-      "a4": "还不是。Home Glance 仍处于公开测试阶段，因此反馈和错误报告非常重要。"
+      "a4": "还不是。Home Glance 仍处于公开测试阶段。开发版本可能包含尚未纳入公开 APK 的更改。"
     },
     "download": {
       "latest": "最新测试版本",
@@ -1219,7 +1219,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "完整版本说明",
-      "lead": "GitHub 已发布版本的原始说明。",
+      "lead": "v0.2.2 公开测试版的版本说明。",
       "close": "关闭完整版本说明",
       "intro": "Home Glance v0.2.2 是一次兼容性和可靠性更新，重点改善 Xiaomi / POCO 闹钟、启动器文字显示、小组件尺寸调整和刷新稳定性。",
       "whatsNew": "更新内容",
@@ -1262,7 +1262,7 @@ window.HOME_GLANCE_LOCALES = {
       "title": "あなたの一日を。<br><span>ひと目で。</span>",
       "lead": "天気、カレンダーの予定、次のアラーム、スマートなコンテキストを、最新ランチャーになじむすっきりした Android ウィジェットで。",
       "download": "APK をダウンロード",
-      "releaseNotes": "リリースノート",
+      "releaseNotes": "v0.2.2 リリースノート",
       "free": "無料",
       "noAds": "広告なし",
       "languages": "言語",
@@ -1314,7 +1314,7 @@ window.HOME_GLANCE_LOCALES = {
     "screenshots": {
       "kicker": "実際の動作",
       "title": "外はシンプル。中はパワフル。",
-      "lead": "スクリーンショットをタップすると拡大できます。",
+      "lead": "以前のビルドの参考スクリーンショットです。現在の画面とは異なる場合があります。タップすると拡大できます。",
       "home": "ホーム",
       "appearance": "外観",
       "smart": "スマート天気",
@@ -1335,13 +1335,13 @@ window.HOME_GLANCE_LOCALES = {
     "faq": {
       "title": "インストール前に知っておきたいこと。",
       "q1": "古いバージョンの上に v0.2.2 をインストールできますか？",
-      "a1": "はい。Home Glance はアプリを削除せずに以前のバージョンを更新でき、既存の設定とウィジェット構成も保持されます。",
+      "a1": "APK のパッケージ名と署名キーがインストール済みのビルドと同じ場合は可能です。互換性のある更新では設定が保持されます。debug、Play、GitHub の各ビルドは相互に上書きできない場合があります。",
       "q2": "Home Glance に広告はありますか？",
       "a2": "いいえ。Home Glance は無料で、広告は含まれていません。",
       "q3": "対応している Android バージョンは？",
       "a3": "Home Glance は Android 8.0（API 26）以降に対応しています。",
       "q4": "すでに安定した最終版ですか？",
-      "a4": "まだです。Home Glance は現在も公開テスト中で、フィードバックや不具合報告を歓迎しています。"
+      "a4": "まだです。Home Glance は公開テスト中です。開発ビルドには、公開 APK にまだ含まれていない変更がある場合があります。"
     },
     "download": {
       "latest": "最新テスト版",
@@ -1394,7 +1394,7 @@ window.HOME_GLANCE_LOCALES = {
     },
     "fullRelease": {
       "kicker": "完全なリリースノート",
-      "lead": "GitHub で公開されたリリースの原文。",
+      "lead": "公開テスト版 v0.2.2 のリリースノート。",
       "close": "完全なリリースノートを閉じる",
       "intro": "Home Glance v0.2.2 は、Xiaomi / POCO のアラーム、ランチャー上の文字表示、ウィジェットのサイズ変更、更新の安定性に重点を置いた互換性・信頼性アップデートです。",
       "whatsNew": "新機能",
