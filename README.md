@@ -2,9 +2,9 @@
 
 A lightweight Android home-screen widget that combines weather and calendar information in a clean, Pixel-inspired layout.
 
-> **Current release:** Home Glance v0.2.1 · Public test release
+> **Current release:** Home Glance v0.2.2 · Public test release
 
-[Download Home Glance v0.2.1 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.1/Home-Glance-v0.2.1.apk)
+[Download Home Glance v0.2.2 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.2/Home-Glance-v0.2.2.apk)
 
 ## Why Home Glance?
 
@@ -93,6 +93,16 @@ Availability depends on the device and installed system apps.
 4. Install Home Glance.
 5. Add the **Home Glance** widget to your home screen and configure it in the app.
 
+## v0.2.2 highlights
+
+- Fixed incorrect and stale next-alarm times on Xiaomi / POCO devices
+- Fixed temporary `00:00` after disabling an alarm on HyperOS
+- Added direct monitoring of Xiaomi / POCO alarm-setting changes for reliable automatic updates
+- Fixed duplicate ticker text on some POCO and OnePlus launchers
+- Fixed weather text clipping on Xiaomi / POCO
+- Fixed date text remaining clipped after widget resize
+- Improved Refresh Widget full rebuilds and Dynamic Weather transition stability
+
 ## v0.2.1 highlights
 
 - Calendar additions, edits and reminder changes can refresh the widget automatically within a few seconds
@@ -140,4 +150,4 @@ Availability depends on the device and installed system apps.
 
 Home Glance is still in public testing. Feedback and bug reports are welcome.
 
-[View Home Glance v0.2.1 release notes](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.1)
+[View Home Glance v0.2.2 release notes](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.2)
