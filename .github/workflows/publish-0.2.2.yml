@@ -1,0 +1,32 @@
+name: Publish Home Glance 0.2.2
+
+on:
+  push:
+    paths:
+      - ".github/workflows/publish-0.2.2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Create prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view 0.2.2 >/dev/null 2>&1; then
+            echo "Release 0.2.2 already exists."
+            exit 0
+          fi
+
+          gh release create 0.2.2 \
+            --target main \
+            --title "Home Glance v0.2.2" \
+            --notes-file RELEASE_NOTES_0.2.2.md \
+            --prerelease
