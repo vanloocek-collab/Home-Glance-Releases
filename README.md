@@ -64,25 +64,17 @@ Availability depends on the device and installed system apps.
 
 ## Screenshots
 
-These are reference screenshots from earlier builds. Some screens and background options have changed; they are not a version-matched screenshot set for v0.2.3. The older “Milky” preview is retained as a visual reference, while the published app offers No background, Material You and Liquid Glass.
+The old reference screenshot set has been removed so the repository does not present outdated UI as current. The next full screenshot set will be captured against a matching public build.
 
-<table>
-  <tr>
-    <td align="center"><img src="screenshots/home-glance-home.jpg" width="250"/><br/><b>Home</b></td>
-    <td align="center"><img src="screenshots/home-glance-languages.jpg" width="250"/><br/><b>Languages</b></td>
-    <td align="center"><img src="screenshots/home-glance-appearance.jpg" width="250"/><br/><b>Appearance</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="screenshots/home-glance-weather-location.jpg" width="250"/><br/><b>Weather location</b></td>
-    <td align="center"><img src="screenshots/home-glance-weather-smart.jpg" width="250"/><br/><b>Smart weather</b></td>
-    <td align="center"><img src="screenshots/home-glance-calendar.jpg" width="250"/><br/><b>Calendar</b></td>
-  </tr>
-</table>
+For now, the project site uses the current widget capture below:
 
 <p align="center">
-  <img src="screenshots/home-glance-widget-milky.jpg" width="280"/><br/>
-  <b>Home Glance widget on the Android home screen</b>
+  <img src="screenshots/2026-09-27-widget-crop.webp" width="760"/><br/>
+  <b>Home Glance widget — current public-site capture</b>
 </p>
+
+- [Open the project website](https://vanloocek-collab.github.io/Home-Glance-Releases/)
+- [Open the wallpapers gallery](https://vanloocek-collab.github.io/Home-Glance-Releases/wallpapers.html)
 
 ## Requirements
 
