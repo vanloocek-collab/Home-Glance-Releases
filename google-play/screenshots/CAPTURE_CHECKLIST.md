@@ -1,6 +1,6 @@
 # Final screenshot capture checklist
 
-The files in `reference/` are working references, not the final EN-US Play Store screenshot set.
+The old reference screenshot set has been removed. Capture a fresh version-matched set for the final EN-US Play Store listing.
 
 For the default EN-US listing:
 
