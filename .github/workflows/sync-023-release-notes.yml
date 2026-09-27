@@ -1,0 +1,27 @@
+name: Sync 0.2.3 release notes
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/sync-023-release-notes-trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update published release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release edit 0.2.3 \
+            --title "Home Glance v0.2.3" \
+            --notes-file RELEASE_NOTES_0.2.3.md \
+            --prerelease
