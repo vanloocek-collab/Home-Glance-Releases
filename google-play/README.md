@@ -9,6 +9,7 @@ This folder is the central checklist and source-of-truth for publishing Home Gla
 - Store listing copy: `PLAY_STORE_LISTING.md`
 - Data Safety draft: `DATA_SAFETY_DRAFT.md`
 - App Content draft: `APP_CONTENT_DRAFT.md`
+- Release notes: `RELEASE_NOTES_0.2.3.md`
 - Screenshot capture plan: `screenshots/CAPTURE_CHECKLIST.md`
 - Public privacy page: https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html
 
