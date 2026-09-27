@@ -1,0 +1,1 @@
+Rename the published 0.2.3 APK to the standard Home-Glance-vX.Y.Z.apk pattern.
