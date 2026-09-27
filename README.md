@@ -64,16 +64,16 @@ Availability depends on the device and installed system apps.
 
 ## Screenshots
 
-The old reference screenshot set has been removed so the repository does not present outdated UI as current. The next full screenshot set will be captured against a matching public build.
+Current Home Glance captures using the **Slow Down. It's Enough.** wallpaper collection:
 
-For now, the project site uses the current widget capture below:
+<table>
+  <tr>
+    <td align="center"><img src="screenshots/2026-09-27-slow-down-minimal.webp" width="280"/><br/><b>Main current screenshot</b></td>
+    <td align="center"><img src="screenshots/2026-09-27-slow-down-crosswalk.webp" width="280"/><br/><b>Wallpaper in use</b></td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="screenshots/2026-09-27-widget-crop.webp" width="760"/><br/>
-  <b>Home Glance widget — current public-site capture</b>
-</p>
-
-- [Open the project website](https://vanloocek-collab.github.io/Home-Glance-Releases/)
+- [Open the screenshots page](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html)
 - [Open the wallpapers gallery](https://vanloocek-collab.github.io/Home-Glance-Releases/wallpapers.html)
 
 ## Requirements
