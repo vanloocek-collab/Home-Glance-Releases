@@ -1,0 +1,26 @@
+name: Rename 0.2.3 release asset
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/rename-023-asset-trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rename release APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          asset_id="$(gh api "repos/${{ github.repository }}/releases/tags/0.2.3" --jq '.assets[] | select(.name=="Home.Glance.v0.2.3.apk") | .id' | head -n1)"
+          if [ -z "$asset_id" ]; then
+            echo "Dotted asset name not found; it may already be renamed."
+            exit 0
+          fi
+          gh api --method PATCH "repos/${{ github.repository }}/releases/assets/$asset_id" -f name='Home-Glance-v0.2.3.apk'
