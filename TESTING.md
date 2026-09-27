@@ -29,6 +29,7 @@ When reporting a problem or sharing test results, please include:
 - Add the Home Glance widget to the home screen
 - If updating from an older version, confirm that settings are preserved
 - Use the in-app update checker and confirm that it can detect, download and install a newer release when available
+- If Google Play Protect scans the APK during manual installation, record the result. On POCO / HyperOS this extra scan has been observed as normal behavior; if Play Protect reports that the app appears safe and installation continues, do not treat the scan itself as a Home Glance bug.
 
 ## Widget
 
