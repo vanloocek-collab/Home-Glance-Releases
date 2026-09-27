@@ -64,14 +64,12 @@ Availability depends on the device and installed system apps.
 
 ## Screenshots
 
-Current Home Glance captures using the **Slow Down. It's Enough.** wallpaper collection:
+Current Home Glance widget capture:
 
-<table>
-  <tr>
-    <td align="center"><img src="screenshots/2026-09-27-slow-down-minimal.webp" width="280"/><br/><b>Main current screenshot</b></td>
-    <td align="center"><img src="screenshots/2026-09-27-slow-down-crosswalk.webp" width="280"/><br/><b>Wallpaper in use</b></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="screenshots/2026-09-27-widget-crop.webp" width="760"/><br/>
+  <b>Home Glance widget</b>
+</p>
 
 - [Open the screenshots page](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html)
 - [Open the wallpapers gallery](https://vanloocek-collab.github.io/Home-Glance-Releases/wallpapers.html)
