@@ -34,4 +34,13 @@ On POCO / HyperOS devices, Google Play Protect may perform an additional scan wh
 
 v0.2.3 can be installed directly over a compatible previous Home Glance release signed with the same key. Existing settings and widget configuration are preserved.
 
+## Verification metadata
+
+- Package: `com.vanloocek.homeglance`
+- versionName: `0.2.3`
+- versionCode: `10`
+- Source tag: `v0.2.3` in the private Home-Glance-Widget source repository
+- Source commit: `ac4c308c36b4a8d97080e1160ee158a0c2fef601`
+- APK SHA-256: `cc89f055514dcd1748dc3072e612a10587f30fefe5e8ff594f4ca007822925fc`
+
 Home Glance remains in public testing. Feedback and bug reports are very welcome.
