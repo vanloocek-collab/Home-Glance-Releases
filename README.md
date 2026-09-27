@@ -4,7 +4,7 @@ A lightweight Android home-screen widget that combines weather and calendar info
 
 > **Latest public APK:** Home Glance v0.2.3 · Public test prerelease
 
-[Download Home Glance v0.2.3 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.3/Home.Glance.v0.2.3.apk)
+[Download Home Glance v0.2.3 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.3/Home-Glance-v0.2.3.apk)
 
 This repository contains public downloads, the [project website](https://vanloocek-collab.github.io/Home-Glance-Releases/), documentation and issue tracking. App source development is maintained separately.
 
