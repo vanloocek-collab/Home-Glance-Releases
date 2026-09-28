@@ -98,3 +98,41 @@ html[lang^="pl"] .tester-pl{display:block}
 .tester-kicker .tester-eyebrow{margin-bottom:0}
 .play-store-icon{width:24px;height:24px;flex:0 0 24px;display:block}
 @media(max-width:560px){.brand-tester-alert{font-size:10px}.site-brand{gap:.35em;line-height:1.2}.play-store-icon{width:22px;height:22px;flex-basis:22px}}
+
+
+/* Header contrast + synchronized tester alert */
+body:not(.home-page) .site-brand-main,
+body:not(.home-page) .menu-button{
+  color:#111;
+  mix-blend-mode:normal;
+}
+
+body:not(.home-page):has(.detail.dark) .site-brand-main,
+body:not(.home-page):has(.detail.dark) .menu-button{
+  color:#fff;
+}
+
+.home-page .site-brand-main,
+.home-page .menu-button{
+  color:#fff;
+  mix-blend-mode:difference;
+}
+
+body.menu-open .site-brand-main,
+body.menu-open .menu-button{
+  color:#fff!important;
+  mix-blend-mode:normal!important;
+}
+
+.brand-tester-alert{
+  color:var(--red);
+  opacity:0;
+  animation:stopSignal 2.4s steps(1,end) 1.85s infinite;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .brand-tester-alert{
+    animation:none;
+    opacity:1;
+  }
+}
