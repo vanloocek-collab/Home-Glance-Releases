@@ -50,7 +50,7 @@
 .detail>.wrap.policy{max-width:1200px}
 .carousel-phone,.carousel-slide figcaption{width:min(310px,58vw)}
 .home-page .hero-code{display:none!important}
-.home-page .red-dot{position:absolute;left:-1px;top:-10px;margin:0;opacity:0;transform:none;box-shadow:none;animation:stopSignal 2.4s steps(1,end) 2.79s infinite}
+.home-page .red-dot{position:absolute;left:-1px;top:-10px;margin:0;opacity:0;transform:none;box-shadow:none;animation:stopSignal 2.4s steps(1,end) 1.85s infinite}
 @keyframes stopSignal{0%,43%{opacity:1}44%,72%{opacity:0}73%,100%{opacity:1}}
 .release-pl{display:none}
 [lang="pl"] .release-en{display:none}
