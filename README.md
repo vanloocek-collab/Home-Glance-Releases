@@ -9,6 +9,19 @@ A lightweight Android home-screen widget for weather, calendar, next alarm and u
 
 > This is the public distribution, documentation and issue-tracking repository for Home Glance. App source development is maintained separately.
 
+## Help bring Home Glance to Google Play
+
+Home Glance is preparing for its first Google Play release. Google requires a **closed test with at least 12 testers for 14 days** before production access can be requested.
+
+If you use Home Glance — or simply want to help the project reach Google Play — join the tester group:
+
+**[Join Home Glance Testers](https://groups.google.com/g/home-glance-testers)**
+
+No payment, subscription or testing experience is required. The Google Play opt-in link will be added here as soon as the closed-test release is approved.
+
+**Goal:** 12 testers · 14 days
+
+
 ## About
 
 Home Glance was created as a modern spiritual successor to the idea behind **Another Widget**: show the information you need at a glance, keep the home screen calm, and provide deeper customization only when you want it.
