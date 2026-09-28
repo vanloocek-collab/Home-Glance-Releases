@@ -132,6 +132,4 @@ Alongside the roadmap above:
 
 Home Glance is inspired by the simplicity of Another Widget and aims to become its modern spiritual successor, but the goal is not a visual clone.
 
-The direction is:
-
-**all the useful control Another Widget offered, plus modern Android support, new widgets and active development — without turning the home screen into noise.**
+**All the useful control Another Widget offered, plus modern Android support, new widgets and active development — without turning the home screen into noise.**

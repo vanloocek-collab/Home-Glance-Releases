@@ -1,161 +1,100 @@
 # Home Glance
 
-A lightweight Android home-screen widget that combines weather and calendar information in a clean, Pixel-inspired layout.
+A lightweight Android home-screen widget for weather, calendar, next alarm and useful contextual information in a clean, Pixel-inspired layout.
 
-> **Latest public APK:** Home Glance v0.2.3 · Public test prerelease
+**Current public release:** v0.2.3 · Public test prerelease  
+**Android:** 8.0+ (API 26)
 
-[Download Home Glance v0.2.3 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.3/Home-Glance-v0.2.3.apk)
+[Website](https://vanloocek-collab.github.io/Home-Glance-Releases/) · [Download](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/latest) · [Screenshots](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html) · [Roadmap](https://vanloocek-collab.github.io/Home-Glance-Releases/roadmap.html) · [Issues](https://github.com/vanloocek-collab/Home-Glance-Releases/issues) · [Privacy](https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html)
 
-This repository contains public downloads, the [project website](https://vanloocek-collab.github.io/Home-Glance-Releases/), documentation and issue tracking. App source development is maintained separately.
+> This is the public distribution, documentation and issue-tracking repository for Home Glance. App source development is maintained separately.
 
-Development and experimental test builds can contain changes that are not included in v0.2.3. The features and release highlights below describe the published APK; unreleased work is not a new public release.
+## About
 
-## Why Home Glance?
+Home Glance was created as a modern spiritual successor to the idea behind **Another Widget**: show the information you need at a glance, keep the home screen calm, and provide deeper customization only when you want it.
 
-I have always been a big fan of **Another Widget**. After it stopped evolving, I decided to create what I see as its spiritual successor: a modern, actively developed widget that keeps the same idea of showing the information you need at a glance, while adding more customization, broader device compatibility and new features.
-
-There is another reason behind Home Glance too: it is for Android users who like the clean, Pixel-like look, but do not want to switch to a custom ROM just to get it — especially when keeping **Strong Play Integrity** matters to them. Home Glance aims to bring a little of that clean-Android feel to the home screen while letting users keep their existing system setup.
-
-Home Glance is an independent project and is not affiliated with Another Widget.
+The project is independently developed and is not affiliated with Google, Pixel At a Glance or Another Widget.
 
 ## Features
 
-- Current weather, condition icon and temperature
-- Automatic or manual location
+- Current weather with automatic or manual location
 - Celsius / Fahrenheit / system units
-- Smart weather refresh intervals
-- Dynamic weather detail rotation
-- Smart weather insights for rain, snow, thunderstorms, strong wind, heat and frost
-- Calendar integration with selectable calendars
-- Event start time or countdown
-- Ongoing-event support, event location and calendar name
-- Event filters and configurable look-ahead
-- Widget backgrounds: **No background, Material You and Liquid Glass**, with adjustable wallpaper visibility
-- Google-inspired, iOS-inspired and system font styles
-- Adjustable widget text size and alignment
-- Custom weekday and month formatting
-- Long-text scrolling for date/alarm, weather and calendar, with per-line controls and configurable pause
-- Optional next-alarm time beside the date
-- Quick widget refresh directly from the Home dashboard
+- Dynamic weather details and smart weather insights
+- Calendar integration with selectable calendars and event filters
+- Event start time or countdown, ongoing events, location and calendar name
+- Optional next-alarm information beside the date
+- No background, Material You and Liquid Glass widget backgrounds
+- Adjustable text size, alignment, date formatting and font style
+- Independent long-text scrolling for date/alarm, weather and calendar
 - Direct launch of supported weather and calendar apps
-- In-app update checker
-- In-app bug reporting through GitHub Issues
-- Direct email contact with the developer for users without a GitHub account
+- Quick widget refresh from the Home dashboard
+- In-app update checker for the GitHub build
+- Built-in bug reporting and developer contact
+- 11 interface languages
 
-## Languages
-
-Home Glance includes an in-app language selector with:
-
-**English (US), English (UK), Polski, Deutsch, Español, Français, Italiano, Português (Brasil), Русский, 简体中文 and 日本語.**
-
-## Weather app compatibility
-
-Home Glance can detect supported weather apps installed on the device, including:
-
-- Google / Pixel Weather
-- Xiaomi / POCO Weather
-- Samsung Weather
-- Motorola Weather
-- OnePlus / OPPO / ColorOS Weather
-- Huawei Weather
-- Honor Weather
-
-Availability depends on the device and installed system apps.
-
-## Screenshots
-
-Current Home Glance widget capture:
+## Screenshot
 
 <p align="center">
-  <img src="screenshots/2026-09-27-widget-crop.webp" width="760"/><br/>
-  <b>Home Glance widget</b>
+  <img src="screenshots/2026-09-27-widget-crop.webp" width="760" alt="Home Glance widget"/>
 </p>
 
-- [Open the screenshots page](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html)
-- [Open the wallpapers gallery](https://vanloocek-collab.github.io/Home-Glance-Releases/wallpapers.html)
-
-## Requirements
-
-- Android 8.0 (API 26) or newer
-- Internet connection for weather data
-- Location permission when using automatic weather location
-- Calendar permission when calendar events are enabled
+More: [screenshots](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html) · [wallpapers](https://vanloocek-collab.github.io/Home-Glance-Releases/wallpapers.html)
 
 ## Installation
 
-1. Download the APK from the latest release.
-2. Open the downloaded file on your Android device.
-3. Allow installation from this source if Android asks for permission.
-4. Install Home Glance.
-5. Add the **Home Glance** widget to your home screen and configure it in the app.
+1. Open the [latest release](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/latest).
+2. Download the APK.
+3. Install it on Android.
+4. Add the **Home Glance** widget to the home screen.
+5. Configure the widget from the app.
 
-Updating in place requires the same package name and signing key as the installed app. Compatible updates preserve settings. Debug, Google Play and GitHub builds may not be interchangeable; include the build source when reporting an installation problem.
+Compatible updates preserve settings. Debug, Google Play and GitHub builds may use different signing/distribution paths and are not always interchangeable.
 
-## v0.2.3 highlights
+## Current release highlights
 
-- New **Soft Pixel** home banner with a cleaner Pixel / Material You-inspired visual style
-- Responsive next-alarm layout: full information when space allows, icon-only on narrow widgets and automatic hiding at very small widths
-- Larger 22 dp weather icon and refined alarm/calendar glyphs
-- Compact pinned live widget preview in settings
+### v0.2.3
+
+- New Soft Pixel home banner
+- Responsive next-alarm layout for narrow widgets
+- Larger weather icon and refined alarm/calendar glyphs
+- Compact pinned Live Preview in settings
 - Restored long-text scrolling
 - Improved alarm width calculations and Android alarm-screen fallback
-- Validated on **OnePlus 12, POCO X5 Pro, POCO X3 NFC and Motorola Edge 60 Pro**
+- Validated on OnePlus 12, POCO X5 Pro, POCO X3 NFC and Motorola Edge 60 Pro
 
-## v0.2.2 highlights
+For previous versions, see [GitHub Releases](https://github.com/vanloocek-collab/Home-Glance-Releases/releases).
 
-- Fixed incorrect and stale next-alarm times on Xiaomi / POCO devices
-- Fixed temporary `00:00` after disabling an alarm on HyperOS
-- Added direct monitoring of Xiaomi / POCO alarm-setting changes for reliable automatic updates
-- Fixed duplicate ticker text on some POCO and OnePlus launchers
-- Fixed weather text clipping on Xiaomi / POCO
-- Fixed date text remaining clipped after widget resize
-- Improved Refresh Widget full rebuilds and Dynamic Weather transition stability
+## Testing and feedback
 
-## v0.2.1 highlights
-
-- Calendar additions, edits and reminder changes can refresh the widget automatically within a few seconds
-- Added Android Calendar provider change monitoring without keeping a background process alive
-- Fixed unwanted ellipsis in long Standard weather text
-- Fixed a first-cycle calendar ticker glitch after dismissing a smart weather insight
-- Kept the regular 30-minute Android widget refresh as a fallback
-
-## v0.2.0 highlights
-
-- Completely redesigned Home Glance interface with a Bento-style dashboard
-- Added quick widget refresh with real refresh progress and completion feedback
-- Added long-text scrolling to all three widget lines
-- Added separate scrolling controls for the date/alarm, weather and calendar lines
-- Added configurable pause between scrolls and natural clipping when scrolling is disabled
-- Added optional next-alarm information beside the date
-- Replaced the old Milky background with **Material You** and **Liquid Glass** options
-- Added adjustable wallpaper visibility for widget backgrounds
-- Improved widget resizing and behaviour on narrow layouts
-- Existing settings and widget configuration are preserved when updating from previous versions
-
-## Feedback and support
+Home Glance is still in public testing. Reports from different Android versions, manufacturers and launchers are especially useful.
 
 - [Report a bug or request a feature](https://github.com/vanloocek-collab/Home-Glance-Releases/issues/new/choose)
-- [Support guide](SUPPORT.md)
-- [Security policy](SECURITY.md)
-
-## Contributing
-
-[How to contribute](CONTRIBUTING.md)
-
-## Testing
-
-[View the Home Glance Testing Checklist](TESTING.md)
+- [Testing checklist](docs/TESTING.md)
+- [Contributing guide](.github/CONTRIBUTING.md)
+- [Support](.github/SUPPORT.md)
+- [Security policy](.github/SECURITY.md)
 
 ## Roadmap
 
-[View the Home Glance Roadmap](ROADMAP.md)
+Development priorities are documented in [docs/ROADMAP.md](docs/ROADMAP.md) and on the public [roadmap page](https://vanloocek-collab.github.io/Home-Glance-Releases/roadmap.html).
+
+The current order is:
+
+1. Music widget
+2. Wireless-headphones widget
+3. Layout, typography and tap-action parity
+4. Clock, calendar and weather parity
+5. Smart Glance providers
+
+## Repository structure
+
+- `.github/` — issue templates and community/support documents
+- `assets/` — website assets and wallpapers
+- `docs/` — testing and development roadmap
+- `google-play/` — Google Play publishing pack
+- `screenshots/` — current product screenshots
+- `*.html`, `site.css`, `site.js` — GitHub Pages website
 
 ## Privacy
 
-[Read the Home Glance Privacy Policy](PRIVACY.md)
-
-## Status
-
-Home Glance is still in public testing. Feedback and bug reports are welcome.
-
-[View Home Glance v0.2.3 release notes](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.3)
+Read the public [Privacy Policy](https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html) or the repository copy in [PRIVACY.md](PRIVACY.md).

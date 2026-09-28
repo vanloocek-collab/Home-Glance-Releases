@@ -15,7 +15,7 @@ An in-place update needs a compatible package name and signing key. Debug, Googl
 When reporting a problem or sharing test results, please include:
 
 - Home Glance version
-- Build source (public GitHub APK, Google Play or developer-provided test APK)
+- Build source
 - Branch or commit, if supplied with a development build
 - Android version
 - Device manufacturer and model
@@ -29,7 +29,6 @@ When reporting a problem or sharing test results, please include:
 - Add the Home Glance widget to the home screen
 - If updating from an older version, confirm that settings are preserved
 - Use the in-app update checker and confirm that it can detect, download and install a newer release when available
-- If Google Play Protect scans the APK during manual installation, record the result. On POCO / HyperOS this extra scan has been observed as normal behavior; if Play Protect reports that the app appears safe and installation continues, do not treat the scan itself as a Home Glance bug.
 
 ## Widget
 
@@ -39,14 +38,11 @@ When reporting a problem or sharing test results, please include:
 - Resize the widget if your launcher allows it
 - Check whether text is clipped or overlaps
 - Test **No background**, **Material You** and **Liquid Glass**
-- For Material You and Liquid Glass, move the wallpaper visibility slider through low, medium and high values
-- Confirm the Material You background follows the current Android system color palette
-- Try left, center and right alignment
+- Test left, center and right alignment
 - Try different text sizes and font styles
-- Enable long-text scrolling and verify both weather and calendar text return to the starting position smoothly
-- Try several pauses between scrolls
-- If a next alarm is set, confirm the alarm icon and time appear correctly in the first widget line
-- Resize the widget, then use **Refresh widget** from the Home Glance dashboard and confirm the widget adapts correctly
+- Enable long-text scrolling and verify all enabled lines return to the starting position smoothly
+- If a next alarm is set, confirm the alarm icon and time appear correctly
+- Resize the widget, then use **Refresh widget** and confirm the layout adapts correctly
 
 ## Weather
 
@@ -63,24 +59,19 @@ When reporting a problem or sharing test results, please include:
 - Enable calendar integration
 - Select one or more calendars
 - Confirm the next relevant event appears
-- Add, edit and delete a calendar event while the widget is visible and confirm the widget refreshes automatically within a few seconds
-- Confirm calendar changes still refresh correctly after the phone has been idle for a while
+- Add, edit and delete a calendar event while the widget is visible
 - Test Start time and Countdown modes
 - Test ongoing events
 - Test event location and calendar name display
-- Try the event filters
-- Try Today / 24h / 3d / 7d look-ahead
+- Try the event filters and look-ahead options
 - Tap the calendar area and confirm the selected calendar app opens
 
 ## Application
 
-- Confirm the redesigned Home dashboard opens normally
-- Open Settings, Weather, Calendar and Application from the dashboard
+- Confirm the Home dashboard opens normally
+- Open Settings, Weather, Calendar and Application
 - Change the app language and confirm the interface updates
-- On the Home dashboard, tap **Refresh widget**
-- Confirm the refresh card first shows the refreshing state and then **Widget refreshed** only after the widget update finishes
-- Change a widget setting, refresh the widget and confirm the change appears
-- Resize the widget, refresh it and confirm the layout updates correctly
+- Use **Refresh widget**
 - Check the Application page
 - Test Check for updates
 - Test Report a bug
@@ -90,32 +81,16 @@ When reporting a problem or sharing test results, please include:
 
 ## Launchers and devices
 
-Testing on different launchers is especially useful.
+Testing on different launchers is especially useful. Include your launcher in every report when possible.
 
-If possible, mention whether you use:
-
-- Pixel Launcher
-- Samsung One UI Home
-- Xiaomi / POCO Launcher
-- OnePlus Launcher
-- Nova Launcher
-- Lawnchair
-- another launcher
+Examples: Pixel Launcher, Samsung One UI Home, Xiaomi / POCO Launcher, OnePlus Launcher, Nova Launcher, Lawnchair or another launcher.
 
 ## How to report a bug
 
-Use **Application → Trouble → Report a bug** in Home Glance.
+Use **Application → Trouble → Report a bug** in Home Glance or open a [GitHub issue](https://github.com/vanloocek-collab/Home-Glance-Releases/issues/new/choose).
 
-The app will open GitHub Issues and pre-fill basic device information. Screenshots are very helpful when the problem is visual.
-
-If you do not use GitHub, use **Application → Trouble → Contact developer** instead.
-
-## Feature ideas
-
-Use the **Feature request** template in GitHub Issues if you have an idea for a new option or improvement.
+Screenshots are especially helpful for visual problems.
 
 ## Thank you
-
-Home Glance is inspired by the simplicity of Another Widget and is being shaped by real-world testing on different Android devices and launchers.
 
 Every useful report helps improve compatibility and reliability.

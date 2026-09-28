@@ -2,9 +2,7 @@
 
 Please do not publish security or privacy vulnerabilities as public GitHub issues.
 
-Contact:
-
-vanloocek@gmail.com
+Contact: **vanloocek@gmail.com**
 
 Include the affected Home Glance version, device/Android details when relevant, and clear reproduction steps.
 
