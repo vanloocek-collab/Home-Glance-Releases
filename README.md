@@ -13,11 +13,12 @@ A lightweight Android home-screen widget for weather, calendar, next alarm and u
 
 Home Glance is preparing for its first Google Play release. Google requires a **closed test with at least 12 testers for 14 days** before production access can be requested.
 
-If you use Home Glance — or simply want to help the project reach Google Play — join the tester group:
+If you use Home Glance — or simply want to help the project reach Google Play — join the closed test in two steps:
 
-**[Join Home Glance Testers](https://groups.google.com/g/home-glance-testers)**
+1. **[Join Home Glance Testers](https://groups.google.com/g/home-glance-testers)**
+2. **[Join the closed test on Google Play](https://play.google.com/apps/testing/com.vanloocek.homeglance)**
 
-No payment, subscription or testing experience is required. The Google Play opt-in link will be added here as soon as the closed-test release is approved.
+Join the tester group first, then open the Google Play opt-in page. No payment, subscription or testing experience is required.
 
 **Goal:** 12 testers · 14 days
 
