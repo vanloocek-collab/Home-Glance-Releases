@@ -164,16 +164,17 @@ Improve the logic that decides which connected Bluetooth devices belong on the H
 
 Planned behavior:
 
-- Do not treat every Bluetooth audio device as headphones
+- Keep genuine headphones, earbuds, headsets and Bluetooth speakers visible in the Headphones page
 - Exclude car audio / hands-free systems such as Ford SYNC, BMW, Audi MMI, Mercedes, Toyota and similar systems
 - Prefer Android Bluetooth device class/profile information, including car-audio classifications where available
 - Use cautious name-based heuristics only as a fallback
-- Keep normal Bluetooth audio and call connectivity untouched; Home Glance should only ignore the device in the Headphones UI
+- Keep normal Bluetooth audio and call connectivity untouched; Home Glance should only ignore excluded car-audio devices in its own UI
 - Do not show the Headphones navigation entry solely because a car audio system is connected
 - Add a manual per-device override such as “This is not headphones” for ambiguous hardware
-- Preserve support for genuine headphones, earbuds and headsets even when they expose unusual Bluetooth profiles
+- Add a complementary manual override such as “Show in Headphones” for devices Android classifies incorrectly
+- Preserve support for unusual devices that expose non-standard Bluetooth profiles
 
-The goal is that the Headphones widget represents actual personal headphones/headsets, not every connected Bluetooth audio endpoint.
+The goal is to keep useful personal Bluetooth audio devices — including speakers — visible, while filtering out car infotainment and hands-free systems that do not belong on the Headphones page.
 
 ### Priority 11 — Font system redesign
 
