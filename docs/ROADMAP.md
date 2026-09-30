@@ -86,7 +86,23 @@ Planned behavior:
 - New hardware integrations can be tested before reaching all users
 - Stable users should not be exposed to unverified device-specific code
 
-### Priority 06 — Automatic capability detection
+### Priority 06 — Update available notification
+
+Add a clear in-app notification when a new Home Glance version is released.
+
+Planned behavior:
+
+- Detect when a newer version is available
+- Show a visible pop-up / dialog inside the app
+- Display the new version number and a short release summary
+- Provide a direct action to open the update flow
+- Allow the user to dismiss the message without blocking normal app use
+- Avoid repeatedly showing the same dismissed version
+- Respect distribution channel differences: GitHub builds can use the existing self-update flow, while Play builds should use the appropriate Google Play update path
+
+The goal is that users should not need to manually check whether a new Home Glance version exists.
+
+### Priority 07 — Automatic capability detection
 
 Home Glance should detect relevant capabilities and suggest the best configuration while keeping user choice.
 
@@ -99,7 +115,7 @@ Examples:
 
 The app should guide the user without forcing a specific setup.
 
-### Priority 07 — Weather provider expansion
+### Priority 08 — Weather provider expansion
 
 Expand weather sources while keeping provider choice fully under user control.
 
@@ -115,7 +131,7 @@ Planned work:
 
 A major goal is to avoid situations where Home Glance shows, for example, 17°C while the weather app opened by the user shows 16°C.
 
-### Priority 08 — Headphones compatibility expansion
+### Priority 09 — Headphones compatibility expansion
 
 Expand the headphones page to many manufacturers and models.
 
@@ -142,7 +158,7 @@ Possible features per adapter:
 
 Implementation can begin from public protocol documentation and reverse-engineered open-source projects, but a model should only be treated as confirmed after real-device testing.
 
-### Priority 09 — Font system redesign
+### Priority 10 — Font system redesign
 
 Replace the current small font list with a broader, consistent system.
 
@@ -159,7 +175,7 @@ Planned scope:
   - Music
   - Headphones
 
-### Priority 10 — Settings backup and import
+### Priority 11 — Settings backup and import
 
 Allow users to export and restore Home Glance configuration.
 
@@ -170,7 +186,7 @@ Planned scope:
 - Restore appearance, weather, calendar, media and other configuration where safe
 - Version the backup format so it can evolve over time
 
-### Priority 11 — Widget profiles and presets
+### Priority 12 — Widget profiles and presets
 
 Allow complete configurations to be saved and switched as presets.
 
@@ -185,7 +201,7 @@ Example profiles:
 
 A profile should be able to store multiple settings at once instead of requiring manual reconfiguration.
 
-### Priority 12 — Settings search
+### Priority 13 — Settings search
 
 Add a search field once the settings surface becomes larger.
 
@@ -198,7 +214,7 @@ Examples:
 
 Search should navigate directly to the relevant setting or section.
 
-### Priority 13 — Advanced media mode
+### Priority 14 — Advanced media mode
 
 Extend the media page beyond standard music playback.
 
@@ -212,7 +228,7 @@ Planned ideas:
 - Better handling of media apps with non-standard controls
 - Keep the current generic MediaSession approach rather than hard-coding support for individual players whenever possible
 
-### Priority 14 — More task and calendar sources
+### Priority 15 — More task and calendar sources
 
 After Google Tasks, investigate additional providers.
 
@@ -226,7 +242,7 @@ Possible future sources:
 
 These should use the provider architecture rather than being directly embedded into the main widget code.
 
-### Priority 15 — Automatic widget-page switching
+### Priority 16 — Automatic widget-page switching
 
 Add an optional smart page mode.
 
@@ -243,15 +259,15 @@ This must remain optional so users who prefer manual navigation keep full contro
 
 ### Foundation
 
-Priorities **01–06** are the technical foundation. They should be completed before aggressively expanding device- and service-specific integrations.
+Priorities **01–07** are the technical foundation. They should be completed before aggressively expanding device- and service-specific integrations.
 
 ### Integrations
 
-Priorities **07–09** are the main compatibility and customization expansion.
+Priorities **08–10** are the main compatibility and customization expansion.
 
 ### Product maturity
 
-Priorities **10–15** focus on portability, usability, discoverability and advanced behavior.
+Priorities **11–16** focus on portability, usability, discoverability and advanced behavior.
 
 ## Ongoing work
 
