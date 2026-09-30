@@ -158,7 +158,24 @@ Possible features per adapter:
 
 Implementation can begin from public protocol documentation and reverse-engineered open-source projects, but a model should only be treated as confirmed after real-device testing.
 
-### Priority 10 — Font system redesign
+### Priority 10 — Bluetooth device classification and car-audio filtering
+
+Improve the logic that decides which connected Bluetooth devices belong on the Headphones page.
+
+Planned behavior:
+
+- Do not treat every Bluetooth audio device as headphones
+- Exclude car audio / hands-free systems such as Ford SYNC, BMW, Audi MMI, Mercedes, Toyota and similar systems
+- Prefer Android Bluetooth device class/profile information, including car-audio classifications where available
+- Use cautious name-based heuristics only as a fallback
+- Keep normal Bluetooth audio and call connectivity untouched; Home Glance should only ignore the device in the Headphones UI
+- Do not show the Headphones navigation entry solely because a car audio system is connected
+- Add a manual per-device override such as “This is not headphones” for ambiguous hardware
+- Preserve support for genuine headphones, earbuds and headsets even when they expose unusual Bluetooth profiles
+
+The goal is that the Headphones widget represents actual personal headphones/headsets, not every connected Bluetooth audio endpoint.
+
+### Priority 11 — Font system redesign
 
 Replace the current small font list with a broader, consistent system.
 
@@ -175,7 +192,7 @@ Planned scope:
   - Music
   - Headphones
 
-### Priority 11 — Settings backup and import
+### Priority 12 — Settings backup and import
 
 Allow users to export and restore Home Glance configuration.
 
@@ -186,7 +203,7 @@ Planned scope:
 - Restore appearance, weather, calendar, media and other configuration where safe
 - Version the backup format so it can evolve over time
 
-### Priority 12 — Widget profiles and presets
+### Priority 13 — Widget profiles and presets
 
 Allow complete configurations to be saved and switched as presets.
 
@@ -201,7 +218,7 @@ Example profiles:
 
 A profile should be able to store multiple settings at once instead of requiring manual reconfiguration.
 
-### Priority 13 — Settings search
+### Priority 14 — Settings search
 
 Add a search field once the settings surface becomes larger.
 
@@ -214,7 +231,7 @@ Examples:
 
 Search should navigate directly to the relevant setting or section.
 
-### Priority 14 — Advanced media mode
+### Priority 15 — Advanced media mode
 
 Extend the media page beyond standard music playback.
 
@@ -228,7 +245,7 @@ Planned ideas:
 - Better handling of media apps with non-standard controls
 - Keep the current generic MediaSession approach rather than hard-coding support for individual players whenever possible
 
-### Priority 15 — More task and calendar sources
+### Priority 16 — More task and calendar sources
 
 After Google Tasks, investigate additional providers.
 
@@ -242,7 +259,7 @@ Possible future sources:
 
 These should use the provider architecture rather than being directly embedded into the main widget code.
 
-### Priority 16 — Automatic widget-page switching
+### Priority 17 — Automatic widget-page switching
 
 Add an optional smart page mode.
 
@@ -263,11 +280,11 @@ Priorities **01–07** are the technical foundation. They should be completed be
 
 ### Integrations
 
-Priorities **08–10** are the main compatibility and customization expansion.
+Priorities **08–11** are the main compatibility and customization expansion.
 
 ### Product maturity
 
-Priorities **11–16** focus on portability, usability, discoverability and advanced behavior.
+Priorities **12–17** focus on portability, usability, discoverability and advanced behavior.
 
 ## Ongoing work
 
