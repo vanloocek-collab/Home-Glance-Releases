@@ -292,3 +292,6 @@ body,
 @media(prefers-reduced-motion:reduce){
   .theme-toggle-knob{transition:none}
 }
+
+/* Progressive fallback: basic navigation/content remain usable without site.js. */
+.fallback-nav{background:#111;color:#f6f6f2;border-bottom:1px solid #2a2a2a}.fallback-nav-inner{width:min(var(--max),calc(100% - 48px));margin:0 auto;padding:14px 0;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}.fallback-nav a{font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px}.navigation-ready .fallback-nav{display:none}html:not(.navigation-ready) .shot-carousel{display:block}html:not(.navigation-ready) .shot-carousel .carousel-arrow,html:not(.navigation-ready) .shot-carousel .carousel-footer{display:none}html:not(.navigation-ready) .shot-carousel .carousel-viewport{overflow:visible}html:not(.navigation-ready) .shot-carousel .carousel-track{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;transform:none!important}html:not(.navigation-ready) .shot-carousel .carousel-slide{min-width:0}html:not(.navigation-ready) .shot-carousel .carousel-phone,html:not(.navigation-ready) .shot-carousel .carousel-slide figcaption{width:min(100%,420px)}@media(max-width:900px){.fallback-nav-inner{width:calc(100% - 28px)}}
