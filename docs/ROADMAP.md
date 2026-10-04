@@ -2,7 +2,7 @@
 
 Home Glance is in public testing. This roadmap shows the planned direction of development without promising fixed release dates. Priorities can still change when testing exposes a more important compatibility or reliability issue.
 
-The latest published APK is **v0.2.3**, a public test prerelease. Development builds and experiments are not part of the public download until they are explicitly released.
+The latest published APK is **v0.2.4**, a public test prerelease. Development builds and experiments are not part of the public download until they are explicitly released.
 
 ## Development order
 
@@ -176,22 +176,18 @@ Planned behavior:
 
 The goal is to keep useful personal Bluetooth audio devices — including speakers — visible, while filtering out car infotainment and hands-free systems that do not belong on the Headphones page.
 
-### Priority 11 — Font system redesign
+### Priority 11 — Typography refinement
 
-Replace the current small font list with a broader, consistent system.
+Keep Home Glance typography simple and predictable instead of expanding the number of font families.
 
-Planned scope:
+Current direction:
 
-- 10 selectable font styles
-- Keep System
-- Keep the current Sans Serif / Google-like style
-- Add Google Sans where redistribution is legally permitted, otherwise use a suitable legal alternative
-- Add seven other popular, high-quality fonts
-- Include the current Music/Headphones typeface if it is distinct and fits the final set
-- Apply the selected font consistently to all three widget pages:
-  - Home
-  - Music
-  - Headphones
+- One consistent Pixel-inspired font family across the app and widget
+- Standard and Bold text weights
+- Consistent metrics between static text and long-text scrolling
+- Preserve readability across OEM launchers and widget hosts
+- Continue accessibility testing for text scaling and narrow layouts
+- Avoid adding font-family choices unless they provide a clear user benefit without increasing layout instability
 
 ### Priority 12 — Settings backup and import
 
