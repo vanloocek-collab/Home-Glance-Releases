@@ -2,7 +2,7 @@
 
 A lightweight Android home-screen widget for weather, calendar, next alarm and useful contextual information in a clean, Pixel-inspired layout.
 
-**Current public release:** v0.2.3 · Public test prerelease  
+**Current public release:** v0.2.4 · Public test prerelease  
 **Android:** 8.0+ (API 26)
 
 [Website](https://vanloocek-collab.github.io/Home-Glance-Releases/) · [Download](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/latest) · [Screenshots](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html) · [Roadmap](https://vanloocek-collab.github.io/Home-Glance-Releases/roadmap.html) · [Issues](https://github.com/vanloocek-collab/Home-Glance-Releases/issues) · [Privacy](https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html)
@@ -22,7 +22,6 @@ Join the tester group first, then open the Google Play opt-in page. No payment, 
 
 **Goal:** 12 testers · 14 days
 
-
 ## About
 
 Home Glance was created as a modern spiritual successor to the idea behind **Another Widget**: show the information you need at a glance, keep the home screen calm, and provide deeper customization only when you want it.
@@ -38,7 +37,7 @@ The project is independently developed and is not affiliated with Google, Pixel 
 - Event start time or countdown, ongoing events, location and calendar name
 - Optional next-alarm information beside the date
 - No background, Material You and Liquid Glass widget backgrounds
-- Adjustable text size, alignment, date formatting and font style
+- Adjustable text size, text weight, alignment and date formatting
 - Independent long-text scrolling for date/alarm, weather and calendar
 - Direct launch of supported weather and calendar apps
 - Quick widget refresh from the Home dashboard
@@ -66,15 +65,16 @@ Compatible updates preserve settings. Debug, Google Play and GitHub builds may u
 
 ## Current release highlights
 
-### v0.2.3
+### v0.2.4
 
-- New Soft Pixel home banner
-- Responsive next-alarm layout for narrow widgets
-- Larger weather icon and refined alarm/calendar glyphs
-- Compact pinned Live Preview in settings
-- Restored long-text scrolling
-- Improved alarm width calculations and Android alarm-screen fallback
-- Validated on OnePlus 12, POCO X5 Pro, POCO X3 NFC and Motorola Edge 60 Pro
+- One consistent Pixel-style typography with Standard and Bold text weights
+- Improved long-text ticker measurement and scrolling consistency
+- Dynamic Rotation now respects weather visibility settings
+- Google Tasks authorization flow fixed after account selection
+- Automatic weather recovery after internet connectivity returns
+- Cleaner Android widget picker with one public Home Glance entry and a real widget preview
+- Character-encoding and localization fixes
+- Validated on OnePlus 12 and POCO X5 Pro
 
 For previous versions, see [GitHub Releases](https://github.com/vanloocek-collab/Home-Glance-Releases/releases).
 
