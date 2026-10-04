@@ -4,9 +4,9 @@ Home Glance is still in public testing. If you want to help, you do not need to 
 
 ## Which build to test
 
-- **Public testing:** use the [v0.2.3 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.3). This checklist describes the latest public release.
+- **Public testing:** use the [v0.2.4 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.4). This checklist describes the latest public release.
 - **Development testing:** if you receive a separate test APK from the developer, record its version, build source and, if supplied, branch or commit. It may include unreleased changes; do not assume those changes are in the public APK.
-- **Experimental features:** test only in the build supplied for that experiment. Experimental development work is not part of v0.2.3 unless it is explicitly listed in the release notes.
+- **Experimental features:** test only in the build supplied for that experiment. Experimental development work is not part of v0.2.4 unless it is explicitly listed in the release notes.
 
 An in-place update needs a compatible package name and signing key. Debug, Google Play and GitHub builds may not update one another.
 
@@ -39,8 +39,8 @@ When reporting a problem or sharing test results, please include:
 - Check whether text is clipped or overlaps
 - Test **No background**, **Material You** and **Liquid Glass**
 - Test left, center and right alignment
-- Try different text sizes and font styles
-- Enable long-text scrolling and verify all enabled lines return to the starting position smoothly
+- Try different text sizes and both **Standard** and **Bold** text weights
+- Enable long-text scrolling and verify all enabled lines show the full text and return to the starting position smoothly
 - If a next alarm is set, confirm the alarm icon and time appear correctly
 - Resize the widget, then use **Refresh widget** and confirm the layout adapts correctly
 
@@ -50,8 +50,9 @@ When reporting a problem or sharing test results, please include:
 - Test manual city search
 - Check Celsius / Fahrenheit / system units
 - Try a weather refresh
-- Test Dynamic weather details
+- Test Dynamic Rotation and confirm disabled weather elements stay hidden
 - Test Smart weather insights if weather conditions allow
+- Disable connectivity, confirm cached weather remains visible, then restore connectivity and verify weather recovers automatically
 - Tap the weather area and confirm the selected weather app opens
 
 ## Calendar
@@ -65,6 +66,13 @@ When reporting a problem or sharing test results, please include:
 - Test event location and calendar name display
 - Try the event filters and look-ahead options
 - Tap the calendar area and confirm the selected calendar app opens
+
+## Google Tasks
+
+- Enable Google Tasks
+- Start authorization and select the intended Google account
+- Confirm authorization completes without a false cancellation state
+- Confirm open tasks can synchronize and appear when eligible for the widget
 
 ## Application
 
