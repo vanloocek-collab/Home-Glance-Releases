@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "contentVersion": 1,
+  "locales": {
+    "en": [
+      {
+        "id": "en-calm-01",
+        "text": "There is room to pause."
+      },
+      {
+        "id": "en-calm-02",
+        "text": "Let the moment be simple."
+      },
+      {
+        "id": "en-calm-03",
+        "text": "A quiet breath is enough."
+      },
+      {
+        "id": "en-calm-04",
+        "text": "You can leave some space."
+      },
+      {
+        "id": "en-calm-05",
+        "text": "Notice the light around you."
+      },
+      {
+        "id": "en-calm-06",
+        "text": "Rest has a place here."
+      },
+      {
+        "id": "en-calm-07",
+        "text": "A small pause belongs to you."
+      },
+      {
+        "id": "en-calm-08",
+        "text": "The day can unfold gently."
+      },
+      {
+        "id": "en-calm-09",
+        "text": "You do not have to hurry."
+      },
+      {
+        "id": "en-calm-10",
+        "text": "Let your shoulders soften."
+      },
+      {
+        "id": "en-calm-11",
+        "text": "Some things can wait."
+      },
+      {
+        "id": "en-calm-12",
+        "text": "There is no score to keep."
+      },
+      {
+        "id": "en-calm-13",
+        "text": "Be here for a moment."
+      },
+      {
+        "id": "en-calm-14",
+        "text": "A little quiet can stay."
+      },
+      {
+        "id": "en-calm-15",
+        "text": "The sky asks nothing of you."
+      },
+      {
+        "id": "en-calm-16",
+        "text": "Make room for a gentle breath."
+      },
+      {
+        "id": "en-calm-17",
+        "text": "You can take the slower path."
+      },
+      {
+        "id": "en-calm-18",
+        "text": "This moment needs no plan."
+      },
+      {
+        "id": "en-calm-19",
+        "text": "Let enough be enough."
+      },
+      {
+        "id": "en-calm-20",
+        "text": "There is space between things."
+      }
+    ],
+    "pl": [
+      {
+        "id": "pl-calm-01",
+        "text": "Jest miejsce na chwilę przerwy."
+      },
+      {
+        "id": "pl-calm-02",
+        "text": "Ta chwila może być prosta."
+      },
+      {
+        "id": "pl-calm-03",
+        "text": "Spokojny oddech wystarczy."
+      },
+      {
+        "id": "pl-calm-04",
+        "text": "Możesz zostawić trochę przestrzeni."
+      },
+      {
+        "id": "pl-calm-05",
+        "text": "Zauważ światło wokół siebie."
+      },
+      {
+        "id": "pl-calm-06",
+        "text": "Odpoczynek ma tu swoje miejsce."
+      },
+      {
+        "id": "pl-calm-07",
+        "text": "Mała przerwa należy do Ciebie."
+      },
+      {
+        "id": "pl-calm-08",
+        "text": "Dzień może płynąć łagodnie."
+      },
+      {
+        "id": "pl-calm-09",
+        "text": "Nie musisz się spieszyć."
+      },
+      {
+        "id": "pl-calm-10",
+        "text": "Rozluźnij ramiona."
+      },
+      {
+        "id": "pl-calm-11",
+        "text": "Niektóre rzeczy mogą poczekać."
+      },
+      {
+        "id": "pl-calm-12",
+        "text": "Nie trzeba liczyć punktów."
+      },
+      {
+        "id": "pl-calm-13",
+        "text": "Pobądź tu przez chwilę."
+      },
+      {
+        "id": "pl-calm-14",
+        "text": "Trochę ciszy może zostać."
+      },
+      {
+        "id": "pl-calm-15",
+        "text": "Niebo niczego od Ciebie nie wymaga."
+      },
+      {
+        "id": "pl-calm-16",
+        "text": "Zostaw miejsce na spokojny oddech."
+      },
+      {
+        "id": "pl-calm-17",
+        "text": "Możesz wybrać wolniejsze tempo."
+      },
+      {
+        "id": "pl-calm-18",
+        "text": "Ta chwila nie potrzebuje planu."
+      },
+      {
+        "id": "pl-calm-19",
+        "text": "Niech wystarczy to, co jest."
+      },
+      {
+        "id": "pl-calm-20",
+        "text": "Między sprawami jest przestrzeń."
+      }
+    ]
+  }
+}
