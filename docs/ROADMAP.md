@@ -2,7 +2,7 @@
 
 Home Glance is in public testing. This roadmap shows the planned direction of development without promising fixed release dates. Priorities can still change when testing exposes a more important compatibility or reliability issue.
 
-The latest published APK is **v0.2.4**, a public test prerelease. Development builds and experiments are not part of the public download until they are explicitly released.
+The latest published APK is **v0.2.8**, a [public test prerelease](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.8). Development builds and experiments are not part of the public download until they are explicitly released. Google Tasks is temporarily disabled in v0.2.8; its potential restoration remains a future decision.
 
 ## Development order
 
@@ -288,7 +288,7 @@ Priorities **12–17** focus on portability, usability, discoverability and adva
 Alongside the roadmap above:
 
 - Fix compatibility issues across Android devices and launchers
-- Improve weather, calendar, alarm, Tasks and media reliability
+- Improve weather, calendar, alarm and media reliability; leave the temporarily disabled Google Tasks integration inactive until an explicitly reviewed future release
 - Expand localization
 - Improve accessibility
 - Keep installation, update and feedback flows stable
