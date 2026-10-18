@@ -4,9 +4,9 @@ Home Glance is still in public testing. If you want to help, you do not need to 
 
 ## Which build to test
 
-- **Public testing:** use the [v0.2.4 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.4). This checklist describes the latest public release.
+- **Public testing:** use the [v0.2.8 APK](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.8). This checklist describes the latest public release.
 - **Development testing:** if you receive a separate test APK from the developer, record its version, build source and, if supplied, branch or commit. It may include unreleased changes; do not assume those changes are in the public APK.
-- **Experimental features:** test only in the build supplied for that experiment. Experimental development work is not part of v0.2.4 unless it is explicitly listed in the release notes.
+- **Experimental features:** test only in the build supplied for that experiment. Experimental development work is not part of v0.2.8 unless it is explicitly listed in the release notes.
 
 An in-place update needs a compatible package name and signing key. Debug, Google Play and GitHub builds may not update one another.
 
@@ -67,12 +67,17 @@ When reporting a problem or sharing test results, please include:
 - Try the event filters and look-ahead options
 - Tap the calendar area and confirm the selected calendar app opens
 
+## Music, navigation and headphones
+
+- Compare arrow positions across Home, Music and Headphones, including compact Home
+- Check long titles, track changes, pauses between complete scroll loops and full playback times
+- Check Automatic/Light/Dark text and monochrome icons on all three pages
+- If supported headphones are connected, verify actual ANC switching and the active-mode outline, then restore your normal mode
+- Navigation targets are horizontally narrower (24×48dp); report any difficulty tapping them
+
 ## Google Tasks
 
-- Enable Google Tasks
-- Start authorization and select the intended Google account
-- Confirm authorization completes without a false cancellation state
-- Confirm open tasks can synchronize and appear when eligible for the widget
+Tasks is temporarily disabled in 0.2.8, including synchronization and cache reads. Do not start authorization or API tests for this release. Stored settings/data are retained.
 
 ## Application
 

@@ -33,40 +33,9 @@ The project is actively developed and currently available as a public test relea
 
 Home Glance is an independent project and is not affiliated with Google, Pixel At a Glance or Another Widget.
 
-## Polish
+## Historical draft metadata
 
-### Nazwa
-Home Glance
-
-### Krótki opis
-Pogoda, kalendarz, alarm i inteligentne informacje w jednym widżecie.
-
-### Pełny opis
-Home Glance umieszcza najważniejsze informacje bezpośrednio na ekranie głównym Androida w czystym i konfigurowalnym widżecie inspirowanym prostotą rozwiązania At a Glance.
-
-Sprawdzaj pogodę, najbliższe wydarzenia z kalendarza, następny alarm oraz przydatne informacje kontekstowe bez otwierania kilku aplikacji.
-
-**Stworzony dla ekranu głównego**
-
-- Aktualna pogoda z automatyczną lub ręczną lokalizacją
-- Nadchodzące wydarzenia z kalendarza i elastyczne filtry
-- Najbliższy alarm obok daty
-- Inteligentne informacje o deszczu, śniegu, wietrze, upale i innych warunkach
-- Niezależne przewijanie linii daty/alarmu, pogody i kalendarza
-- Regulowany czas przerwy pomiędzy przewijaniem
-- Konfigurowalny rozmiar tekstu, wyrównanie i format daty
-- Tła widżetu Material You i Liquid Glass
-- Regulacja widoczności tapety
-- Obsługa różnych rozmiarów widżetu i launcherów Androida
-- Obsługa 11 języków
-
-Home Glance pozostaje prosty na ekranie głównym, a jednocześnie daje szerokie możliwości personalizacji.
-
-Projekt jest aktywnie rozwijany i obecnie znajduje się w publicznych testach. Opinie oraz zgłoszenia błędów są mile widziane.
-
-Home Glance jest niezależnym projektem i nie jest powiązany z Google, Pixel At a Glance ani Another Widget.
-
-## Publishing metadata
+This retained draft does not represent a new Google Play publication.
 
 - Type: App
 - Price: Free

@@ -1,6 +1,6 @@
 # Privacy Policy for Home Glance
 
-Effective date for 0.2.5: October 18, 2026.
+Effective date for 0.2.8: October 18, 2026.
 
 Home Glance displays weather, calendar, next alarm, music and connected-headphone information. It has no Home Glance account, advertising SDK, analytics SDK or developer-operated backend for user data.
 
@@ -20,7 +20,7 @@ Automatic location requests Android approximate-location permission. Configured 
 
 Manual city search uses Android's system Geocoder; its provider and possible network processing depend on the device. The selected coordinates are then used for weather requests.
 
-OpenWeather is an optional prepared source requiring a configured API key. Without that configuration it is unavailable. A build that enables it sends weather coordinates and request parameters to OpenWeather rather than silently relabelling Open-Meteo data. The published 0.2.5 build without a key keeps OpenWeather unavailable. System/OEM availability checks do not grant access to an OEM weather database.
+OpenWeather is an optional prepared source requiring a configured API key. Without that configuration it is unavailable. A build that enables it sends weather coordinates and request parameters to OpenWeather rather than silently relabelling Open-Meteo data. The published 0.2.8 build without a key keeps OpenWeather unavailable. System/OEM availability checks do not grant access to an OEM weather database.
 
 Provider information: [Open-Meteo](https://open-meteo.com/en/terms), [OpenWeather](https://openweather.co.uk/privacy-policy).
 
@@ -32,7 +32,7 @@ The GitHub distribution checks release metadata using api.github.com and can dow
 
 ## Temporarily inactive Google Tasks
 
-In 0.2.5, Google Tasks integration is temporarily disabled in settings, widgets, synchronization and cache reads. Stored preferences and earlier local cache are preserved for possible restoration, but are not displayed or refreshed. This release does not request new Tasks authorization or fetch tasks. A future reactivation requires an updated release and corresponding disclosures. Home Glance does not revoke permissions previously granted in your Google account; those can be managed in Google's account settings.
+In 0.2.8, Google Tasks integration is temporarily disabled in settings, widgets, synchronization and cache reads. Stored preferences and earlier local cache are preserved for possible restoration, but are not displayed or refreshed. This release does not request new Tasks authorization or fetch tasks. A future reactivation requires an updated release and corresponding disclosures. Home Glance does not revoke permissions previously granted in your Google account; those can be managed in Google's account settings.
 
 ## Diagnostics and reports
 

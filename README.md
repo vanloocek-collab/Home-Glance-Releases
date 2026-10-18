@@ -2,10 +2,10 @@
 
 A lightweight Android home-screen widget for weather, calendar, next alarm and useful contextual information in a clean, Pixel-inspired layout.
 
-**Current public release:** v0.2.4 · Public test prerelease  
+**Current public release:** v0.2.8 · Public test prerelease
 **Android:** 8.0+ (API 26)
 
-[Website](https://vanloocek-collab.github.io/Home-Glance-Releases/) · [Download](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/latest) · [Screenshots](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html) · [Roadmap](https://vanloocek-collab.github.io/Home-Glance-Releases/roadmap.html) · [Issues](https://github.com/vanloocek-collab/Home-Glance-Releases/issues) · [Privacy](https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html)
+[Website](https://vanloocek-collab.github.io/Home-Glance-Releases/) · [Download](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.8) · [Screenshots](https://vanloocek-collab.github.io/Home-Glance-Releases/screenshots.html) · [Roadmap](https://vanloocek-collab.github.io/Home-Glance-Releases/roadmap.html) · [Issues](https://github.com/vanloocek-collab/Home-Glance-Releases/issues) · [Privacy](https://vanloocek-collab.github.io/Home-Glance-Releases/privacy.html)
 
 > This is the public distribution, documentation and issue-tracking repository for Home Glance. App source development is maintained separately.
 
@@ -55,7 +55,7 @@ More: [screenshots](https://vanloocek-collab.github.io/Home-Glance-Releases/scre
 
 ## Installation
 
-1. Open the [latest release](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/latest).
+1. Open the [latest release](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.8).
 2. Download the APK.
 3. Install it on Android.
 4. Add the **Home Glance** widget to the home screen.
@@ -65,16 +65,20 @@ Compatible updates preserve settings. Debug, Google Play and GitHub builds may u
 
 ## Current release highlights
 
-### v0.2.4
+### v0.2.8
 
-- One consistent Pixel-style typography with Standard and Bold text weights
-- Improved long-text ticker measurement and scrolling consistency
-- Dynamic Rotation now respects weather visibility settings
-- Google Tasks authorization flow fixed after account selection
-- Automatic weather recovery after internet connectivity returns
-- Cleaner Android widget picker with one public Home Glance entry and a real widget preview
-- Character-encoding and localization fixes
-- Validated on OnePlus 12 and POCO X5 Pro
+One consolidated release covering 0.2.5–0.2.8, replacing withdrawn 0.2.5:
+
+- Ten-second Music title pauses and complete playback-time labels
+- More horizontal Music space without shrinking text or artwork
+- Matching side-arrow positions on Home, Music and Headphones, including compact Home
+- Automatic/Light/Dark content colors across all three pages and monochrome icons
+- A visible outline for the known active ANC mode
+- Legacy Music opening, private ANC receiver and log-privacy fixes
+- Google Tasks temporarily disabled, with stored data and preferences retained
+- Updated privacy disclosures and explicit verification limits
+
+[Release notes and known limits](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/tag/0.2.8) · [APK checksum](https://github.com/vanloocek-collab/Home-Glance-Releases/releases/download/0.2.8/Home-Glance-v0.2.8.apk.sha256)
 
 For previous versions, see [GitHub Releases](https://github.com/vanloocek-collab/Home-Glance-Releases/releases).
 
